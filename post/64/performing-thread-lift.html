@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aptos.global/post/64/performing-thread-lift by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:37:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Performing Thread Lift - Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="../../css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="../../css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="../../favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0" />
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="../../favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Performing Thread Lift - Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="performing-thread-lift.html">
+    <meta property="og:image" content="../../../media-global.aptos.world/media/417/conversions/optimizedd92e.jpg?Expires=1694848722&amp;Signature=kFAHVUGXoCzKBT7OZKZFdHjMyikmYfiFkp1QSVNX4sCl22tX-Pj6AiZc2uUhILFUF1TbYhJGY6uEZyBmNTY2oKD~NZlxUpObRWntrjS~NxFTQVckRDDKwVuhFhpnRVpayPy3N6MhQs5yQ8sxFFXqiB6tcw3ZnK50bldoT8pClvl~d5CxZZt20R3G9dFuSiir9nOg8BKF4P6ElYKvYVhro9c0a0zsgLQSwtSGaH6BFZTrH4j6D0xvewF-BrylgA414-K6VM6cA1p2h-ck3jwkhNDyiSj2dN1gEaksw7ZhscEJaM4OJYvw80E3SnTF4-dZz15OJMS31pnpxiRZ2G4ubQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        '../../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1797333467260014');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading has-navbar ">
+    
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src='../../img/success-circle.png' />
+          <p class='mt-2'>Your Message was sent successfuly</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src="../../img/success-circle.png" />
+          <p class="mt-2">Your Location Updated Successfully</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" >Add Procedure</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form class="modal-body d-flex flex-column align-items-center">
+          <div class='row' id="modal-row">
+              <div class="form-group w-100 col-12">
+                  <label>Procedure Name</label>
+                  <input type="text" id="procedure-name-input" class="ag-form-control form-control" name="en[name]" placeholder="Select Other Option" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (from)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_from" name="price_from" placeholder="From" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (to)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_to" name="price_to" placeholder="To" />
+                  <span class="input-error-text"></span>
+              </div>
+          </div>
+
+          <div id="save-btn-container">
+            <button type='submit' class='submit-btn' id="save-btn">Save</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="loader">
+        <div id="loader-animation"></div>
+    </div>
+    
+    <script type="text/javascript" src="../../js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+    <script type="text/javascript" src="../../js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+            <nav class="navbar navbar-expand-lg fixed-top  for-patients-nav" id="main-navbar-container">
+    <a class="navbar-brand" href="../../index.html">
+        <i class="logo-icon"></i>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">About</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../history.html">History</a>
+                                                                                            <a class="dropdown-item " href="../../about.html">What is Aptos</a>
+                                                                                            <a class="dropdown-item " href="../../faq.html">FAQ</a>
+                                                                                            <a class="dropdown-item " href="../../subscribe.html">Newsletter</a>
+                                                                                </div>
+                                    </li>
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">Activity</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../category/1/news.html">News</a>
+                                                                                            <a class="dropdown-item " href="../../category/3/conferences.html">Conferences</a>
+                                                                                            <a class="dropdown-item " href="../../category/5/articles.html">Articles</a>
+                                                                                            <a class="dropdown-item " href="../../category/6/for-patient.html">For Patient</a>
+                                                                                            <a class="dropdown-item " href="../../category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a>
+                                                                                        <a class="dropdown-item " href="../../intimate.html">Aptos Intimate</a>
+                                                    </div>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../patients.html">Products</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../coaches.html">Trainers</a>
+                                    </li>
+            
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="../../aconnect.html"><i class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../asupport.html"><i class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../Aphoto.html"><i class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                            <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled" href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global/post/64/performing-thread-lift">Log in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="../../courses.html">Register for courses</a>
+                </li>
+            
+
+            <li class="nav-item world">
+                <a class="nav-link" href="../../world.html">
+                    <i class="globe-icon"></i>Distribution
+                </a>
+            </li>
+
+                            <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#" class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center " data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="../../img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="../../img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+    
+                <div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <i class="bg-circle-left"></i>
+            <i class="bg-circle-right"></i>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                                                    <div class="row justify-content-center navbar-items-list-container">
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Preparations</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/26/documents-to-be-filled-before-the-aptos-thread-lifting.html">Documents to be filled before the APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/27/what-to-know-for-before-consultation-to-doctor.html">What to know for before consultation to doctor</a></li>
+                                                                                            <li><a href="../../archive/28/cost-of-aptos-thread-procedure.html">Cost of Aptos thread procedure</a></li>
+                                                                                            <li><a href="../../archive/29/how-to-choose-a-doctor-and-a-clinic-for-a-thread-lift.html">How to choose a doctor and a clinic for a thread lift</a></li>
+                                                                                            <li><a href="../../archive/30/the-indications-and-contraindications-for-a-thread-lifting.html">The indications and contraindications for a thread lifting</a></li>
+                                                                                            <li><a href="../../archive/31/myths-and-prejudices-associated-with-aptos-thread-lifting.html">Myths and prejudices associated with APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/37/becoming-aptos-model.html">Becoming Aptos Model</a></li>
+                                                                                            <li><a href="../../archive/39/candidates-suitable-for-procedure.html">Candidates suitable for procedure:</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/10/elimination-of-neck-bands-and-wrinkles.html">Elimination of Neck Bands and Wrinkles</a></li>
+                                                                                            <li><a href="../../archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">Nasolabial Folds: Correction of the folds without fillers and scalpel</a></li>
+                                                                                            <li><a href="../../archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">Sagging mouth corners &quot;wrinkles of sadness&quot;</a></li>
+                                                                                            <li><a href="../../archive/15/eyebrow-correction-with-aptos-threads.html">Eyebrow correction with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/16/tummy-tuck-and-prevention-of-ptosis.html">Tummy tuck and prevention of ptosis</a></li>
+                                                                                            <li><a href="../../archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">Lifting of the forehead with Aptos Threads - Redefined youth and beauty</a></li>
+                                                                                            <li><a href="../../archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">Correction of Lip Contour and Mouth Furrows with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/19/correction-of-the-mental-area-with-aptos-threads.html">Correction of the mental area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/21/double-chin-correction.html">Double Chin Correction</a></li>
+                                                                                            <li><a href="../../archive/22/correction-of-decollete-area-with-aptos-threads.html">Correction of décolleté area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">Lifting of the arms and shoulders with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/24/lifting-of-the-inner-thighs-it-is-easy.html">LIFTING OF THE INNER THIGHS - IT IS EASY!</a></li>
+                                                                                            <li><a href="../../archive/25/special-threads-for-correction-of-the-area-above-knee.html">Special threads for correction of the area above knee</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Post procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/32/how-is-the-procedure-of-thread-lifting-performed-using-aptos.html">How is the procedure of thread lifting performed using APTOS</a></li>
+                                                                                            <li><a href="../../archive/33/does-it-hurt-during-and-after-the-procedure.html">Does it hurt during and after the procedure</a></li>
+                                                                                            <li><a href="../../archive/34/post-procedure-conditions.html">Post Procedure Conditions</a></li>
+                                                                                            <li><a href="../../archive/36/rehabilitation.html">Rehabilitation</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Threads</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/3/the-essence-of-the-method.html">The Essence of the method</a></li>
+                                                                                            <li><a href="../../archive/5/creating-aptos-threads.html">Creating APTOS threads</a></li>
+                                                                                            <li><a href="../../archive/6/advantages-of-thread-rejuvenation.html">Advantages of thread rejuvenation</a></li>
+                                                                                            <li><a href="../../archive/9/aptos-invites.html">APTOS invites</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                                            </div>
+
+                    <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="../../img/icons/close.svg" alt="">Close Window</button>
+                </div>
+            </div>
+        </div>
+    
+
+<div class="news">
+    <div class="container">
+                    <nav class="inside-nav">
+                <ul>
+                                                                <li class=""><a href="../../category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a></li>
+                                            <li class=""><a href="../../category/6/for-patient.html">For Patient</a></li>
+                                            <li class="active"><a href="../../category/5/articles.html">Articles</a></li>
+                                            <li class=""><a href="../../category/3/conferences.html">Conferences</a></li>
+                                            <li class=""><a href="../../category/1/news.html">News</a></li>
+                                    </ul>
+            </nav>
+        
+                    <a href="../../../media-global.aptos.world/media/417/conversions/optimizedd92e.jpg?Expires=1694848722&amp;Signature=kFAHVUGXoCzKBT7OZKZFdHjMyikmYfiFkp1QSVNX4sCl22tX-Pj6AiZc2uUhILFUF1TbYhJGY6uEZyBmNTY2oKD~NZlxUpObRWntrjS~NxFTQVckRDDKwVuhFhpnRVpayPy3N6MhQs5yQ8sxFFXqiB6tcw3ZnK50bldoT8pClvl~d5CxZZt20R3G9dFuSiir9nOg8BKF4P6ElYKvYVhro9c0a0zsgLQSwtSGaH6BFZTrH4j6D0xvewF-BrylgA414-K6VM6cA1p2h-ck3jwkhNDyiSj2dN1gEaksw7ZhscEJaM4OJYvw80E3SnTF4-dZz15OJMS31pnpxiRZ2G4ubQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q" class="d-block" data-fancybox data-caption="Performing Thread Lift">
+                <div class="img" style="background-image: url('../../../media-global.aptos.world/media/417/conversions/optimizedd92e.jpg?Expires=1694848722&amp;Signature=kFAHVUGXoCzKBT7OZKZFdHjMyikmYfiFkp1QSVNX4sCl22tX-Pj6AiZc2uUhILFUF1TbYhJGY6uEZyBmNTY2oKD~NZlxUpObRWntrjS~NxFTQVckRDDKwVuhFhpnRVpayPy3N6MhQs5yQ8sxFFXqiB6tcw3ZnK50bldoT8pClvl~d5CxZZt20R3G9dFuSiir9nOg8BKF4P6ElYKvYVhro9c0a0zsgLQSwtSGaH6BFZTrH4j6D0xvewF-BrylgA414-K6VM6cA1p2h-ck3jwkhNDyiSj2dN1gEaksw7ZhscEJaM4OJYvw80E3SnTF4-dZz15OJMS31pnpxiRZ2G4ubQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+            </a>
+        
+        <div class="section-title">
+            <h3>Performing Thread Lift</h3>
+        </div>
+
+        <div class="wrapper ">
+                            <div class="details">
+                    <form method="POST" class="save--post" data-post-id=64 action="https://aptos.global/save-post">
+                        <button class="save not-saved" type="submit" name="button">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            <span class="not-saved">Save for later</span>
+
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            <span class="saved">Saved</span>
+                        </button>
+                    </form>
+
+                    <div class="date">
+                        <img src="../../img/icons/date.png" alt="">
+                        <span class="title">Date</span>
+                        <span>8 May 2018</span>
+                    </div>
+
+                                            <div class="location">
+                            <img src="../../img/icons/location.png" alt="">
+                            <span class="title">Location</span>
+                            <span>Tbilisi</span>
+                        </div>
+                                    </div>
+            
+            <div class="content pb-4">
+                <p>Dr Albina Kajaia shares her personal experience of using polylactic acid threads and advises the best methods for application.</p><p><br></p><p><strong>After the arrival of surgical thread-lift procedures for the face in the late 90s, many aesthetic practitioners learnt the techniques to offer their patients an alternative option for facial rejuvenation.</strong></p><p><br></p><p>Non-surgical thread-lift treatments have now become firmly established in the work of many practitioners because the procedure is less invasive than surgical procedures. The other advantages to thread lifts are that all manipulations are carried out through small puncture wounds that leave no scars, while there is no need for general anaesthesia or long-term rehabilitation. Threads have become popular not only among medical practitioners, but also among patients, as there is the potential to receive instant results without the need for surgery.</p><p><strong>Absorbable threads</strong></p><p>Absorbable threads have been marketed as an alternative to more invasive procedures, such as a facelift, because the recovery time is faster and the cost is lower. Before the development of absorbable threads, permanent surgical ones were used, which were composed of silicone, gold, titan and polypropylene. These threads, which required insertion through incision and general</p><p>anaesthesia, did not bring wide-spread popularity among surgeons and practitioners. This was due to problematic access because of the incision and the deeper penetration of thread insertion.</p><p>In my opinion, development of threads took a significant step in 2008 with the introduction of a resorbable material consisting of polylactic acid (PLA) and polycaprolactone (PCL).</p><p><strong>PLA threads</strong></p><p>Polylactic acid aims to rejuvenate the skin and is the main component of the PLA thread product I use. It aims to stimulate the natural revitalisation of tissues and prolong the ageing process. During biodegradation, lactic acid is released into surrounding tissues, stimulating new collagen production and their rehydration. PCL, the second component of the thread, aims to slow down the biodegradation, increasing the duration of the tissues’ tightening effect and serving as a lactic acid; a delivery system to surrounding tissues. The full reabsorbtion period for the PLA threads takes between one and a half to two years.</p><p><img src="../../../aptos.global_443/media/418/conversions/optimized.html"></p><p><strong>Histocompatibility of threads (rat soft tissue)</strong></p><p>After one week there is fibrous around the thread and stimulation of collagen type 1, at one month there is a fibrous capsule around the thread and the barb, and fomation of collagen type 3. At six months, there’s a contour of fibrous capsule around the thread and collagen type 3, at 18 months the thread is almost fully absorbed, fibrous capsule and collagen type 3 remain.</p><p><strong>Tissue reaction</strong></p><p>The tissue reacts to the implantation of the PLA threads by formation of collagen, type 1 and type 3, and by development of a fibrous capsule. Even after full thread biodegradation, the fibrous capsule continues to hold soft tissue for three to five months (Figure 1). The most notable property of PLA threads is the disposition of its multidirectional barbs. This configuration gives the opportunity to evenly distribute the tension of the tissues along the entire length of the thread, and the three-dimensional arrangement of the barbs allows the practitioner to achieve the most reliable fixation (Figure 2). The method is universal; it can be successfully applied both for lifting and reinforcement of almost all areas of the face.</p><p><br></p><p><img src="../../../aptos.global_443/media/419/conversions/optimized.html"></p><p>In my practice, we use barbed threads that come already placed in cannulas of 15cm and cannulas of 7cm. One of the most important characteristics of these products is that the thread is preinstalled in a special atraumatic cannula, with a hole and a rounded edge, thus aiming to avoid any extra bleeding and swelling after the procedure. The rounded tip of the cannula does not give the possibility to go beyond the right plane and pushes the tissue without any breaks. Thus, superficial muscular-aponeurotic system (SMAS) perforation and damage in deeper lying structures are practically impossible. The risk of the appearance of skin retractions is also minimal as the cannula slides in one plane.</p><p><strong>Contraindications</strong></p><p>The contradictions are the same as the majority of thread-lift procedures and include pregnancy and lactation, acute and chronic infectious diseases, presence of benign and malignant tumours,</p><p>keloid predisposition, disorders of blood coagulation and serious chronic diseases.</p><p><strong>Side effects</strong></p><p>Side effects are temporary and may include: pain, swelling, temporal asymmetry, transient rippling or dimple formation, transient haematoma or bruising, slight depression or skin irregularity. These</p><p>inconveniences should disappear a few days after treatment.</p><p><strong>Method of application</strong></p><p>The procedure is conducted in a sterile treatment room. Preliminary preparation of the patient is not required. If the threads are used in combination with botulinum toxin, then I would recommended the toxin to be administered two weeks before manipulation with threads. I often carry out this treatment combination as I find that relaxed muscles give a better thread-lifting result; muscle movements may destroy barbs. Other techniques (for example, mesotherapy) should be applied two weeks after the procedure because, in my experience, this is the time when all side effects have worn off and neocollagenesis is activated. Mesotherapy can help to improve skin tone, structure and quality. Before the procedure, the practitioner should determine the indications and contraindications, examine the patient, introduce the technique and warn about possible complications, as well as asking the patient to sign an informed consent form. The practitioner should</p><p>photograph the patient in five standard positions (one frontal view, two oblique views and two lateral views).</p><p><br></p><p><strong>Step by step procedure:</strong></p><p>1. The local infiltrative anaesthesia is performed using ultracaine or lidocaine solutions, depending on whether the patient is allergic to either one or based on the practitioner’s preference.</p><p>2. The marking at injection site and the application area is carried out in an upright position, then the patient is laid horizontally.</p><p>3. The cannula with the rounded tip is introduced into the entry point.</p><p>4. Depending on the task, different methods of thread application are used, as shown in Figures 3,4, &amp; 5.</p><p>5. After installation, the thread is trimmed at the skin so that the tip is hidden under the subcutaneous tissue.</p><p>6. At the end of the procedure the patient returns to the upright position, where the practitioner evaluates the asymmetry and soothes the tissues with light massage along the Langer’s lines and</p><p>the puncture site.</p><p>7. The patient is photographed again in the aforementioned five positions.</p><p>8. The patient is provided with the post-treatment recommendations below and an ice pack is applied to the intervention zone for 20 minutes.</p><p><br></p><p>I would propose the following post-treatment recommendations:</p><p>• Apply ice packs immediately after the procedure</p><p>• Antibiotics should be prescribed if there is deemed to be a high risk of infection</p><p>• Analgesics should be taken in case of pain for two to three days</p><p>• Patients should refrain from applying make-up for a minimum 24 hours</p><p><span style="color: rgb(50, 51, 50);">• </span>Patients should sleep face up, in an elevated position on pillows for three to five nights</p><p>• The face should be washed gently without rubbing or massaging for five to seven days</p><p>• Excessive face and neck movements should be avoided for about two weeks and face and neck massages for one month</p><p>• Over-exposure to direct sunlight should be avoided for two weeks</p><p>• Sports and exercise should be avoided for two weeks</p><p>• Saunas should not been used for three weeks</p><p>• No dental surgery should take place for three weeks</p><p><br></p><p><img src="../../../aptos.global_443/media/429/conversions/optimized.html"></p><p><br></p><h2><em>I often carry out this treatment combination as I find that relaxed muscles give a better thread-lifting result; muscle movements may destroy barbs</em></h2><p><br></p><p><strong>Combination treatment for facial zones</strong></p><p>Even though thread lift procedures are a big part of my practice, injection techniques have not been replaced by them. Moreover, they are used in combination. Such combinations as botulinum toxin</p><p>and threads or HA fillers and threads, in my opinion, give the most desirable results. Over the years of using various thread methods, I have developed unique algorithms for combining these methods, depending on facial zones, as described below.</p><p><br></p><p><strong>Upper third of the face</strong></p><p>In this area, the procedure should be done in two main steps:</p><p>Step 1: Injections of botulinum toxin. It is better to do injections 10-14 days before thread application. Products and doses are chosen individually. Without blocking the muscles, active gesture may cause breakage of barbs or even of the thread, in particular during the two weeks after the procedure, and the fixation will be lost gradually.</p><p>Step 2: Insert the threads in subcutaneous fatty tissue along blocked muscles. In my experience, the threads will get better fixation and retain results for longer. </p><p><strong>Middle third of the face</strong></p><p>Depending on the desire of the patient, we can reposition the volume or simply emphasise the zygomatic area. In the instance where we want to just emphasise the cheekbone area, we use threads. During the procedure, hypercorrection is mandatory. It will disappear in 10-14 days. If the patient wants to create more prominent and voluminous cheekbones, then about 0.5ml of HA filler should be injected each side, two weeks after the thread application.</p><p><br></p><p><img src="../../../aptos.global_443/media/430/conversions/optimized.html"></p><p><img src="../../../aptos.global_443/media/431/conversions/optimized.html"></p><p><br></p><p><strong>Lower third of the face</strong></p><p>In this area, I use the following steps:</p><p>Step 1: Correction of the oval using botulinum toxin, according to the Nefertiti technique, which aims to define the jaw line.</p><p>Step 2: Thread application.</p><p>Step 3: Correction using HA filler (if necessary).</p><p><br></p><p><strong>Results</strong></p><p>I advise doing a control checkup three, 10 and 18 days after thread lifting. Asymmetry and swelling of the face can remain for about a month; from experience, by the end of the first month, asymmetry should completely disappear and the face is redefined. This period can depend on the individual characteristics of the patient. After the first month there is also a lifting effect, a clear contour and repositioned volume. The skin becomes smoother and looks more elastic and moisturised due to biorevitalisation. According to observations of 420 thread-lift procedures performed</p><p>at our clinic, desired results in all patients were preserved during the year. The following assessments were obtained:</p><p>• Excellent: 336 (80%)</p><p>• Good: 76 (18%)</p><p>• Average: 8 (2%)</p><p><br></p><p><strong>Conclusion</strong></p><p>The features of PLA threads, namely the arrangement of barbs, sets of threads with different lengths, a cannula with an atraumatic rounded tip and a hole aside, determine their advantages and</p><p>effectiveness of application. PLA threads are effective to create a contour and reposition the volume of different areas of the face and neck, as well as for lifting and soft tissue armouring. An additional advantage is the effect of biorevitalisation due to the presence of lactic acid and complete resorption of the threads throughout the year, with the formation of a new collagen.</p><p>Combining various techniques with botulinum toxin injections, HA fillers and threads give the opportunity to achieve the maximum lifting effect, and to administer the desired result of rejuvenation,</p><p>without surgery, to aesthetic patients.</p><p><br></p><p><img src="../../../aptos.global_443/media/432/conversions/optimized.html"></p><p>REFERENCES</p><p>1. Histocompatibility Study of APTOS threads, (2008) &lt;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2840891/&gt;</p><p>2. Sarah Tonks, Understanding thread lifting, Aesthetics journal (2015) &lt;https://aestheticsjournal.com/feature/understanding-thread-lifting&gt;</p><p>3. G. Sulamanidze. Aptos Excellence, New possibilities in aesthetic medicine, Tecrussia (2013) http://www.tecrussia.ru</p><p>4. Gold Thread Lift, (2010) &lt;http://faceliftpedia.blogspot.com/2010/12/gold-thread-lift.html&gt;</p><p>5. Helen Carroll, Threadlift – Is the Non-Surgical Facelift for You? Learn About the Lunchtime Facelift, (2015) &lt;http://anti.agingarsenal.com/procedures/threadlift-non-surgical-facelift/&gt;</p><p>6. JiaolongWang et al. Biodegradable Polymer Membranes Applied in Guided Bone/Tissue Regeneration: A Review. MDPI, (2016)</p><p>7. Goldberg D, Guana A, Volk A, Daro-Kaftan E. Single-arm study for the characterization of human tissue response to injectable poly-L-lactic acid. Dermatol Surg. (2013);39(6):915–922</p><p>8. A. Kajaia, G. Sulamanidze, T. Paikidze, K. Sulamanidze. Modern approach to the face modeling: Aptos Excellence Visage, in hands of dermatocosmetologist. Estetic medicine, (2012)-N 4.-С.505-512.</p><p>9. Aptos LLC, Products, &lt;http://aptos.global/products/&gt;</p><p>10. Stein P, Vitavska O, Kind P, Hoppe W, Wieczorek H, Süchurer NY. The biological basis for poly-l-lactic acid-induced augmentation. J Dermatol Sci. (2015);78(1):26–33</p><p>11. Aptos threads information leaflet, in product box</p><p>12. Juan Lopez, Mesotherapy for Facial Skin Hydration, Aesthetics journal, (2015) https://aestheticsjournal.com/feature/mesotherapy-for-facial-skin-hydration</p><p>13. Helen Carroll, Threadlift – Is the Non-Surgical Facelift for You? Learn About the Lunchtime Facelift,(2015) &lt;http://anti.agingarsenal.com/procedures/threadlift-non-surgical-facelift/&gt;</p><p><br></p>
+                
+                
+                
+                                    <div class="post-gallery mt-5 position-relative">
+                        <div class="right control-buttons mb-3 text-right">
+                            <div class="button-prev"><i class="fa fa-chevron-left"></i></div>
+                            <div class="button-next mr-0"><i class="fa fa-chevron-right"></i></div>
+                        </div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                                                    <a class="swiper-slide" data-fancybox="gallery" href="../../../media-global.aptos.world/media/435/conversions/optimized9834.jpg?Expires=1694848722&amp;Signature=kx8SD2gTSmjcNvGvGkg1xPY3JPnWeCT-TQKqGc4hbePqk0K8JNwSReVPEk6zJVkAEi0qCyhYi8GLga5wQ2jRmEWGisG7fRBKzzpUKourvtQM-Ca0sOH0MVE7hMdEBEkfdfN9LLBVJ5yBR4nofnDNG37pm4x0nwR3Lpj7gDCMI97mQneLybsZ6bPB~ijGLmXdCxZkHxZy~tR~OaazDWbX4bfiQBB6HcJ5j7~0VT2iDvMDamPX5pgWlV9gIDTM3NE1BiQvK3b4N4SRWSqq9PtEioQQyEXXHZIbsfe2k3rzCM7pAOPpBi9qggdZmUuhHEDNHePN22ecdnNQMi5Ark--eA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q">
+                                        <div style="background-image:url(../../../media-global.aptos.world/media/435/conversions/resized3b24.jpg?Expires=1694848722&amp;Signature=BqqaFouUQwYPay36Ys8nQmxnkqJwDpZkCr8gcSvgZ6v8o4NOaO9kpYv6~irXF0koxAb292TyzevFtcuEvtLDBHqMwOKmKVyC6ECryPPvRZ2x4FhcTCMtJ2j-wjA-~DsUCZ5jkXeVDpQXTXWdUY~IQDY3Dkq2Vlf6loDUChIhx1b1W3xin3egnaGttL~RgsMI2m1HtsYOuPZvEljSi1SSkROJ0iVmhJiMFfes-nJTZGJ-6HPmjWVO23L1YbKt1mZLgoRD8YomAZ4ZLxy868IeBC88yVHP0ujiRYpK0~QvHiLlAmcUWTjDChWlZbToieK9F1BmzDaqOKmvPqT~5zMVFg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q)"></div>
+                                    </a>
+                                                            </div>
+                        </div>
+                    </div>
+                            </div>
+
+                            <div class="share ">
+                    <h5>Share on</h5>
+
+                    <ul>
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://aptos.global/post/64/performing-thread-lift" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+                        <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://aptos.global/post/64/performing-thread-lift" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></li>
+                        <li><a href="https://twitter.com/intent/tweet?text=http://aptos.global/post/64/performing-thread-lift" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+                    </ul>
+                </div>
+                    </div>
+    </div>
+</div>
+
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+        <p class="accept-cookies-title mr-4">
+            We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+            about how visitors use our site. We collect the information to compile reports and to help us improve the
+            site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+            where visitors have come to the site from and the pages they visited. <a href="../../terms.html">Details.</a>
+        </p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+    </div>
+
+    <div class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="../../Aphoto.html" target="_blank">
+                            <img src="../../img/aphoto_logo.svg" class="aphoto-other-service-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="../../img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../aconnect.html" target="_blank">
+                            <img src="../../img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="../../asupport.html">
+                            <img src="../../img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo" />
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="../../terms.html" target="_blank" >
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../terms.html" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../contact.html" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    <div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+                <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: {
+                    {
+                        env('FB_APP_ID', '1797333467260014')
+                    }
+                },
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+    <script type="text/javascript" src="../../js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+    <script type="text/javascript" src="../../assets/js/sharect.min.js"></script>
+    <script type="text/javascript" src="../../js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </body>
+
+    
+<!-- Mirrored from aptos.global/post/64/performing-thread-lift by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:37:24 GMT -->
+</html>

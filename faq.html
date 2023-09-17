@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aptos.global/faq by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:27:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>FAQ - Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0" />
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FAQ - Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="faq.html">
+    <meta property="og:image" content="img/og_image.png">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        '../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1797333467260014');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading has-navbar ">
+    
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src='img/success-circle.png' />
+          <p class='mt-2'>Your Message was sent successfuly</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src="img/success-circle.png" />
+          <p class="mt-2">Your Location Updated Successfully</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" >Add Procedure</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form class="modal-body d-flex flex-column align-items-center">
+          <div class='row' id="modal-row">
+              <div class="form-group w-100 col-12">
+                  <label>Procedure Name</label>
+                  <input type="text" id="procedure-name-input" class="ag-form-control form-control" name="en[name]" placeholder="Select Other Option" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (from)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_from" name="price_from" placeholder="From" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (to)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_to" name="price_to" placeholder="To" />
+                  <span class="input-error-text"></span>
+              </div>
+          </div>
+
+          <div id="save-btn-container">
+            <button type='submit' class='submit-btn' id="save-btn">Save</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="loader">
+        <div id="loader-animation"></div>
+    </div>
+    
+    <script type="text/javascript" src="js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+    <script type="text/javascript" src="js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+            <nav class="navbar navbar-expand-lg fixed-top  for-patients-nav" id="main-navbar-container">
+    <a class="navbar-brand" href="index.html">
+        <i class="logo-icon"></i>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">About</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="history.html">History</a>
+                                                                                            <a class="dropdown-item " href="about.html">What is Aptos</a>
+                                                                                            <a class="dropdown-item active" href="faq.html">FAQ</a>
+                                                                                            <a class="dropdown-item " href="subscribe.html">Newsletter</a>
+                                                                                </div>
+                                    </li>
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">Activity</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="category/1/news.html">News</a>
+                                                                                            <a class="dropdown-item " href="category/3/conferences.html">Conferences</a>
+                                                                                            <a class="dropdown-item " href="category/5/articles.html">Articles</a>
+                                                                                            <a class="dropdown-item " href="category/6/for-patient.html">For Patient</a>
+                                                                                            <a class="dropdown-item " href="category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a>
+                                                                                        <a class="dropdown-item " href="intimate.html">Aptos Intimate</a>
+                                                    </div>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="patients.html">Products</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="coaches.html">Trainers</a>
+                                    </li>
+            
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="aconnect.html"><i class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="asupport.html"><i class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="Aphoto.html"><i class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                            <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled" href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global/faq">Log in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="courses.html">Register for courses</a>
+                </li>
+            
+
+            <li class="nav-item world">
+                <a class="nav-link" href="world.html">
+                    <i class="globe-icon"></i>Distribution
+                </a>
+            </li>
+
+                            <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#" class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center " data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+    
+                <div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <i class="bg-circle-left"></i>
+            <i class="bg-circle-right"></i>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                                                    <div class="row justify-content-center navbar-items-list-container">
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Preparations</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="archive/26/documents-to-be-filled-before-the-aptos-thread-lifting.html">Documents to be filled before the APTOS thread lifting</a></li>
+                                                                                            <li><a href="archive/27/what-to-know-for-before-consultation-to-doctor.html">What to know for before consultation to doctor</a></li>
+                                                                                            <li><a href="archive/28/cost-of-aptos-thread-procedure.html">Cost of Aptos thread procedure</a></li>
+                                                                                            <li><a href="archive/29/how-to-choose-a-doctor-and-a-clinic-for-a-thread-lift.html">How to choose a doctor and a clinic for a thread lift</a></li>
+                                                                                            <li><a href="archive/30/the-indications-and-contraindications-for-a-thread-lifting.html">The indications and contraindications for a thread lifting</a></li>
+                                                                                            <li><a href="archive/31/myths-and-prejudices-associated-with-aptos-thread-lifting.html">Myths and prejudices associated with APTOS thread lifting</a></li>
+                                                                                            <li><a href="archive/37/becoming-aptos-model.html">Becoming Aptos Model</a></li>
+                                                                                            <li><a href="archive/39/candidates-suitable-for-procedure.html">Candidates suitable for procedure:</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="archive/10/elimination-of-neck-bands-and-wrinkles.html">Elimination of Neck Bands and Wrinkles</a></li>
+                                                                                            <li><a href="archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">Nasolabial Folds: Correction of the folds without fillers and scalpel</a></li>
+                                                                                            <li><a href="archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">Sagging mouth corners &quot;wrinkles of sadness&quot;</a></li>
+                                                                                            <li><a href="archive/15/eyebrow-correction-with-aptos-threads.html">Eyebrow correction with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/16/tummy-tuck-and-prevention-of-ptosis.html">Tummy tuck and prevention of ptosis</a></li>
+                                                                                            <li><a href="archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">Lifting of the forehead with Aptos Threads - Redefined youth and beauty</a></li>
+                                                                                            <li><a href="archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">Correction of Lip Contour and Mouth Furrows with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/19/correction-of-the-mental-area-with-aptos-threads.html">Correction of the mental area with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/21/double-chin-correction.html">Double Chin Correction</a></li>
+                                                                                            <li><a href="archive/22/correction-of-decollete-area-with-aptos-threads.html">Correction of décolleté area with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">Lifting of the arms and shoulders with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/24/lifting-of-the-inner-thighs-it-is-easy.html">LIFTING OF THE INNER THIGHS - IT IS EASY!</a></li>
+                                                                                            <li><a href="archive/25/special-threads-for-correction-of-the-area-above-knee.html">Special threads for correction of the area above knee</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Post procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="archive/32/how-is-the-procedure-of-thread-lifting-performed-using-aptos.html">How is the procedure of thread lifting performed using APTOS</a></li>
+                                                                                            <li><a href="archive/33/does-it-hurt-during-and-after-the-procedure.html">Does it hurt during and after the procedure</a></li>
+                                                                                            <li><a href="archive/34/post-procedure-conditions.html">Post Procedure Conditions</a></li>
+                                                                                            <li><a href="archive/36/rehabilitation.html">Rehabilitation</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Threads</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="archive/3/the-essence-of-the-method.html">The Essence of the method</a></li>
+                                                                                            <li><a href="archive/5/creating-aptos-threads.html">Creating APTOS threads</a></li>
+                                                                                            <li><a href="archive/6/advantages-of-thread-rejuvenation.html">Advantages of thread rejuvenation</a></li>
+                                                                                            <li><a href="archive/9/aptos-invites.html">APTOS invites</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                                            </div>
+
+                    <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="img/icons/close.svg" alt="">Close Window</button>
+                </div>
+            </div>
+        </div>
+    
+
+<div class="faq container">
+    <div class="row">
+        <div class="questions col-md-6">
+            <h4 class="title">Frequently asked questions</h4>
+            <h6 class="subtitle">Questions</h6>
+
+            <ul class="nav flex-column">
+                                    <li class="nav-item">
+                    <a class="nav-link active" id="question-13-tab" data-toggle="tab" href="#question-13">What will I look like after the procedure?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-12-tab" data-toggle="tab" href="#question-12">What are the recommendations to be followed after Aptos thread lift?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-11-tab" data-toggle="tab" href="#question-11">Is the treatment painful?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-10-tab" data-toggle="tab" href="#question-10">Are there any contraindications to Aptos thread lift?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-9-tab" data-toggle="tab" href="#question-9">What happens immediately after the treatment?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-8-tab" data-toggle="tab" href="#question-8">Who can provide Aptos thread lift?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-7-tab" data-toggle="tab" href="#question-7">What must be done before the treatment?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-6-tab" data-toggle="tab" href="#question-6">What are the indications for Aptos thread lift?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-5-tab" data-toggle="tab" href="#question-5">Am I a candidate for Aptos thread lift?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-4-tab" data-toggle="tab" href="#question-4">Does the procedure change the facial features?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-3-tab" data-toggle="tab" href="#question-3">Can Aptos threads be used in complete safety?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-2-tab" data-toggle="tab" href="#question-2">What are the Aptos threads made of?</a>
+                    </li>
+                                    <li class="nav-item">
+                    <a class="nav-link " id="question-1-tab" data-toggle="tab" href="#question-1">Background Information</a>
+                    </li>
+                            </li>
+        </div>
+
+        <div class="answers col-md-6">
+            <div class="tab-content">
+                <h5 class="title">Answers</h5>
+                                    <div class="tab-pane fade show active" id="question-13">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">Doesn`t "5 to 10 years younger" sounds perfect for a minimally invasive procedure`s result?!</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Because that`s how you are going to look like after Aptos thread lifting</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Right after the procedure, you might have slight swelling or overcorrection, but already in a few days, you will look like the pictures of yourself several years ago.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Compared to a traditional facelift surgery – which is perfect for a visible change, but also leaves scars and requires a long recovery period, after Aptos thread lifting, you will not find any signs of intervention or scars. And definitely will notice an improvement in skin texture, fine lines, and sagging skin.</span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-12">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">What are the recommendations to be followed after Aptos thread lift?</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Apply ice packs immediately after the procedure</span></p><ul><li><span style="color: rgb(38, 38, 38);">Take analgetics in case of pain for 2-3 days</span></li><li><span style="color: rgb(38, 38, 38);">Refrain from applying make-up for a minimum of 24 hours</span></li><li><span style="color: rgb(38, 38, 38);">Sleep face up, in an elevated position for about 3-5 nights</span></li><li><span style="color: rgb(38, 38, 38);">Wash face gently without rubbing or massaging for 5-7 days</span></li><li><span style="color: rgb(38, 38, 38);">Avoid excessive face and neck movements for about 2 weeks</span></li><li><span style="color: rgb(38, 38, 38);">Avoid face and neck massages for 1 month</span></li><li><span style="color: rgb(38, 38, 38);">Avoid over-exposure to direct sunlight for 2 weeks</span></li><li><span style="color: rgb(38, 38, 38);">Avoid sports and exercise for 2 weeks</span></li><li><span style="color: rgb(38, 38, 38);">Do not use saunas for about 3 weeks</span></li><li><span style="color: rgb(38, 38, 38);">Avoid dental surgery for 3 weeks</span></li><li><span style="color: rgb(38, 38, 38);">The doctor will prescribe antibiotics if there is a substantial risk of infection</span></li></ul><p><br></p><p><span style="color: rgb(38, 38, 38);">Follow your doctor`s recommendations and enjoy youthful skin! </span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-11">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">The Aptos thread lift is a minimally invasive procedure and does not require general anesthesia to correct small areas such as the face and neck. General anesthesia is used for armoring and lifting of body (breast, buttocks, thighs, etc.)</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">In both cases, the thread lifting procedure is not associated with pain or other discomforts. After the preparation of the correction zone, the patient undergoes local anesthesia with an anesthetic solution, which is in action after a few minutes.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">All that can be felt during the procedure is the insertion of the cannula but without any pain.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">The procedure lasts about 15 minutes, leaves no scars or other marks, and does not require a long recovery.</span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-10">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">Thread lifting is classified as a minimally invasive technique. However, minimally invasive procedures also involve some contraindications.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Below are the most common ones:</span></p><ul><li><span style="color: rgb(38, 38, 38);">Allergy to plastic, biomaterial, non-absorbable fillers</span></li><li><span style="color: rgb(38, 38, 38);">Active acne or skin infection</span></li><li><span style="color: rgb(38, 38, 38);">Keloid predisposition</span></li><li><span style="color: rgb(38, 38, 38);">Auto-immune diseases: scleroderma, sarcoidosis, amyloidosis, etc.</span></li><li><span style="color: rgb(38, 38, 38);">Anti-coagulant medication: coumarin &amp; heparin (aspirin)</span></li><li><span style="color: rgb(38, 38, 38);">Haemophilia</span></li><li><span style="color: rgb(38, 38, 38);">Hypertension stages 2 and 3</span></li><li><span style="color: rgb(38, 38, 38);">Severe diseases</span></li><li><span style="color: rgb(38, 38, 38);">Collagenosis</span></li><li><span style="color: rgb(38, 38, 38);">Neurological and mental disorders</span></li><li><span style="color: rgb(38, 38, 38);">Pregnancy, breastfeeding</span></li><li><span style="color: rgb(38, 38, 38);">Malignancy/Chemotherapy</span></li><li><span style="color: rgb(38, 38, 38);">Hepatitis B &amp; C, HIV</span></li><li><span style="color: rgb(38, 38, 38);">Porphyria</span></li></ul><p><br></p><p><span style="color: rgb(38, 38, 38);">In order to avoid complications, always honestly share your medical history with the doctor, and, if necessary, undergo the appropriate examinations.</span></p><p><span style="color: rgb(38, 38, 38);">And remember, your health comes first!</span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-9">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">To be informed about any side effects before any manipulation is a must!</span></p><p><span style="color: rgb(38, 38, 38);">Even if it is a minimally invasive procedure when the needle touches the skin there is a possibility of side effects, although not everybody experiences them. Today we are sharing with you all types of side effects, what causes them, and how to fix or avoid them if possible.</span></p><p><br></p><ul><li><span style="color: rgb(38, 38, 38);">Pain or discomfort during the first couple of days can be eased using any painkiller that works well for you.</span></li><li><span style="color: rgb(38, 38, 38);">Swelling is normal after any invasive procedure, it can vary depending on the procedure area or how intense the invasion was.</span></li><li><span style="color: rgb(38, 38, 38);">Temporal asymmetry is either caused by swelling of certain parts of the face or by intentional hypercorrection to compensate the natural asymmetry of the corrected area.</span></li><li><span style="color: rgb(38, 38, 38);">Transient rippling or dimple formation sometimes happens when the thread was inserted closer to the skin surface and will pass after the swelling comes off or can be fixed by a doctor.</span></li><li><span style="color: rgb(38, 38, 38);">Transient hematoma or bruising is also the normal effect after injection or thread lifting. It is temporary and to lessen or prevent the bruising the Ice pack application is recommended a couple of hours after the procedure.</span></li><li><span style="color: rgb(38, 38, 38);">Slight depression or skin irregularity can be caused by the above-mentioned swelling or hypercorrection, especially if the corrected area has extra skin.</span></li><li><span style="color: rgb(38, 38, 38);">Inflammation can be caused by improper preparation or holding of the procedure, touching the injection area with dirty hands, or as a system`s individual reaction. It`s also quite easy can be treated and avoided by prescribing antibiotics, only if needed.&nbsp;</span></li></ul><p><br></p><p><span style="color: rgb(38, 38, 38);">If you experience any side effects don`t hesitate to talk to your doctor.</span></p><p><span style="color: rgb(38, 38, 38);">One of the best things about Aptos thread lifting is that a specially trained doctor is always prepared to fix any of them during and after the procedure.</span></p><p><span style="color: rgb(38, 38, 38);">All of the possible side effects are well studied and have a whole range of treatment protocols to avoid any long-term complications.</span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-8">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">There are more than 10,000 Aptos certified specialists around the world! How to find a doctor near you?</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">It is already well-know that thread lifting does not require general anesthesia and skin incisions.</span></p><p><span style="color: rgb(38, 38, 38);">Does this mean that any surgeon, cosmetologist, or specialist in a related profession can perform a thread lifting procedure?</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Of course not.</span></p><p><span style="color: rgb(38, 38, 38);">Thread lifting affects the deep layers of the skin, so the procedure requires to be carried out by a professional with higher medical education and excellent knowledge of skin and subcutaneous anatomy. In addition, the doctor must also undergo appropriate trainings in thread lifting methods.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">This is how we guarantee safe procedures and perfect results with Aptos thread lifting!</span></p><p><span style="color: rgb(38, 38, 38);">To help you find Aptos specialists easily and conveniently we’ve created </span><a href="aconnect.html" target="_blank" style="color: rgb(38, 38, 38);">Aconnect</a><span style="color: rgb(38, 38, 38);">.</span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-7">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">No special preparation is required prior to the Aptos thread lift.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">However, it is recommended to discuss your expectations and ask your doctor any questions you have before the treatment. The patient selection criteria are a very important part of the thread lifting procedure.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">The doctor must evaluate the patient`s face, considering their age, skin condition, the grade of ptosis, and asymmetries.</span></p><p><span style="color: rgb(38, 38, 38);">All these criteria are giving the specialist a possibility to decide which thread type and method from a wide range of Aptos products are suitable for a specific patient.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">For example, in some patients, especially for those who have extra skin, heavy tissue, signs of III-IV degree ptosis is recommended to choose surgical methods or adjust their expectations with the possible thread lifting outcome.&nbsp;</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Inform the doctor of any treatment you have already received and of any medicines, you are currently taking. Perform the test for local anesthetic allergies if necessary.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">The best results can be achieved in combination with proper skincare, device procedures, injectables (mesotherapy, biorevitalization, PRP), botulinum toxin, and fillers.</span></p><p><span style="color: rgb(38, 38, 38);">Ask your doctor which procedures will help you to prepare the skin before the thread lift, and which are great to maintain or prolong the effect.</span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-6">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">The success of the thread lifting procedure depends on the correct selection of the patient.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Being on the verge of plastic surgery and cosmetology, thread lifting is able to solve a wide range of problems, in case the patient selection criteria are met.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Ideal candidates for thread lift include people with minimal signs of aging who need just a small lift. Usually, these are women and men between 30 and 55.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Right candidates are those patients who have:</span></p><ul><li><span style="color: rgb(38, 38, 38);">the prominence of the jaw</span></li><li><span style="color: rgb(38, 38, 38);">a relaxed / sagging mid-facial appearance</span></li><li><span style="color: rgb(38, 38, 38);">slight bags under the eyes or on the neck</span></li><li><span style="color: rgb(38, 38, 38);">those who have had some relapse from a previous procedure such as a facelift or neck lift</span></li></ul><p><br></p><p><span style="color: rgb(38, 38, 38);">Aptos methods can be used to treat various parts of the face and body:</span></p><ul><li><span style="color: rgb(38, 38, 38);">Contours of the face</span></li><li><span style="color: rgb(38, 38, 38);">Jawline</span></li><li><span style="color: rgb(38, 38, 38);">Cheeks and mid-face area</span></li><li><span style="color: rgb(38, 38, 38);">Eyebrows</span></li><li><span style="color: rgb(38, 38, 38);">Neck</span></li><li><span style="color: rgb(38, 38, 38);">Breast</span></li><li><span style="color: rgb(38, 38, 38);">Arms</span></li><li><span style="color: rgb(38, 38, 38);">Abdomen</span></li><li><span style="color: rgb(38, 38, 38);">Buttocks</span></li><li><span style="color: rgb(38, 38, 38);">Inner thighs</span></li><li><span style="color: rgb(38, 38, 38);">Knees</span></li></ul><p><br></p><p><span style="color: rgb(38, 38, 38);">Poor candidates:</span></p><ul><li><span style="color: rgb(38, 38, 38);">Those patients who have excessively sagging skin at an advanced age will show a very limited improvement</span></li><li><span style="color: rgb(38, 38, 38);">Those patients who are obese, or have very heavy, rugged skin too will show no improvement. In these patients, thread lift can be combined with liposuction</span></li></ul>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-5">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">Are you an ideal candidate for a thread lift?</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Ideal candidates for thread lifts include people with minimal signs of aging who need just a small lift. Usually, these are women and men between 35 and 55.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Right candidates are those patients who have:</span></p><ul><li><span style="color: rgb(38, 38, 38);">the prominence of the jaw</span></li><li><span style="color: rgb(38, 38, 38);">a relaxed/sagging mid-facial appearance</span></li><li><span style="color: rgb(38, 38, 38);">slight bags under the eyes or the neck skin ptosis</span></li><li><span style="color: rgb(38, 38, 38);">some relapse from a previous procedure such as a facelift or neck lift</span></li></ul><p><br></p><p><span style="color: rgb(38, 38, 38);">Aptos methods can be used to treat various parts of the face and body:</span></p><ul><li><span style="color: rgb(38, 38, 38);">Contours of the face</span></li><li><span style="color: rgb(38, 38, 38);">Jawline</span></li><li><span style="color: rgb(38, 38, 38);">Cheeks and mid-face area</span></li><li><span style="color: rgb(38, 38, 38);">Eyebrows</span></li><li><span style="color: rgb(38, 38, 38);">Neck</span></li><li><span style="color: rgb(38, 38, 38);">Breast</span></li><li><span style="color: rgb(38, 38, 38);">Arms</span></li><li><span style="color: rgb(38, 38, 38);">Hands</span></li><li><span style="color: rgb(38, 38, 38);">Abdomen</span></li><li><span style="color: rgb(38, 38, 38);">Buttocks</span></li><li><span style="color: rgb(38, 38, 38);">Inner thighs</span></li><li><span style="color: rgb(38, 38, 38);">Knees</span></li></ul><p><br></p><p><span style="color: rgb(38, 38, 38);">Poor candidates are those patients who:</span></p><ul><li><span style="color: rgb(38, 38, 38);">have excessively sagging skin at an advanced age, the procedure will show a very limited improvement</span></li><li><span style="color: rgb(38, 38, 38);">are obese, or have very heavy, rugged skin, the procedure will show no improvement. In these cases, thread lift can be combined with liposuction</span></li></ul>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-4">
+
+                            
+                            <div class="text">
+                                <p>Everyone will notice, no one is going to know!</p><p><br></p><p>What is the most pleasant about Aptos thread lifting results is the improvement of facial features and volumes without visible signs of intervention.</p><p><br></p><p>Unlike traditional surgical facelifts, Aptos threads rejuvenate the face without changing your natural features. Usually, soft tissues are just re-positioned to their original location. After a thread lift, you can typically expect to look like you did several years ago.</p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-3">
+
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">It has been almost 25 years since the first Aptos thread and method has been introduced to the aesthetic world. It was first developed in 1996 by Dr. Marlen Sulamanidze.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Aptos threads are currently available in 75 countries. Millions of threads are sold all over the world.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Aptos products comply with the requirements of European Pharmacopoeia. Products have a CE mark and FDA approval and the production is certified according to ISO 13485, that guarantees the quality throughout the entire manufacturing process.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">As there is no cutting of the skin and only a local anesthetic is used, the procedure is considered less complicated than a full surgical face lift.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">For thread lifting, a strict procedure protocol has been developed, which implies compliance with septic and antiseptic standards for minimally invasive interventions. Compliance with all recommendations, numerous studies and the composition of the thread ensures the minimization and prevention of any complications and unwanted consequences from the procedure.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">It is important to remember that thread lifting can only be performed by a licensed doctor who has undergone special Aptos training.</span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-2">
+
+                                                            <a class="video" data-fancybox data-type="iframe" data-src="https://youtube.com/embed/i5OBSnh-qkU?autoplay=1" href="javascript:;">
+                                    <img src="img/dev/videoprew.png" class="w-100" />
+                                    <div class="play"><i class="fa fa-play" aria-hidden="true"></i></div>
+                                </a>
+                            
+                            <div class="text">
+                                <p><span style="color: rgb(38, 38, 38);">It all started with an idea ...</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">The history of Aptos development goes back to 1987, when the Georgian plastic, reconstructive surgeon Marlen Sulamanidze was inspired by the idea of ​​avoiding a long rehabilitation period and reducing the risks associated with traditional interventions of plastic surgery.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Now the Aptos product line is a large selection of threads of different composition, shape, and purpose.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Aptos threads are made of both non-absorbable (polypropylene) and absorbable (poly-L-lactic acid + caprolactone) material. Polypropylene threads are used in surgery as a suture material for more than 50 years, as well as Polylactic threads which are composed of fully absorbable, non-allergic material.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">Last year Aptos inventors presented a revolutionary new formula of thread composition - the 3rd Generation Aptos Thread with Hyaluronic Acid.</span></p><p><br></p><p><span style="color: rgb(38, 38, 38);">An improved formulation ensures additional benefit for the skin, provides less traumatic procedure, faster rehabilitation. Skin elasticity and texture improvement are visible right after thread implantation.</span></p>
+                            </div>
+
+                            
+                    </div>
+                                    <div class="tab-pane fade show " id="question-1">
+
+                                                            <a class="video" data-fancybox data-type="iframe" data-src="https://youtube.com/embed/mtQpYt70E-M?autoplay=1" href="javascript:;">
+                                    <img src="img/dev/videoprew.png" class="w-100" />
+                                    <div class="play"><i class="fa fa-play" aria-hidden="true"></i></div>
+                                </a>
+                            
+                            <div class="text">
+                                <p>As we age, the effects of gravity become more noticeable on our faces. The supporting tissue of the cheeks weakens and starts to sag, facial fat is lost, the jaw line that used to be firm and tight forms jowls at the edges of the mouth that drift down towards the chin and the lower face and neck sags. This sagging or drooping action of the tissue is referred to by doctors as ptosis.</p><p>Traditionally, the tendency for sugging would lead most people to a cosmetic surgeon in search of a facelift, however, there is now a less invasive procedure available that can lift, contour and suspend the sagging tissues of the face, neck and body; in those people who need only little to moderate rejuvenation.</p><p>Thread lifting is a procedure which involves elevating different parts of the face and body using specially designed threads without having to make incisions as per the classical face lift.</p><p>Dr Marlen A. Sulamanidze, thought that if you took prolene (a plastic non-absorbable suture) and cut barbs (very small “teeth”) along its length, it could act as a rope to hold up a drooping brow, cheek or jowl; and this resulted in the development and creation of APTOS threads in the late 1990’s. These barbed threads have now been patented, and further developed. Other forms of threads or sutures, both barbed and smooth have also now been developed for use in thread face lift procedures.</p><p>If you're considering having APTOS thread lift, the following information will give you a basic understanding of the procedure. It can't answer all your questions, since a lot depends on the patient and the surgeon, but please do ask your surgeon about anything you don't understand.</p>
+                            </div>
+
+                            
+                    </div>
+                            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+        <p class="accept-cookies-title mr-4">
+            We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+            about how visitors use our site. We collect the information to compile reports and to help us improve the
+            site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+            where visitors have come to the site from and the pages they visited. <a href="terms.html">Details.</a>
+        </p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+    </div>
+
+    <div class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="Aphoto.html" target="_blank">
+                            <img src="img/aphoto_logo.svg" class="aphoto-other-service-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="aconnect.html" target="_blank">
+                            <img src="img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="asupport.html">
+                            <img src="img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo" />
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="terms.html" target="_blank" >
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms.html" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    <div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+                <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: {
+                    {
+                        env('FB_APP_ID', '1797333467260014')
+                    }
+                },
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+    <script type="text/javascript" src="js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+    <script type="text/javascript" src="assets/js/sharect.min.js"></script>
+    <script type="text/javascript" src="js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </body>
+
+    
+<!-- Mirrored from aptos.global/faq by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:27:10 GMT -->
+</html>

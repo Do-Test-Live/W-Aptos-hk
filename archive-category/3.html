@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aptos.global/archive-category/3 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:32:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="../css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="../css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="../favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0" />
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="../favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="3.html">
+    <meta property="og:image" content="../index.html">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        '../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1797333467260014');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading has-navbar ">
+    
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src='../img/success-circle.png' />
+          <p class='mt-2'>Your Message was sent successfuly</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src="../img/success-circle.png" />
+          <p class="mt-2">Your Location Updated Successfully</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" >Add Procedure</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form class="modal-body d-flex flex-column align-items-center">
+          <div class='row' id="modal-row">
+              <div class="form-group w-100 col-12">
+                  <label>Procedure Name</label>
+                  <input type="text" id="procedure-name-input" class="ag-form-control form-control" name="en[name]" placeholder="Select Other Option" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (from)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_from" name="price_from" placeholder="From" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (to)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_to" name="price_to" placeholder="To" />
+                  <span class="input-error-text"></span>
+              </div>
+          </div>
+
+          <div id="save-btn-container">
+            <button type='submit' class='submit-btn' id="save-btn">Save</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="loader">
+        <div id="loader-animation"></div>
+    </div>
+    
+    <script type="text/javascript" src="../js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+    <script type="text/javascript" src="../js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+            <nav class="navbar navbar-expand-lg fixed-top  for-patients-nav" id="main-navbar-container">
+    <a class="navbar-brand" href="../index.html">
+        <i class="logo-icon"></i>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="2.html">Preparations</a>
+                                    </li>
+                                                            <li class="nav-item  active">
+                    <a class="nav-link" href="3.html">Procedures</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="4.html">Post procedures</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="5.html">Threads</a>
+                                    </li>
+            
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="../aconnect.html"><i class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../asupport.html"><i class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../Aphoto.html"><i class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                            <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled" href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global/archive-category/3">Log in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="../courses.html">Register for courses</a>
+                </li>
+            
+
+            <li class="nav-item world">
+                <a class="nav-link" href="../world.html">
+                    <i class="globe-icon"></i>Distribution
+                </a>
+            </li>
+
+                            <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#" class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center " data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="../img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="../img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+    
+                <div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <i class="bg-circle-left"></i>
+            <i class="bg-circle-right"></i>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                                                                                <div class="row justify-content-center navbar-items-list-container">
+                                                                                                                                        
+                                                                            <div class="col-12 col-lg-4">
+                                            <b>About</b>
+                                            <ul>
+                                                                                                                                                                                                        <li><a href="../history.html">History</a></li>
+                                                                                                                                                        <li><a href="../about.html">What is Aptos</a></li>
+                                                                                                                                                        <li><a href="../faq.html">FAQ</a></li>
+                                                                                            </ul>
+                                        </div>
+                                                                                                                                            
+                                                                            <div class="col-12 col-lg-4">
+                                            <b>Activity</b>
+                                            <ul>
+                                                                                                                                                                                                        <li><a href="../category/1/news.html">News</a></li>
+                                                                                                                                                        <li><a href="../category/3/conferences.html">Conferences</a></li>
+                                                                                                                                                        <li><a href="../category/5/articles.html">Articles</a></li>
+                                                                                                                                                        <li><a href="../category/6/for-patient.html">For Patient</a></li>
+                                                                                                                                                        <li><a href="../category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a></li>
+                                                                                            </ul>
+                                        </div>
+                                                                                                                                            
+                                                                                                                                                                                                                        
+                                                                                                                                                                                <div class="col-12 col-lg-4">
+                                    <ul class="bold-list">
+                                                                                    <li class="nav-item ">
+                                                <a class="nav-link" href="../patients.html">Products</a>
+                                            </li>
+                                                                                    <li class="nav-item ">
+                                                <a class="nav-link" href="../coaches.html">Trainers</a>
+                                            </li>
+                                                                            </ul>
+                                </div>
+                            </div>
+                                            </div>
+
+                    <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="../img/icons/close.svg" alt="">Close Window</button>
+                </div>
+            </div>
+        </div>
+    
+    <div class="container  navbar-items-list-container">
+        <div class="row justify-content-center">
+            <b class="bml-image mb-4" style="background-image: url()">
+                <span>Procedures</span>
+            </b>
+        </div>
+        <div class="row justify-content-center">
+            <ul class="mb-4">
+                <div class="row news-list">
+                                                                        <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/25/special-threads-for-correction-of-the-area-above-knee.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2397/conversions/resized61d9.jpg?Expires=1694848593&amp;Signature=nEK1ZLhB~NFT7JBKMRsDJFvAhKnDNzqfowLeszxxF9sv9R2K61lsSK7MTuezi35l-o~s~9Hm5zWrAxyfGnVEcab48RVd7K8LBmrSIW4sCqbAeYUI2sGTkltsK-GhPD8wDeOvpsgghC3TawooXEeUFAi9oPtwPMOYY91QQXUapiA3sW9MTHXD9VwRnmGOeetWdANzM3xI0eWRg~BTgCtvWDYi7AzHKfUVK5o8Q78PlWya7zwrg2GZLdSWLYWA3hcaOLbOhfy6bYetoG-y9JIPBvxGhiq1FGpVP4Ynvfrlf0l5G4JguXHrK9LVUy5PTKY53TAp8WD1ycstQ1ho0ScUCA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/25/special-threads-for-correction-of-the-area-above-knee.html" class="title">Special threads for correction of the area above knee</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            As we age, the skin around the knees deteriorates, just like it does everywhere else and gives away our true age. Sudden weight loss is opposing facto...
+                                        </div>
+                                        <div><a href="../archive/25/special-threads-for-correction-of-the-area-above-knee.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/24/lifting-of-the-inner-thighs-it-is-easy.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2394/conversions/resized4230.jpg?Expires=1694848593&amp;Signature=OLFmJJZ21ORYoveuIQUGlP~2DVGIsfyopCsaE5umMz1RgN0RO~7btuCIRjVIlZAjvU1EqTY-IiUIlQ92sYqjGuvZ2giO1c938wgPw95duVKcFCgwZNdFhU~n-zUEZQ75kbIAB0kAGlosg6E0~gDEB1p-pTs2ohcJDTjwkbFYs76XtjOwpMdqtlJohV6vEYYhXYXq-LMDtinE7oI8dFiY1hgAeF6qvn~d1KFcGcSncUwWcY8GKgMAC93-OftXxzfYddtkXi030d2r6TBxyLOvalhmlqTPAxht-RkakeBMHvBwHyIYR-Vtx6iK2dwvP8smkFzQ5z47C-z3kQDnjakNPA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/24/lifting-of-the-inner-thighs-it-is-easy.html" class="title">LIFTING OF THE INNER THIGHS - IT IS EASY!</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            Inner thighs become flabby with age, especially in women. To get rid of wrinkles with the help of massage or exercise is unlikely to succeed. Sudden w...
+                                        </div>
+                                        <div><a href="../archive/24/lifting-of-the-inner-thighs-it-is-easy.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2400/conversions/resizedb0d2.jpg?Expires=1694848593&amp;Signature=NpcGdplqVrsZWjYz96oZTTrsEvjqY535EVdVZaM8kDUiPwgqGyzYXzw~alpu9rimKMEaN4s20NLwxAuRuQ5xceLKRnyiLCaOelhK4yhyaz9izDq1789mHBo70cVmzOOMaGUVJl3-m9OA6Mn0BZrlJSUZqKppt~ztSrSXaiEwIZegrh848B05u3l32IDMvFfqTBT7WTQYuS1ZCa6qIxsYe1OAUzqbp6hWB8eVxvMo2~l8lD9LKgfuv6pc0T3g77tny4rcAVMm8stgrlm3d4KWKvC0WWg0KZD1oekgOr9cjIHIeBtqVfMpHLHa9DJ73KVP1SGN3idFzlORNAS~9E2ceA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html" class="title">Lifting of the arms and shoulders with Aptos Threads</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            APTOS thread lift is a minimally invasive procedure performed with threads consisting of poly-L-lactic acid and e-caprolactone. Threads are hypoallerg...
+                                        </div>
+                                        <div><a href="../archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/22/correction-of-decollete-area-with-aptos-threads.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2396/conversions/resized7a76.jpg?Expires=1694848593&amp;Signature=BomAZi0zhtSLdmSOaajUyvWj4Thx2WyGSHFLxEkjy5du0esvFo3JLDitNDxplyrrGsxEltiROFXRCSL3ie8maYIm1VeI4pSwzl37cu9qv-ggMIrJiivXAi4lS-nkkycourSdTXageQur7wMTSvknw6OnuMy8ZawtZboW86sgRo01zD2vtPghT65Qa70c8YGxYnXY6DNHH5HC~pO6YpNSnvo4FnM5GzdcnCWlDA8nX02zjdrJqPRGBBrEwGLVS9WSaztb12wg6bQWGmzwEQ~g4V~fSOAXV17yizkiTufhGYpO9mdzW2YDr4fV21seXJKm~t1Uv2eHz9r42VdgfJxb0w__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/22/correction-of-decollete-area-with-aptos-threads.html" class="title">Correction of décolleté area with Aptos Threads</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            Tight skin in the décolleté area is a dream of any woman. How to make it real? APTOS has developed special threads for aging décolleté area and the pr...
+                                        </div>
+                                        <div><a href="../archive/22/correction-of-decollete-area-with-aptos-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/21/double-chin-correction.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2343/conversions/resizedefc3.jpg?Expires=1694848593&amp;Signature=kktuGepiO~Lg~14PEi27hecWnx85S-RrWQM3~Z-xJjAdZK8TWzLpY~VGk0adNpTrM~VUCYKItsIF3IfDHYsjMvmF767SBRJ-tDii6GB0cXCJCRWtjpHSDeBGtdQ2BI1DZRnAzSiEqlYVuM7q6YBzv9Pvsc-kcXXikgH5nKPXi6JLTmq2u68~vTcMivWwd7BRWcxTuKhtSmyH0tTXjGcy29QMeeAs8ujZuGtF7rraBFR5SWHqaqoXwWhjmMC5DAZf7WDTLRvlLKiLDlRlAKhCwX08oRIMO2sayFt7VVBZA915nHPGJexB0kOTgy86LEGiA7-jFd-U-DU8~fL~cQcO1g__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/21/double-chin-correction.html" class="title">Double Chin Correction</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            Sagging skin under the chin occurs as we age and our skin loses elasticity. For some of us it can be inherited. Unfortunately there’s much more than t...
+                                        </div>
+                                        <div><a href="../archive/21/double-chin-correction.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/19/correction-of-the-mental-area-with-aptos-threads.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2516/conversions/resized2d02.jpg?Expires=1694848593&amp;Signature=Hmuqdo9c-mZ1kuDxniok4PYmSmsuKOwzUNJ1gCrNhfnaizNtZlGs94pg8GJZCYuWbWhiwom4nnmbjiLoB0NK1s5gTAR1drx-FuFgn-M3qbC7ChabTlliYWaiREnDAHwelmTpbUGofRGRf1BWlrE0XkAahFhh-HcFIltQyszi1L1YosI8CS34UiMpueX3Q918K5870zcpbU-KhP4ePFQVgLMO5Tr2ghQlYlu648VGOkSCumdtnUN~yUjwbWVCgSOMKtNJNoZv7zZXaTtA-IG383mQaDgPi7N-xDmlzuPY33FbIOaTHE7ZtNvL5ETi9oM5RU86uo718Pb51fFoV9W0Og__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/19/correction-of-the-mental-area-with-aptos-threads.html" class="title">Correction of the mental area with Aptos Threads</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            The jawline plays a crucial role in balancing the facial proportions, facial profile, and defining the lower face. With age, under the influence of gr...
+                                        </div>
+                                        <div><a href="../archive/19/correction-of-the-mental-area-with-aptos-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2429/conversions/resizedd0d9.jpg?Expires=1694848593&amp;Signature=ZEiHX1Mb~sKv660xGsNQXC7VJFQzCDbCnan8honN4nDz3DmP~dBiLBspc7RviePzCxXp08enAV~e630X3ZCReapBGaxytn8lTx34GKng0mvtYXLZHhtJkeyPZx4EA7Sb0osZ4s~Pk4MLNTRznbXmCvFYOBDhR9Aw6ADhOkEK2aETV8P-jxERsg4YEGCQPcp7aiCTbCyqdpzw1xkrxp4ffQznGT~-l2F2iDIJ0kKmztqOaQxkL9VDgLlEnaxfXP~57Z4tfbVgAiVfMCnwVzY2jpdyHXiYBManJMYgvJHovul008ynYxFFUS2juJCNx1aTEpEA3dlUY2WEdXHoRom0cg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html" class="title">Correction of Lip Contour and Mouth Furrows with Aptos Threads</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            The lower third of the face is the area where the facial expression is most active. The greatest number of muscles is involved in the development of a...
+                                        </div>
+                                        <div><a href="../archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2517/conversions/resized4423.jpg?Expires=1694848593&amp;Signature=Bu~N8PVFMTF1aExFDORqfAxmQMyPo2aJHEsxuYM2d-rZmdCxV4I-qX3O8ATjVOgCe0KTXWPucQ3XWPw-yW92JvBYSv0rr3ZsIP7jnHl-rI8CvxRIYZr1sj0xkDUoKyeWU3UDg1YYscGYMIfpgO0xnB8pMPRlsvDhWeb0VjJOHnLDCfOi7Mmax6Ic~33PZpSzx1TC9Vau30X84oJJMTHtMDYo2TSMtxpZqbsvHjKOd8EU~Nzc-9J-e7eTvIGdLZnNKsGysNZ9WgdHlrzwBj-p5h6ppXbh-ulITC39RtkaNu15O6Aoby34a73mnG8-8cFkqUXng6rg7qZOgTu0SCP8Ig__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html" class="title">Lifting of the forehead with Aptos Threads - Redefined youth and beauty</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            The first signs of aging forehead may occur even in younger individuals as a result of habitual or dynamic forehead muscular hyperactivity. Frown line...
+                                        </div>
+                                        <div><a href="../archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/16/tummy-tuck-and-prevention-of-ptosis.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2431/conversions/resized86bc.jpg?Expires=1694848593&amp;Signature=XXuSS1oQKrn9Sj0ywUTxZl6GxPprPL0nwohKk4TW1RvTw2rHWUqwRi~H9IyX~HuGVn6~loTvHODGzWqGKgPICVUEFmyhYadGEYIcQ9oz87UPd5~LHSWgL88aSEFEZrOc9S2H-t39gdYEaAvpPDTgItkzqwrVP3Ji9o8egxOwUd0beNwuLmPobPugWtpi85T-Dm38kt9y6DCGRx1XFH5LwxNGMHyulWmNuOOYUiSYTlHvhTgJE1f8UtPeUUyBkHLFcpELbbe7vR9VcWtFfC~SBTwqmpWMHrm9Izg0fS7Msnoifrs~9o-CBP74aUOMJA~GlaolIaCidhu3ucYm5GowxQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/16/tummy-tuck-and-prevention-of-ptosis.html" class="title">Tummy tuck and prevention of ptosis</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            Pregnancy, weight loss, poor nutrition, sedentary lifestyle are the opposing factors leading to the loss of abdominal skin elasticity. Different kinds...
+                                        </div>
+                                        <div><a href="../archive/16/tummy-tuck-and-prevention-of-ptosis.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/15/eyebrow-correction-with-aptos-threads.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2362/conversions/resized437a.jpg?Expires=1694848593&amp;Signature=BruUsr5BgPpfxTQ3CdCYAhL3Na3VKKZjwntG2F6PZz4PvVsraXdLGP-S8csKDpXxHkr3INkR1kTPuerbDfbrr1STnOIuJsu68TL3aX~zce4DVcEUmcP4ImdUC852T7v7zbE7~BGPnG8lYIfyz~yxpQu8wUUPKSBVwbdwrr9lVryaTnsVCd7qf6W0Px5~RNblKdpK4yhpvmFo8gYhEY7bMsRBqOYjNzU3vZ62mThgKaL6nFbH-71ARmGP6Y2x38SntrRd8vNTLxBeK6pnOqxaKipQ89SeoQZq2PrTtPaBEV6FWb0otWdQb4TNUhY7ojePmQcRBcC14NHkKC9eEj5WNw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/15/eyebrow-correction-with-aptos-threads.html" class="title">Eyebrow correction with Aptos Threads</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            Beautiful shape of eyebrows emphasizes the beauty of the eyes and makes you look younger. Eyebrows can send body language, they are highly visible com...
+                                        </div>
+                                        <div><a href="../archive/15/eyebrow-correction-with-aptos-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2393/conversions/resized8c86.jpg?Expires=1694848593&amp;Signature=Sey1yDdJ4wW35tYtTtPTD~cUHSspJ-GRrN1A38npGChIpAwjEJuhtvRCA~Asdy07drvhRtYZD7p7K2aup6nJ85dkRpPoHtgi3wEDpGtTol6sdrtELMJbEWy9ulfV1Fe-c4ziPCV37xq6MNdTMrxWjkNKuAdoMpY7YiSoIBUghWiDtBc1S3NsOWdPZDCMdP4OtybC5hhSS8BJtEMIpGlriHxLRrnb9rCQU0qwxp8GThiXJJe1K-Q2wSlKfZ6fL4njiu55Kgm3QfA7~ijr6-GGdfXsJPE5H-aGANzguJ-PWPmMMC-MvkcONDl0IiGZw5xh1wWVZWZKzWKtMdq2IJWLvg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/14/sagging-mouth-corners-wrinkles-of-sadness.html" class="title">Sagging mouth corners &quot;wrinkles of sadness&quot;</a></div>
+                                        <div class="date">9 May 2018</div>
+                                        <div class="description">
+                                            The drooping mouth corners are also called &quot;wrinkles of sadness&quot; as they give the face an expression of sadness, causing associations with helplessnes...
+                                        </div>
+                                        <div><a href="../archive/14/sagging-mouth-corners-wrinkles-of-sadness.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2333/conversions/resized24e6.jpg?Expires=1694848593&amp;Signature=XlZ6BW3KTCN9nqCURWM1XJYvzEjAQQF7uk2h5~xB4AWpOihIm8plSt3ycz9PoV0YkmZx4MAH9Fu2QUQNeRpqNJVefIQCJ52UKnMH8RbsmoCNRyIxkaJFHI9fejvMpsk4fSbrmOzB1BlIEFkXHgqcSzoh0JXeOB6Ic50GWGqK-t520kKgS~Wp5tyzzWFyHP6RBZb0YA1fI0RHOmugyeAJUFewVH2gTKulLjJTCik9NI53YBC-y9~TT6640g6lDveykhmlZsrRrIf4cDif-pqPuEExpf-mR~bavPJShRhlTCRbEwHB9e1SPiPIf7~skIkcQss~b1jUeu0bilaonrIPpQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html" class="title">Nasolabial Folds: Correction of the folds without fillers and scalpel</a></div>
+                                        <div class="date">8 May 2018</div>
+                                        <div class="description">
+                                            Nasolabial folds are best described as the two skin folds on the side of the nose and corner of the mouth. It is said that as a person ages, the fold...
+                                        </div>
+                                        <div><a href="../archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../archive/10/elimination-of-neck-bands-and-wrinkles.html">
+                                            <div style="background-image: url('../../media-global.aptos.world/media/2430/conversions/resized6d34.jpg?Expires=1694848593&amp;Signature=M02NELjIYfjUwOaCSiWQt5A2ECOQEp1JBtv89DRBz1or2bA0J-3fhqCET0TSnCmNDIfdyoInmseX~wz8H6Sy-gaVX5XAI1xu~Vgyucj0042I7-W198HEG9b54mQKPq0ZivYUw5ck6BPGDJ82zx5IIUL2hdu9bSX754b3myXIx64LZ5QoMiWu3p-HqTff~eexaf5APxQ8~PeSJC~-giGEmfq8GXRN-pHtJ39wMuHdZk6XyAJSGdpksDbz2QEfIIlGWm8f5llktNUZMKmKKhYLbRWSauq7zM0iPtE-2wsOlP70GgO6sw6x6qXWIZv2RgrZ8mqi5C9NjwACPMEitrfVlQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../archive/10/elimination-of-neck-bands-and-wrinkles.html" class="title">Elimination of Neck Bands and Wrinkles</a></div>
+                                        <div class="date">8 May 2018</div>
+                                        <div class="description">
+                                            Neck is the first area of the body to show signs of aging and the one whose youth cannot be preserved with exercise or cosmetics. It gives away our tr...
+                                        </div>
+                                        <div><a href="../archive/10/elimination-of-neck-bands-and-wrinkles.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </ul>
+        </div>
+    </div>
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+        <p class="accept-cookies-title mr-4">
+            We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+            about how visitors use our site. We collect the information to compile reports and to help us improve the
+            site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+            where visitors have come to the site from and the pages they visited. <a href="../terms.html">Details.</a>
+        </p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+    </div>
+
+    <div class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="../Aphoto.html" target="_blank">
+                            <img src="../img/aphoto_logo.svg" class="aphoto-other-service-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="../img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../aconnect.html" target="_blank">
+                            <img src="../img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="../asupport.html">
+                            <img src="../img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo" />
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="../terms.html" target="_blank" >
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../terms.html" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact.html" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    <div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+                <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: {
+                    {
+                        env('FB_APP_ID', '1797333467260014')
+                    }
+                },
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+    <script type="text/javascript" src="../js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+    <script type="text/javascript" src="../assets/js/sharect.min.js"></script>
+    <script type="text/javascript" src="../js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </body>
+
+    
+<!-- Mirrored from aptos.global/archive-category/3 by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:32:24 GMT -->
+</html>

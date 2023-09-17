@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aptos.global/category/5/articles by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:28:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Articles - Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="../../css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="../../css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="../../favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0" />
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="../../favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Articles - Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="articles.html">
+    <meta property="og:image" content="../../img/og_image.png">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        '../../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1797333467260014');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading has-navbar ">
+    
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src='../../img/success-circle.png' />
+          <p class='mt-2'>Your Message was sent successfuly</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src="../../img/success-circle.png" />
+          <p class="mt-2">Your Location Updated Successfully</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" >Add Procedure</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form class="modal-body d-flex flex-column align-items-center">
+          <div class='row' id="modal-row">
+              <div class="form-group w-100 col-12">
+                  <label>Procedure Name</label>
+                  <input type="text" id="procedure-name-input" class="ag-form-control form-control" name="en[name]" placeholder="Select Other Option" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (from)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_from" name="price_from" placeholder="From" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (to)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_to" name="price_to" placeholder="To" />
+                  <span class="input-error-text"></span>
+              </div>
+          </div>
+
+          <div id="save-btn-container">
+            <button type='submit' class='submit-btn' id="save-btn">Save</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="loader">
+        <div id="loader-animation"></div>
+    </div>
+    
+    <script type="text/javascript" src="../../js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+    <script type="text/javascript" src="../../js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+            <nav class="navbar navbar-expand-lg fixed-top  for-patients-nav" id="main-navbar-container">
+    <a class="navbar-brand" href="../../index.html">
+        <i class="logo-icon"></i>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">About</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../history.html">History</a>
+                                                                                            <a class="dropdown-item " href="../../about.html">What is Aptos</a>
+                                                                                            <a class="dropdown-item " href="../../faq.html">FAQ</a>
+                                                                                            <a class="dropdown-item " href="../../subscribe.html">Newsletter</a>
+                                                                                </div>
+                                    </li>
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">Activity</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../1/news.html">News</a>
+                                                                                            <a class="dropdown-item " href="../3/conferences.html">Conferences</a>
+                                                                                            <a class="dropdown-item active" href="articles.html">Articles</a>
+                                                                                            <a class="dropdown-item " href="../6/for-patient.html">For Patient</a>
+                                                                                            <a class="dropdown-item " href="../8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a>
+                                                                                        <a class="dropdown-item " href="../../intimate.html">Aptos Intimate</a>
+                                                    </div>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../patients.html">Products</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../coaches.html">Trainers</a>
+                                    </li>
+            
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="../../aconnect.html"><i class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../asupport.html"><i class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../Aphoto.html"><i class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                            <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled" href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global/category/5/articles">Log in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="../../courses.html">Register for courses</a>
+                </li>
+            
+
+            <li class="nav-item world">
+                <a class="nav-link" href="../../world.html">
+                    <i class="globe-icon"></i>Distribution
+                </a>
+            </li>
+
+                            <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#" class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center " data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="../../img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="../../img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+    
+                <div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <i class="bg-circle-left"></i>
+            <i class="bg-circle-right"></i>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                                                    <div class="row justify-content-center navbar-items-list-container">
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Preparations</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/26/documents-to-be-filled-before-the-aptos-thread-lifting.html">Documents to be filled before the APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/27/what-to-know-for-before-consultation-to-doctor.html">What to know for before consultation to doctor</a></li>
+                                                                                            <li><a href="../../archive/28/cost-of-aptos-thread-procedure.html">Cost of Aptos thread procedure</a></li>
+                                                                                            <li><a href="../../archive/29/how-to-choose-a-doctor-and-a-clinic-for-a-thread-lift.html">How to choose a doctor and a clinic for a thread lift</a></li>
+                                                                                            <li><a href="../../archive/30/the-indications-and-contraindications-for-a-thread-lifting.html">The indications and contraindications for a thread lifting</a></li>
+                                                                                            <li><a href="../../archive/31/myths-and-prejudices-associated-with-aptos-thread-lifting.html">Myths and prejudices associated with APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/37/becoming-aptos-model.html">Becoming Aptos Model</a></li>
+                                                                                            <li><a href="../../archive/39/candidates-suitable-for-procedure.html">Candidates suitable for procedure:</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/10/elimination-of-neck-bands-and-wrinkles.html">Elimination of Neck Bands and Wrinkles</a></li>
+                                                                                            <li><a href="../../archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">Nasolabial Folds: Correction of the folds without fillers and scalpel</a></li>
+                                                                                            <li><a href="../../archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">Sagging mouth corners &quot;wrinkles of sadness&quot;</a></li>
+                                                                                            <li><a href="../../archive/15/eyebrow-correction-with-aptos-threads.html">Eyebrow correction with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/16/tummy-tuck-and-prevention-of-ptosis.html">Tummy tuck and prevention of ptosis</a></li>
+                                                                                            <li><a href="../../archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">Lifting of the forehead with Aptos Threads - Redefined youth and beauty</a></li>
+                                                                                            <li><a href="../../archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">Correction of Lip Contour and Mouth Furrows with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/19/correction-of-the-mental-area-with-aptos-threads.html">Correction of the mental area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/21/double-chin-correction.html">Double Chin Correction</a></li>
+                                                                                            <li><a href="../../archive/22/correction-of-decollete-area-with-aptos-threads.html">Correction of décolleté area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">Lifting of the arms and shoulders with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/24/lifting-of-the-inner-thighs-it-is-easy.html">LIFTING OF THE INNER THIGHS - IT IS EASY!</a></li>
+                                                                                            <li><a href="../../archive/25/special-threads-for-correction-of-the-area-above-knee.html">Special threads for correction of the area above knee</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Post procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/32/how-is-the-procedure-of-thread-lifting-performed-using-aptos.html">How is the procedure of thread lifting performed using APTOS</a></li>
+                                                                                            <li><a href="../../archive/33/does-it-hurt-during-and-after-the-procedure.html">Does it hurt during and after the procedure</a></li>
+                                                                                            <li><a href="../../archive/34/post-procedure-conditions.html">Post Procedure Conditions</a></li>
+                                                                                            <li><a href="../../archive/36/rehabilitation.html">Rehabilitation</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Threads</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/3/the-essence-of-the-method.html">The Essence of the method</a></li>
+                                                                                            <li><a href="../../archive/5/creating-aptos-threads.html">Creating APTOS threads</a></li>
+                                                                                            <li><a href="../../archive/6/advantages-of-thread-rejuvenation.html">Advantages of thread rejuvenation</a></li>
+                                                                                            <li><a href="../../archive/9/aptos-invites.html">APTOS invites</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                                            </div>
+
+                    <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="../../img/icons/close.svg" alt="">Close Window</button>
+                </div>
+            </div>
+        </div>
+    
+
+    <div class="news-page">
+        <div class="container">
+            <nav class="inside-nav">
+    <ul>
+                    <li class=""><a href="../8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a></li>
+                    <li class=""><a href="../6/for-patient.html">For Patient</a></li>
+                    <li class="active"><a href="articles.html">Articles</a></li>
+                    <li class=""><a href="../3/conferences.html">Conferences</a></li>
+                    <li class=""><a href="../1/news.html">News</a></li>
+            </ul>
+</nav>
+            
+            <div class="row section-title">
+                <h3>News for Articles</h3>
+            </div>
+
+                            <div class="row">
+                    <div class="main-news">
+                        <a href="../../post/210/httpsonlinelibrarywileycomdoi101111jocd15885.html">
+                            <div class="img" style="background-image: url('../../../media-global.aptos.world/media/70091/conversions/resized7f93.jpg?Expires=1694848421&amp;Signature=h6r8brkGj574Czq~-K4IzkTO38ZgMFgBAMnbBlCyO8gOvICpc0r5jyfmB-JEgSWa-KFVGLQtnvYU-cHIHOrWd3CHUpjgs9rnDSoVrSYDXMHIMHbqLwkn9dAek3uuwKCXKx6B79T207010QqiDcT098miSemnrXCWyRLKrz~uJnovxqD6XWqPpFCU5pvulL2-jskUgoTxqdtpUQGKrQqwdyWZPAXK6cNN~bhHki4b9r6skNFA1qSPB39maJvA59kI4jPl4AC~zSGP-1Tq~d1i0tDap2yXi~J8mg601Tg4vAEHFZyJxVIUPcoSpa66xNjHZQOGkQtIsvrAZIa~MiquHA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+
+                            <div class="desc">
+                                <h5>The Third Generation Barbed Lifting Threads: Added Value of Hyaluronic Acid</h5>
+                                <p>Facial thread lifting is a highly demanded procedure in esthetic clinics worldwide. The aim of this retrospective study is to evaluate the clinical ef...</p>
+                                <span>19 July 2023</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            
+                            <div class="news-list row justify-content-center">
+                    <div class="row col-12">
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/209/httpsjournalslwwcomprsgofulltext202304000thread-lifting-of-the-nose-fully-comprehensive8aspxej-article-sam-container.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/63623/conversions/resizedefc1.jpg?Expires=1694848422&amp;Signature=IvFsS7jTwLaB0wNhefaYdPemLZMWkKGQ3vCTtf37zlwZi1793hWFIZXOmVy3Vk0zqnZ5eA1hQ4ZB~gGk5K6WXqG64JZWoRZ2CL6cQPVZoX9iN7Ei9znXoV8~ZmDsLVf7llTE3DjRk4YOVjbS4bHV6VfRT19m8PGAngmR0X1I4wuerrG84zz9wAQnEPD2cMHF7ZGCATN-lglvA3KApE1Y1h2Ve-z4U~6nkptw8ImUR5U487u4OH16mz-CdZtLXQLMzUCu8RjKBqia5mPkTXocgOrru~xL~iv0Z8aJj5nGYmWcKykAy5Jkmg9-ckF-F17oRz2s~-9-~ym8bAK7cK1UPA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/209/httpsjournalslwwcomprsgofulltext202304000thread-lifting-of-the-nose-fully-comprehensive8aspxej-article-sam-container.html" class="title">Thread Lifting of the Nose: Fully Comprehensive Approach to the Technique</a></div>
+                                        <div class="date">11 April 2023</div>
+                                        <div class="description">
+                                            Background: Nose thread lifting is a relatively recent technique. It offers a chance to approach nose morphology defects without turning to surgery to...
+                                        </div>
+                                        <div><a href="../../post/209/httpsjournalslwwcomprsgofulltext202304000thread-lifting-of-the-nose-fully-comprehensive8aspxej-article-sam-container.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/204/satisfaction-of-patients-and-surgeons-with-combined-aptos-thread-lifting-treatment-fat-grafting-and-laser-treatment.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/52180/conversions/resized7f08.jpg?Expires=1694848422&amp;Signature=hGKA5cNC8kvwPIivLaUYFM6-srpAGXVbUzOTe78fzjVu7KBO0hzcaCJSOptBCOLHkM1~WYyTJ23lT7uqNzUFuWKmMgyF4u4V6yYqOqrdLyj8p7GxvJ6RMhWo3-bSVFkM9GosX7O~7t4uaROKi~mbyV1H2iOkrI7F-aXMtDd91k3h4j10zS4FihrH5XhIGgS35ilz-G8VBc4~mbgaexRC5OMkVMjcH~NlYuTJR~BJlZedm-1LzyGXZHDIwCOyIoElS-EP6HVvM7RuogH-sDhjGlMsbvsBoezzTKKlSgpKfvcKhEQ1YGM771EWtTLYiO-BfU31gSbUFy0kouccy4qpyQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/204/satisfaction-of-patients-and-surgeons-with-combined-aptos-thread-lifting-treatment-fat-grafting-and-laser-treatment.html" class="title">Satisfaction of Patients and Surgeons with Combined Aptos Thread Lifting Treatment, Fat Grafting and Laser Treatment</a></div>
+                                        <div class="date">10 August 2022</div>
+                                        <div class="description">
+                                            Background Measuring satisfaction with aesthetic treatment and health related quality of life of patients has become one of the indicators of the succ...
+                                        </div>
+                                        <div><a href="../../post/204/satisfaction-of-patients-and-surgeons-with-combined-aptos-thread-lifting-treatment-fat-grafting-and-laser-treatment.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/195/thread-lifting-of-the-jawline-a-pilot-study-for-quantitative-evaluation.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/43227/conversions/resized8828.jpg?Expires=1694848422&amp;Signature=Q~pY3fkqmkSd4kpstnjK7lkqEbzJYXLpGo6YwGt2j~L4v1Lf0Iy7ZgcWXKUhSHN5-o10G512dsr1bQXtEDPF1mhhiy2cDz12sc0g4-iVCx~TnTGt98mgtCV9zH~wudcpSXY0o9EUBjvrCHyHGWHznXOkte-36xzq-yg7y8jI2ESGrgcf9L3GLb4vQTUBcFSDV6o8vsftpni1ZFCAGC0M-3seWDdXPBMMslZfsqLNB-CKijGFIJ5x2fKOS3IBucHOh1qUEk8FLST7Pa1YEaGcqnpC5MUwmJ~SIKxl5HL7uNa8tUPQzsP~YG0KgMCyE~sxEKrCzq~7EPKabzegkkmGxQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/195/thread-lifting-of-the-jawline-a-pilot-study-for-quantitative-evaluation.html" class="title">Thread Lifting of the Jawline: A Pilot Study for Quantitative Evaluation</a></div>
+                                        <div class="date">27 March 2021</div>
+                                        <div class="description">
+                                            The new article on &quot;Thread Lifting of the Jawline: A Pilot Study for Quantitative Evaluation&quot; is presented in the Journal of Cutaneous and Aesthetic S...
+                                        </div>
+                                        <div><a href="../../post/195/thread-lifting-of-the-jawline-a-pilot-study-for-quantitative-evaluation.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/192/sarah-ferguson-looks-very-youthful-after-birth-of-first-grandchild-so-has-she-turned-to-tweakments-such-as-micro-needling-and-an-eye-lift.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/40731/conversions/resized7519.jpg?Expires=1694848422&amp;Signature=qCzR0NMkYQquguTl~zroVRBj~HFnJtq0I-33~iauz5yJ3PY9IBy27r3HF3h1Zys76r3zZa9L1mYrC68pu5YT5Yw6ns2mfM0IvRvmaFewmXAPz0IR8IkrCAUqty3odcPfW3Fm7RJFTb3cYQsvu2JAg1J0f6NCo4~ObntA1NZTrlgiLX~SNcRTve-fxKLyqAeUmvQoRuVWcFafeywID0Qi5o68reyfFv4Z4zv9wPp3EwYsdmNYbWWhGV4N9NMqpuAP9qKkFmRCRAInFrWQDBZz76AFzwU2~Liq8gqK2-7Kutwkrofw76kmPbiijW2rJDt2k-60cjvc9bH7a2WTqxmBOg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/192/sarah-ferguson-looks-very-youthful-after-birth-of-first-grandchild-so-has-she-turned-to-tweakments-such-as-micro-needling-and-an-eye-lift.html" class="title">Sarah Ferguson looks VERY youthful after birth of first grandchild - so, has she turned to tweakments such as micro-needling and an eye lift?</a></div>
+                                        <div class="date">18 February 2021</div>
+                                        <div class="description">
+                                            &#039;Sarah&#039;s jawline is significantly stronger than in previous images so I wouldn&#039;t be surprised if she said that she&#039;d had some sort of cosmetic interve...
+                                        </div>
+                                        <div><a href="../../post/192/sarah-ferguson-looks-very-youthful-after-birth-of-first-grandchild-so-has-she-turned-to-tweakments-such-as-micro-needling-and-an-eye-lift.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/191/dr-paul-banwell-in-tatler-beauty-cosmetic-surgery-guide-2021.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/39916/conversions/resized5e4a.jpg?Expires=1694848422&amp;Signature=o86hYaCTZtYE3rOvaOPJDh1X3ZfWD2-94ZC0J3uMP84O~qFlRl4S~FfkX4vk6GBGt0rqIRE8a9ZohGKz8rla8zEi6D28hd3iwJ4HP-fQSZzv8DNZiKmhz5KxUL5ljGaKPmmvp1B-sQcTyTPCTOt7vSiUzL-51ATUug3s7mHhrEwM4ZCwNyvpGDK2re2fUufvcxG9y-gMhAY0zv0JNiRledJbb4s-N2G-BmLIFWst7f2Bl2Y4DknpykWISQyfDmoCorr9UOWYNw-W~Hut6RQ5ZaIn4VK8TmEv1uEVgE3VC~oPkRvjhUoly2D9T4P2D~0FgkAgsiYKQ~gcgmiVwQ3G9A__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/191/dr-paul-banwell-in-tatler-beauty-cosmetic-surgery-guide-2021.html" class="title">Dr. Paul Banwell in Tatler Beauty &amp; Cosmetic Surgery Guide 2021</a></div>
+                                        <div class="date">9 February 2021</div>
+                                        <div class="description">
+                                            The Tatler Beauty &amp; Cosmetic Surgery Guide 2021 is here. Widely regarded as the ‘Bible’ of aesthetics, the annual guide celebrates the very best p...
+                                        </div>
+                                        <div><a href="../../post/191/dr-paul-banwell-in-tatler-beauty-cosmetic-surgery-guide-2021.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/189/outcomes-in-thread-lift-for-face-neck-and-nose-a-prospective-chart-review-study-with-aptos.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/38601/conversions/resizedf750.jpg?Expires=1694848422&amp;Signature=GzvO8slAioGpNps73NoBBwK9HtJhKywbMttpNYNtOVx0UVPaJrvINWqwVLGpY9CQF54kmtl427iQR2Da3dTb7LsA2HT9CSLnZdLsGT07ssPlN7TQb1kweDuUWq9vqMzFg9Rz3HpXefT0OuE8rIcRhk-rIF6dWjiAD~dMYvwfSGKDBr5FUnCpBYlSooTgWpiXrYAQFOuvw-d7uUsIPK-cG0JOl8lduqzMh2WMDfqXotJ-ALz6vJfN-vvu6sdx3doXGaRcVxIeaU4Jv5CjaFrBJL4XABh7CLj8DUsfYKyhVPdC-D6CzZR8K0y~vn6LjBL8L1WKdm09F5~XTO2XtXEMqw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/189/outcomes-in-thread-lift-for-face-neck-and-nose-a-prospective-chart-review-study-with-aptos.html" class="title">Outcomes in thread lift for face, neck, and nose. A prospective chart review study with Aptos</a></div>
+                                        <div class="date">21 December 2020</div>
+                                        <div class="description">
+                                            Read the new article &quot;Outcomes in thread lift for face, neck, and nose. A prospective chart review study with Aptos&quot; by Samad Rezaee Khiabanloo MD, Re...
+                                        </div>
+                                        <div><a href="../../post/189/outcomes-in-thread-lift-for-face-neck-and-nose-a-prospective-chart-review-study-with-aptos.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/187/new-article-by-aptos-inventors-for-isaps-news.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/16672/conversions/resized12d7.jpg?Expires=1694848422&amp;Signature=LX~0IEZLjDXNBVwaj~3NdZt~H7V5NGm25McZKn8nW-nXaNZP3cdcEvpmsjgJEQXcVzC-xolmztw4WUg7DaeHiyGk5TTV8pVrNDnK-PFMBc0qH5dJAaL3G1x8XdPkruDeZVLHmDN9ULbNLnRulSpCIWgXrybpkqP1P7nsQCDvms6tzi0~DBRcclyGaxdaDIXTjXtKZWsmXPNbKGGrzXc08Rt6PBMc5bw4diEK-IJmhUYPyOIyTvatePoLNb4ZULtQCG2f4ZcC0Di1~z9qI88mOK2XB6T-fdJA8yKWmoAntP354Y7YhRdgufv7SGnmQscbQYJUJ0lUs4rBSxe0AIs5WA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/187/new-article-by-aptos-inventors-for-isaps-news.html" class="title">New article by Aptos inventors for &quot;ISAPS News&quot;</a></div>
+                                        <div class="date">21 December 2020</div>
+                                        <div class="description">
+                                            Plastic surgeons and Aptos methods` inventors Dr. Marlen, George and Konstantin Sulamanidze`s are sharing the methods and results of their experience...
+                                        </div>
+                                        <div><a href="../../post/187/new-article-by-aptos-inventors-for-isaps-news.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/179/hyaluronic-acid-threads-for-skin-improvement.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/15612/conversions/resized5d83.jpg?Expires=1694848422&amp;Signature=qOoTSkgHrNwZqzvbbgodYYIZrJt6gqQ9YbUBBZsdnRHUczc-Wi2Xbu0DcUYAWDawvL8ESSLBZc98FQm2QKHou8QpY5TgmLicGPm2QHYG0vPIctFjMa-2eXp31o~xg6A4czoe~csg1ffB1-gtSaVq45ruTbsMezocecjJvdv8fvILB-g2kxF9fhCwHwPl0M5KOJtVSoHPFI9WV-ZQSb0ytids37sULzV80HT7mKgDCxz1szbDILedbU~G~2r-wFR77RGrpM~MW42tp~QJosSy3BPnhvbNfrrnf9HDqkx56zpJ06EP6Zo5irEPZPW9D8m~WzToMJV-~0lzDZh8meCiag__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/179/hyaluronic-acid-threads-for-skin-improvement.html" class="title">Hyaluronic Acid Threads for Skin Improvement</a></div>
+                                        <div class="date">12 October 2020</div>
+                                        <div class="description">
+                                            Don&#039;t miss out on the September/October 2020 issue of PRIME Journal!Read the new article about Hyaluronic Acid Threads for Skin Improvement.Alberto Di...
+                                        </div>
+                                        <div><a href="../../post/179/hyaluronic-acid-threads-for-skin-improvement.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/177/dr-mohammad-abdul-mabin-about-correction-of-prominent-ears-without-scar-for-isaps.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/15339/conversions/resized56bb.jpg?Expires=1694848422&amp;Signature=Wqm-GXhy6d8hQD9s~sKcEEgr7R8QP4cIRm3hu12b68Modh7i8SBxGi-gqBwcmfHfLGYqRv7RQ0EoFKnsk1TPv-JPe7cmXwQd8Rs-xl03ns1HyTmM0zwosucr412i~J~QYD243prv~1h9jB0H6y5gejEKNRSWRRPKG30CP~qFXOxTkOZuF7adBI8N7LnFaARib4CX9HZn-3-GvCUI0PiwTvtBzpAtERQcgPXA45V4A8zNLhQ7ofOQs2~8S1k9R6xxf10tRPTkWwxwQYeCoBk3tQwsMNbCnFeE8h1GKxtEJKn3PqQ-Cql78QV~IEfAv-utvZMCKuBmE09lr13h3-pdLQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/177/dr-mohammad-abdul-mabin-about-correction-of-prominent-ears-without-scar-for-isaps.html" class="title">Dr Mohammad Abdul Mabin about Correction of Prominent Ears without Scar for ISAPS</a></div>
+                                        <div class="date">21 September 2020</div>
+                                        <div class="description">
+                                            Regardless of the size of the ear, the term “Prominent Ears”means a birth defect in which the ears stick out enoughto appear abnormal. Also, the termi...
+                                        </div>
+                                        <div><a href="../../post/177/dr-mohammad-abdul-mabin-about-correction-of-prominent-ears-without-scar-for-isaps.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/176/dr-alice-prethima-michael-about-aptos-threads-for-buro-24-7.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/15184/conversions/resized1afe.jpg?Expires=1694848422&amp;Signature=OFpS9oL0zD-q~p9P7PYvN5IBKzFOEsclL0M5WoVV4vG70BzRKhlfOnYgD~lOwM2mR3czywrm9WuLfnqzLpyCRWqObCZQNgV9cQtgKa-5nXtZC9n-LFcMTKpEMvBLLuEPruYquqvTyR5E4zQftyYDtI571iJtMwdAeG0NuwNqlxNaEY4y7bhU2r9VjeH-d9Tck4S6Pa92B8c62NvUksCcAyuWOGh6a1RnbWe-94HHrQRnCfdh96W35xvndRJNo7eufwvDekCbMF6pXN7QYUjxPEL3udZcJlgpTqrdNuHCRjPQMnQRZBQ54QRKzyoQQKHDDX67sgbgDlLZ1xAC5iHp7Q__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/176/dr-alice-prethima-michael-about-aptos-threads-for-buro-24-7.html" class="title">Dr Alice Prethima Michael about Aptos threads for Buro 24/7</a></div>
+                                        <div class="date">16 September 2020</div>
+                                        <div class="description">
+                                            Worldwide fashion, beauty and lifestyle portal Buro has interviewed Aptos certified trainer Dr Alice Prethima Michael, Managing Medical Physician, CEO...
+                                        </div>
+                                        <div><a href="../../post/176/dr-alice-prethima-michael-about-aptos-threads-for-buro-24-7.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/183/aptos-methods-guide.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/16070/conversions/resized2dce.jpg?Expires=1694848422&amp;Signature=TUAGIoJrVXKDNALgWPtFvv-mOC1jaHOq9SvL-sJ1ABGt6B-vijQ~Avg1IOsHs3J1hCkLrZ00hyBFKPLqxH1xHZzym~Py-82HgbG5cBbYJDwJj~GI57rFSDiySfvJ8ottCUzUbdAp9Am3dIjhyS7H65RPnxVH7CJfjTvROE0rwS87vyh7IMXsiYnhc47iyR-f65OMmgKzFlo1gBMZ~9p3UmNe-imkLHTyNnjdLZTKAnwf82NidUq5O1aLHi78msPuFlTzZpnOGvqLVmFth5PTkg6Aod3PgybGuLLBe5cwAbmQzim4hNsCemQWOMgjgjEwcs2KDmSyoqtrbJ1atB--Og__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/183/aptos-methods-guide.html" class="title">Aptos Methods&#039; Guide</a></div>
+                                        <div class="date">1 September 2020</div>
+                                        <div class="description">
+                                            The document consists of an on-lable guide of Aptos thread lifting methods.Contents:The history of thread lifting........................................
+                                        </div>
+                                        <div><a href="../../post/183/aptos-methods-guide.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/174/daily-mail-about-nose-job-by-aptos-method.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/15181/conversions/resized315b.jpg?Expires=1694848422&amp;Signature=JoSQNFw4uaeaV9aDPbZTWtDxpi6vxKBn4AO2-hYbPHdKbCd1T8RksUQ9r2GJsauJPIZCakp-tNPN6eMpG3NdKQqTHwX9zej8rYhIebIegvhs-cqXWKNbr9JYD9s9YmJ1U6pEaZNvAYzf0uJDtFkbh4bMYNyTWQgZ8mi4EPnL9izSt3j0PxFoeFaJSMksZECCGk9o-G3iNr7olsBHzcsTz8~WOJQFqHAkegBN-4FtPXTmG0tD6UTN6Ult36NarEtPZpM5CJeuffO54tUrVLJ6t1T0pQwbIbVo2584eI36KmmrHYxKRQn7CtwFUmDZnWLLuM7BIMKMm68r0MvqeS2aLQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/174/daily-mail-about-nose-job-by-aptos-method.html" class="title">Daily Mail about &quot;nose job&quot; by Aptos Method</a></div>
+                                        <div class="date">13 August 2020</div>
+                                        <div class="description">
+                                            According to DailyMail.co.uk queries relating to rhinoplasty - surgery that changes the shape of the nose - were most popular cosmetic surgery search...
+                                        </div>
+                                        <div><a href="../../post/174/daily-mail-about-nose-job-by-aptos-method.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/153/comparison-of-the-influence-of-new-generation-threads-p-la-cl-ha-and-p-la-cl-on-convalescence-and-clinical-effects-in-patients-undergoing-minimally-invasive-anti-aging-treatments.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/5582/conversions/resized55bd.jpg?Expires=1694848422&amp;Signature=YTfpx3OuQ58QzbG2rQd-Nwund8R1RqErHnopDqTD5nsiR526pD0Ruau9~AxiPCVtoCxKWFuJmKxb2VpHxV7pIT38kSglx5quvCSj1PSBjXwDjP~Jk9~oPO~aMv420DLGXAAXGqvOxzUXJMOkrUVhtWyimpu4UjHjkq-8el82zHksNzHuRJ5lUe7xj~Cp7-Oc~Iz3dS0Bb0UC8EQhUaf8VgXB~03LF4kYUSLWN4lYWUwVrOXUihKf0bQBUsppUSzBZpFL~ugwvi70YghinSUs-6p8wsxK6XP0dZlE8SMu4AOSF9Gp1qrSPRJtHmVPfucOs~d2Xt~5fs6BhIYuL9FFDQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/153/comparison-of-the-influence-of-new-generation-threads-p-la-cl-ha-and-p-la-cl-on-convalescence-and-clinical-effects-in-patients-undergoing-minimally-invasive-anti-aging-treatments.html" class="title">Comparison of the Influence of New Generation Threads P(LA/ CL) HA And P(LA/CL) on Convalescence and Clinical Effects in Patients Undergoing Minimally Invasive Anti-Aging Treatments</a></div>
+                                        <div class="date">2 March 2020</div>
+                                        <div class="description">
+                                            AbstractEarly signs of aging of facial skin results from elastic tissue and collagen degradation, causing fine-to-deep wrinkles formation. Various mod...
+                                        </div>
+                                        <div><a href="../../post/153/comparison-of-the-influence-of-new-generation-threads-p-la-cl-ha-and-p-la-cl-on-convalescence-and-clinical-effects-in-patients-undergoing-minimally-invasive-anti-aging-treatments.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/152/effectiveness-plla-pcl-aptos-thread-skin-quality.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/5475/conversions/resized9c64.jpg?Expires=1694848422&amp;Signature=pcY1mOKPn1fKi-G8txkHYBAPXgNFQcyNcOS~fOkRPUvu8-W0PMiWcR8NW9thg1AwBmxcEx-U34Uz3rB3xbn4XOEhtBWssKNq8fSqZ3vuhXkaZ4uolnsSYnSzKBDqCQAKsGEkjlfaslJO6RK3QNMEXfkkqTQ8HracHIxweBzwPTx5tZ7cxqJPlexedQNz6IcFtsVl-4f4PFfN-SYH51-1MQU~OBtpOEr9ue2XG-xK71DPZcid~HuIWGk2b~W-0EiWItQYveCYPqXcIX7bjB74VR93DSnvkk3HTtdbM3u~TYwRPBre3mjFq9LF0wFVXrj0vQJYqv6gsLheJ7uVOdsH9w__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/152/effectiveness-plla-pcl-aptos-thread-skin-quality.html" class="title">The effectiveness of PLLA/PCL Aptos thread on skin quality</a></div>
+                                        <div class="date">7 February 2020</div>
+                                        <div class="description">
+                                            AbstractFor many patients, it is important to improve skin quality and to appear younger. Many aesthetic treatment methods are used for this purpose....
+                                        </div>
+                                        <div><a href="../../post/152/effectiveness-plla-pcl-aptos-thread-skin-quality.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/151/single-blind-comparative-study-aesthetic-outcome-armouring-procedures-plla-pcl-ha-enriched-absorbable-threads.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/5425/conversions/resized338d.jpg?Expires=1694848422&amp;Signature=JmnvjRGKeogtY8xhfeH3YcfNzllNpjoPZfOvFgdqTsaRiGaEqdUkrwubujw35zNWs9HCFv--ePSTkm5SypOSpplR2NFOGadu8~I48oAZz6GbXTNlFfUlhkfMVoZDjlcUT5KuSi6p-EuPnvMcoZHtmNqyF~Dky1SrOzkcWz-OSSmYMPSiDhZI~mNYMbp8Rcv3~CJlXwNenVNFtkT40IBY5bLWUkHR~Xswu93L6OfNi5S0-R~XwJXDSY-EhafMe8iG83MwQ98z66cwgCSxJLk3o5n4H4QmpAtK5m68FDmsRmhOhSKKiI8OqHn5HrEeNQpsUeb88kUnNFPP5w7~2UrmGg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/151/single-blind-comparative-study-aesthetic-outcome-armouring-procedures-plla-pcl-ha-enriched-absorbable-threads.html" class="title">Single-Blind Comparative Study of the Aesthetic Outcome of Armouring Procedures with PLLA/PCL- and HA-Enriched Absorbable Threads</a></div>
+                                        <div class="date">21 January 2020</div>
+                                        <div class="description">
+                                            BackgroundAbsorbable threads represent one of the most exciting breakthroughs in aesthetic medicine. The innovative composition of absorbable poly-L-l...
+                                        </div>
+                                        <div><a href="../../post/151/single-blind-comparative-study-aesthetic-outcome-armouring-procedures-plla-pcl-ha-enriched-absorbable-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/150/elimination-aesthetic-deformations-midface-area-our-experience.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/5423/conversions/resized67a6.jpg?Expires=1694848422&amp;Signature=Xh2GKyVBAUDbV0o7R8h8NrrX~WwzBsDlap8LHb~nmSv8W07wmxn9T~yIId9SW4LxBlU~MiOdfWpsOSM7ePLUZ21nJ8YK-HfGuHDs8eRVf4MWDXh4juKCkTUOvNLl9GezWJB2jDN8F7b~lx~s5agm8-bWcQYU30g5T8w--OpHm7QJRhWOLeYTBruHQ1vElqXK1V~jvY2sY4hM9yqErqAOPVV~xHLyUTJtHMDa7lIvinShhXzP8xMpa4BBlUQhIAHHjL65-tj1hKcXELK0pjf-NHP25jD6LEWJqmTEto-fNg74Z8Mfvite~YsjxdJB0nc7wBZ2JqiEMXGIDWPKnKD~Iw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/150/elimination-aesthetic-deformations-midface-area-our-experience.html" class="title">Elimination of Aesthetic Deformations of the Midface Area: Our Experience</a></div>
+                                        <div class="date">17 January 2020</div>
+                                        <div class="description">
+                                            AbstractThe aesthetic manifestations of the aging process in the cheekbone, cheek and infraorbital areas are especially concerning for patients, so re...
+                                        </div>
+                                        <div><a href="../../post/150/elimination-aesthetic-deformations-midface-area-our-experience.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/143/jaw-and-neck-contouring-combining-procedures-for-ultimate-beauty-effect-with-threads-and-calcium-hydroxyapatite.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/4926/conversions/resized0573.jpg?Expires=1694848422&amp;Signature=NvBGrHoXV8x0pTRKfjVe8NsZ95BwUr0unueWVRDpdNoOvb9auhUsTP9PBrSu9NCuBpw7~38VdbOYYfAraThlDryzw-9E5HXlgBznoKQrxX2eaAvxqzizNt~qIjq8tDfesmZlDsdhsBqpbuVqL18a-EOAd~AbTXcVwvQNLQnq93CUAYXMqCvG6sJiHxTUQZfaIk539bxqF4P779ai58dwukR2e31u3O7ejwbBIIFZClO8zf3gyU9MTNKw4~aUHevrxdjomGm0H053hgR3cQ8ifXYNkDK4aY7Sp89fdve8uqvOZYC8vS--6PK~dFzULncJSW-h9VDPv4deSd9VI0N8ug__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/143/jaw-and-neck-contouring-combining-procedures-for-ultimate-beauty-effect-with-threads-and-calcium-hydroxyapatite.html" class="title">Jaw and Neck Contouring Combining Procedures for Ultimate Beauty Effect with Threads and Calcium Hydroxyapatite</a></div>
+                                        <div class="date">15 July 2019</div>
+                                        <div class="description">
+                                            Jaw and Neck Contouring Combining Procedures for Ultimate Beauty Effect with Threads and Calcium HydroxyapatiteResearch Article in the International J...
+                                        </div>
+                                        <div><a href="../../post/143/jaw-and-neck-contouring-combining-procedures-for-ultimate-beauty-effect-with-threads-and-calcium-hydroxyapatite.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/136/advances-in-plastic-reconstructive-surgery-aprs-journal-published-our-article.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/4902/conversions/resized08b7.jpg?Expires=1694848422&amp;Signature=fTCUMsNsjYTpzZvjBsJvUvzmu9zB5cPAn-oKdMW806IpGgb1DiO67c-~lCuy8iMVqilT4ZVmSKBSKfiIuBad~LZaHc3kyu~V3WdDQURVEJ63hMDondb7BlBTA9SBAVfN5SkXSd~YzWvsI3uRLVUIRpSYE8XJfTzwQ81nYyEdOJGldbTQBy-1WWRouQsupfOXwlMxKat3J-f2TfGiurT-KgO2DmwA7g-aJt1fKkbnYL~IjYCMCamAjkjlxT1xl3Apu-y2U-L6n5tiEOnsZ6JvD9omzBreW9ec-UT1bTWgEE1qZQb2mDvZ9gQHhK1TbhCBiEKknuypOB9M8gFlOthyNA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/136/advances-in-plastic-reconstructive-surgery-aprs-journal-published-our-article.html" class="title">Advances in Plastic &amp; Reconstructive Surgery (APRS) Journal Published Our Article</a></div>
+                                        <div class="date">28 June 2019</div>
+                                        <div class="description">
+                                            We are honored to inform you that the scientific article by Dr. George Sulamanidze, Dr. Albina Kajaia and Dr. Dmitry Nikishin Effectiveness of using P...
+                                        </div>
+                                        <div><a href="../../post/136/advances-in-plastic-reconstructive-surgery-aprs-journal-published-our-article.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/112/evaluation-of-the-effectiveness-and-safety-of-absorbable-threads.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/2553/conversions/resizedf416.jpg?Expires=1694848422&amp;Signature=Z7YnAnL6DAZVHh9E7ovHCKyjKCFrrV2yUNgg8yxX6V4MV1CpLS~tNxy4nYRlqu9rdZDcYog69svdjTDU~SBvsFhfQkVeXmee3uZM02VXmLPhd33mq3GVEDH6uusRQAhZb5IVEaJTQxJwt3CB8o30cmIjomMS-vAjArTd6UZaCwCB2KWSTwkp3z8XZWHrc29kneE9gwsOMrfMS6SGJZOVACvbYzazcqmVlBi-5yABZgNjs60Uc59DjxdZaxESl4KmV217qSgyfRUpxIbzJswx4S0FkONHQ0IypIItZwPm-bT4ez2obZmvURlaGGhyYxNCPp1Vz4~JQNzXRyI9EEH-VQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/112/evaluation-of-the-effectiveness-and-safety-of-absorbable-threads.html" class="title">Evaluation of the effectiveness and safety of absorbable threads</a></div>
+                                        <div class="date">6 December 2018</div>
+                                        <div class="description">
+                                            &nbsp;Evaluation of the effectiveness and safety of absorbable threads, made of polylactic acid in combination with caprolactone, in age-related chang...
+                                        </div>
+                                        <div><a href="../../post/112/evaluation-of-the-effectiveness-and-safety-of-absorbable-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/111/midface-thread-lifting-method-of-internal-suturing.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/2538/conversions/resized16e6.jpg?Expires=1694848422&amp;Signature=fEOSRo5k4ZJyEADmJl7o4lQN8kN1mOXj1u23HaX4nE8~wk0iYbJGbAPQ1uZKjOLQYD8NmBeqYNUAjJ5iJ1en0wg3j7pj43KV4IMJjDKylNiFU3y~jNag1SjLcDQWvzM878tyAJI1XQeMVFjIHkahyMX5CmlP2BhBHmqTof25BR0zgH7GdazBZVvGdGTYQzS8hGmD6ARpDppPmLPaufLwN~7mcVeRLMAicytZQLDBAtl-u2mXkSk1t7DwUOar-gRAL8GebnIQI2FsHn4tyTNRaD6sZcXdcFsX-XIaI7vEfBcnY61Vtd3IxzPb4LQ40bUWYK~B6wigGkmajUP6Xt3Sng__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/111/midface-thread-lifting-method-of-internal-suturing.html" class="title">Midface Thread Lifting: Method of Internal Suturing</a></div>
+                                        <div class="date">6 December 2018</div>
+                                        <div class="description">
+                                            Midface Thread Lifting: Method of Internal SuturingM.A. Sulamanidze, G.M. Sulamanidze and C.M. SulamanidzeIntroductionThe past two decades have seen r...
+                                        </div>
+                                        <div><a href="../../post/111/midface-thread-lifting-method-of-internal-suturing.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/110/how-to-avoid-earlobe-deformation-in-face-lift.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/2527/conversions/resized676f.jpg?Expires=1694848422&amp;Signature=SRBLO2r10gRNuX-BgCn2r7G3K8WWuUK4ZSgPIjIV~plnRVUTO6PvfWKO3HioC5Ck4629WxVKhMzPUpuWNGgGBZykODm6GnCNuFwlVkJ-MZJ2Ulfc3QQl9IKCux9XLuV-5zGEvqJS1ncUbFhAhH8VAZu4y00kgIQXOtFxfPd~t7smNJ-foNaxYCub1VUxSCsAAL2WqqDnD6UYCFjB47vp0vAdX-gWiOwkQ~w3qIabC~KGPeDJ7ivhPmvcZDc~02gND38OQovAlS3U7PWs9qA0uc6QMBTwFA5Iv~i5aX7R5LUCQrVxLuP5OUXa~gNMEY~JwJVrAXpmaou8NuLbD5abzA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/110/how-to-avoid-earlobe-deformation-in-face-lift.html" class="title">How to Avoid Earlobe Deformation in Face Lift</a></div>
+                                        <div class="date">4 December 2018</div>
+                                        <div class="description">
+                                            How to Avoid Earlobe Deformation in Face LiftMarlen Sulamanidze •&nbsp;Constantin Sulamanidze •&nbsp;Georgii SulamanidzeAbstract&nbsp;Background Durin...
+                                        </div>
+                                        <div><a href="../../post/110/how-to-avoid-earlobe-deformation-in-face-lift.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/108/subcutaneous-tissue-reaction-on-poly-l-lactide-co-caprolactone-based-threads.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/2526/conversions/resized49c0.jpg?Expires=1694848422&amp;Signature=Bl5NR2GPibIqlEk~H6lyBTwF6mS2l-nZ8gH17S6L8js6TfDiOEFOjbQxiQpWeXGFDUg5AA~3KrEo-R-Y33SF-sAXgbtiEc3uOEc5oXJFm2U2bf-A-DK66qPlUGQucZIe350HZhUQgd5IhEeNbdwnnR8Q1713~tP2yp7BFp2MpeNNvplMTzQq1e~0PCrrJrVj19urWNhrv80YsjFa9a0Yn-tze-UoQSFNvcskgTywWSaqkIumQSmIc~K6CkvwIaeJ2aQO-X61pUwpnWQwTOLfnrzeWO6l0yTIPuYWMg5cZ1v5O87Mf53x4ZyRuuVZUCvXrOJRp23RUfs4qfO4KSnp0A__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/108/subcutaneous-tissue-reaction-on-poly-l-lactide-co-caprolactone-based-threads.html" class="title">The Subcutaneous Tissue Reaction on Poly (L-lactide-co-caprolactone) based Threads</a></div>
+                                        <div class="date">4 December 2018</div>
+                                        <div class="description">
+                                            Abstract The thread-lifting procedure is gaining popularity all over the globe. It is a mini-invasive, rejuvenate procedure with a short downtime. Aes...
+                                        </div>
+                                        <div><a href="../../post/108/subcutaneous-tissue-reaction-on-poly-l-lactide-co-caprolactone-based-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/107/facial-lifting-with-aptos-methods.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/2505/conversions/resizedadcc.jpg?Expires=1694848422&amp;Signature=P-r4~aC~7FBmi3Z8CS8U40D5g7jAEM5EvkB43QlW8URWZ8m9QoKb62PhQjNIgppZ3kMInyb21nZNLyHV88-RuhSMqrx1tKyKOL4MGNFRd4~O4h5qrHQf9UJ-s1xnFELM8txrkR7gKxqf5RJjS-FBRA9Oqd5Fzpe0xAzSvJjjafElOyhZgLisS6WO-YEB0nWsOgggIkwUX7vQM04pmYHpg~Ixsm2uCUtjNkS1tHKZAHrgkmdcNf9HFPLLm0k0NXbIQt3bM70eNqewZSTFb1f-D04xq070ktPCmpjL6CF6BALSBSUTSEgxPawdNNHvjYru9Ol9ZddRSWzX7Rug0Ks9bw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/107/facial-lifting-with-aptos-methods.html" class="title">Facial lifting with Aptos Methods</a></div>
+                                        <div class="date">4 December 2018</div>
+                                        <div class="description">
+                                            Face lift hitherto had been a complicated and elaborate procedure. The introduction of threads to lift skin has been a major advance in lifting saggin...
+                                        </div>
+                                        <div><a href="../../post/107/facial-lifting-with-aptos-methods.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/106/correction-of-face-involutional-changes-by-method-of-light-lift-elegance-thread-reinforcement.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/2493/conversions/resized5a49.jpg?Expires=1694848422&amp;Signature=PIBdKyaFJPRC7BTZIPJyxeFRgWEVt2fKgRkmjhOGTQE5hkLe2XVSxscosOkaJsL5RbhRlKwMCpmNsmUSx32PGwVEiGurnMtLaPp6UHFxN~xmdCAaZ4NFvflCCPQEZVxmBb7a3Tsi~yv3WeluJKZATgsqtH1c1b~4Np6QAXiDFpP06mFJaXk9ToxPQrWUy4hBGa6I81q5asApZZquNkaakLgYn2drf3vKw86qSFv0uIphQ4f2tpoIFANiA5JUoQLo2zeMFCXEwk3FeTN7NAd0dx7DJdkWY0j5oWFrt-bI~ttOfBEOROOzJEDCqZf4nC9GTZC4kNG36KDesXEM9S7-1A__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/106/correction-of-face-involutional-changes-by-method-of-light-lift-elegance-thread-reinforcement.html" class="title">Correction of Face Involutional Changes by Method of Light Lift Elegance Thread Reinforcement</a></div>
+                                        <div class="date">4 December 2018</div>
+                                        <div class="description">
+                                            IntroductionThe technology of face rejuvenation with the use of polylactic acid absorbable threads, which appeared a few years ago, has become a follo...
+                                        </div>
+                                        <div><a href="../../post/106/correction-of-face-involutional-changes-by-method-of-light-lift-elegance-thread-reinforcement.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/104/experience-in-preventive-measures-and-treatment-of-complications-at-face-and-neck-thread-rejuvenation.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/2457/conversions/resized90ba.jpg?Expires=1694848422&amp;Signature=gld9bgjEgm3SQopgSlKyJy0UfDU2THk-3LegWTrEQz-SjbiRMvSowfUdtPTKfm8Rz7RNhhPpKA87eLs1YDyQJEKhd8hQy-VSxsoPfc15YjDc9K0vy4btDRL-y63Jvs7Ops8CZFog5k33PEvulfeU0r71khFbjHTVTReQ0u4RmQUtVeUFdne9jZykk~hztnbkyUE80ZSWwhDWdnJwFy8aFScQE2ylYA3lSnrCtstz03xRL~qoFAsqP7oZpTV1EitroxA-AokX1AhPKdaDtoobdMeeMPaAA7CRuO1TqK-nx8VpyyPZxYAn6Wy8nOb2cUcVAm7wL2poxjlqOcLHt-3D5A__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/104/experience-in-preventive-measures-and-treatment-of-complications-at-face-and-neck-thread-rejuvenation.html" class="title">Experience in Preventive Measures and Treatment of Complications at Face and Neck Thread Rejuvenation</a></div>
+                                        <div class="date">3 December 2018</div>
+                                        <div class="description">
+                                            Introduction&nbsp;Face and neck soft tissues lift with the use of special threads is a relatively new and not a thoroughly studied approach to aesthet...
+                                        </div>
+                                        <div><a href="../../post/104/experience-in-preventive-measures-and-treatment-of-complications-at-face-and-neck-thread-rejuvenation.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/88/elimination-of-aesthetic-deformations-of-the-midface-area-our-experience.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/1914/conversions/resized9fd1.jpg?Expires=1694848422&amp;Signature=R2buFm-qDNNjprgUotleff3E9cHe4pZmthrfpjSQZIn04EOuiOl3urhCwSga-OfLRRNrgv5XcSLLPmV0G735zFxE5X8M~XcLZdRHIEvJKhOscw6cDyISbRupu37AZr8SjEszeP2uY-NtM9tLovYS~6lX-vEasOJTOXIMpCm3tE7PaAliizzS0hiv7r9i-uGhYPkynHnrjvgo-eYQOdWof3RBH9JZg7r7xHrcQnAWHU4z9xs5E58~AbtkJc8xmdnShGLEFXM1IY4aaNHv6AoEk3lud0VT3xJzv3jiMUuymdzTdczWWxmwuG1TH9Gb9AMyQmegr4Wk0pJp85tIck99hg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/88/elimination-of-aesthetic-deformations-of-the-midface-area-our-experience.html" class="title">Elimination of Aesthetic Deformations of the Midface Area Our Experience</a></div>
+                                        <div class="date">20 July 2018</div>
+                                        <div class="description">
+                                            Marlen Sulamanidze / George Sulamanidze / Constantin Sulamanidze&nbsp;&nbsp;AbstractIntroduction The aesthetic manifestations of the aging process in...
+                                        </div>
+                                        <div><a href="../../post/88/elimination-of-aesthetic-deformations-of-the-midface-area-our-experience.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/87/aptos-suture-lifting-methods-10-years-of-experience.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/1888/conversions/resized82b3.jpg?Expires=1694848422&amp;Signature=XyvvUT8ydcgmTI0u2WtHrLHzTBrWsKIoxPDwhkt0PjQ8mOxxbJMh8lNWO-vVOsZGUkvSVCotna4AIQTTzuPnpiME52Mfiu2moi7O1TSq0S5fNJbL4sJ4~2546vrvHyI-KORBcFWGB08tX2mFZHOFGxzIN1Op-foEdVgIYJ4NQN0mCFbie5PMksaHI3I4jDayiaAcOrMbP1ICON0FVO~QcfPuv9ZWSsiSuS6N0ixiMZW-sDA51mWvaPJ6u4gUuyH-DJknedEpSOR0ma2nSdOTq9SmYlPYHAK9gL1GIL6cjWNlEYwd3qzgB1Uy3Zs-FVxxkymx~faKsXUTPiq793gHwg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/87/aptos-suture-lifting-methods-10-years-of-experience.html" class="title">APTOS Suture Lifting Methods: 10 Years of Experience</a></div>
+                                        <div class="date">19 July 2018</div>
+                                        <div class="description">
+                                            Marlen Sulamanidze/ MD, Georgi Sulamanidze/MDThe process of facial aging is manifested as uneven ptosis of the skin and subcutaneous tissues located a...
+                                        </div>
+                                        <div><a href="../../post/87/aptos-suture-lifting-methods-10-years-of-experience.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/85/facial-lifting-with-aptos-threads.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/1829/conversions/resized9d64.jpg?Expires=1694848422&amp;Signature=OblBCgEHwoN0TBaoOmTszlK3t1ftX5NU4zGtLG1dbMCJq~o0ag~c0Ngg2Rdhvoev3u~-~ujm4j~aeHzPNf2IivaftA8m2d8NOKJhVScR8KRS47appGQCYjwkQXqG8iWSVdLOxI-x5ift~AitcOdL07-eXS6Y1OXDtha5VVbJ-geCUnQG4V1gwwIkhqmVDpKXsWpzpqtG8R0reiY6J18ernfS18eM4CNpn3Et-F6Eh-C5ACGxF10bN65FmvUxYHbMVS~nLzJmYlaCe-sY6BXoGIxXnrT9uVeCChofjOUh8B5I0mudciARMZgizoYsXFjDMkmyknIBoCAZ6-S-Q3RvCA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/85/facial-lifting-with-aptos-threads.html" class="title">Facial Lifting with APTOS Threads</a></div>
+                                        <div class="date">19 July 2018</div>
+                                        <div class="description">
+                                            ABSTRACT&nbsp;The aging face has sagging tissues that have previously been treated with surgical facelift, brow lift, and neck lift. The use of APTOS...
+                                        </div>
+                                        <div><a href="../../post/85/facial-lifting-with-aptos-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/86/removal-of-facial-soft-tissue-ptosis-with-special-threads.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/1842/conversions/resizedbb3b.jpg?Expires=1694848422&amp;Signature=OYE3Ok8lbGze-6Ea6ZhxE9apWZFfEHFaiUoXcB25EzS28HDe0SOCySOtS8Hs21Pms6bvH69FKjmhP1FW2hABgrS~q876BDQoq3upG5uOcAWmuKunAMEmALxzSljsNoqXQG6w7u~u3g5frARIbgLrtAryKwt7UGFWC5QkloLlWHgJQID0l88FMFtKaYk4FgtghKvTDk~M0nQOhB~JaZwj1Pg0~uks36UlRZDy43yataOEh15au56iJ~0UFs~yVPDxopPDIob4mBZLNgF90a-e2j~BAz2xa5mTt5nyFvCZH89F7M69zh~kk2gzprVDnItte1XjEcjcAwrStc~cerSxlg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/86/removal-of-facial-soft-tissue-ptosis-with-special-threads.html" class="title">Removal of Facial Soft Tissue Ptosis With Special Threads</a></div>
+                                        <div class="date">18 July 2018</div>
+                                        <div class="description">
+                                            Background. Facial aging leads to loss of structural integrity. objective. To develop a means of supporting ptotic facial tissue without facelifting.M...
+                                        </div>
+                                        <div><a href="../../post/86/removal-of-facial-soft-tissue-ptosis-with-special-threads.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/84/wire-scalpel-for-surgical-correction-of-soft-tissue-contour-defects-by-subcutaneous-dissection.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/1915/conversions/resized92b1.jpg?Expires=1694848422&amp;Signature=h1gTboDpVPyeLLQSBSdl-EOduczJ3Av~aQmoAV9dDdL0bJNfZ2NLXt5MUfE2et6E5lFDuyCTHWGAqOaMx8X~w4qzq6ZQWneQbrnXpcRm117~UmUPb40GtqC7AfcOhwWtf1I3ZJ5jLImv0UnVtZrMTOwOzYSWW22tm~N3xauWxvXzDu09-L15YE4wVHL6RsOzBdJ7q4nkDrYnvtpvUB7exL3EUzXEdi5qf5JCvLMKJWYRn~yWLsM~ESV3D85inuJzdtpy1zHeb2q64GfvVbmdEccTPVqKkiDMCj5oHKrgHsRbmwkd0hCz0OT4HPBKaNRiBou7yUEHsGB2YgPa5QenPQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/84/wire-scalpel-for-surgical-correction-of-soft-tissue-contour-defects-by-subcutaneous-dissection.html" class="title">Wire Scalpel for Surgical Correction of Soft Tissue / Contour Defects by Subcutaneous Dissection</a></div>
+                                        <div class="date">17 July 2018</div>
+                                        <div class="description">
+                                            Background. Increasing demand exists for cosmetic&nbsp;correction of soft tissue contour defects. Treatments include simple tissue augmentation techni...
+                                        </div>
+                                        <div><a href="../../post/84/wire-scalpel-for-surgical-correction-of-soft-tissue-contour-defects-by-subcutaneous-dissection.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/73/3rd-generation-aptos-threads-with-ha-for-simultaneous-lifting-and-rejuvenation.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/2605/conversions/resizedb488.jpg?Expires=1694848422&amp;Signature=fe3JSrHd3-zYV3IrLw4HoMNOPgcG2QvG1SLQDHffmJhX0-yN1dRheVKJJmBr2p6rrLplek0GpFKMrBMZ-HiiAJj07ceC737sJID0zZKmsBPmfCghl7~I92u3Wi~7DSj6l7PUZdO10dXthXpSs4I4kgwpyJlBbf~WWQuUJMURTEhgHLkAIk07zuEr3tH6hU2q-2EejAKL5JNwEieRAgbjsILfNVkez7BI9k6mbhh95NSwT4JeJSZHVlLoa7zdCG3hG8ULbMd3MdOoKfYnkIMcFnY4~0pajrwEIJB7PahD-BbP-PuvzZHJr3mgfjN0dVnZx2o5o0nodkdQaKzwkbZIVw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/73/3rd-generation-aptos-threads-with-ha-for-simultaneous-lifting-and-rejuvenation.html" class="title">3rd Generation Aptos threads with HA for simultaneous lifting and rejuvenation</a></div>
+                                        <div class="date">17 May 2018</div>
+                                        <div class="description">
+                                            PrefaceThe history of thread lifting starting from 1996. The first devices and methods invented by Dr Marlen Sulamanidze were intended to simplify sur...
+                                        </div>
+                                        <div><a href="../../post/73/3rd-generation-aptos-threads-with-ha-for-simultaneous-lifting-and-rejuvenation.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/67/beauty-contours.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/471/conversions/resized1bba.jpg?Expires=1694848422&amp;Signature=eqY~~~rma70Ff7lD7gCmKMOBWhMZC3IZwWYYhSnjBe5PT1dPEXPZps9uk4M3f6TeepkcMMO3um4bius4IwnV6JbxYVuQaPfY2Yvyor~-rkQAckwraDYV1FXPtIO~0ugLOnIAhx2~jLuu0hhn2kSje9mSwzrYnOcK7RmqQNKcvsj1TKdka9C0Mav9HNIpkmlPwmYiFxpVAFlf3UMbsi9Jmlg-2UONDZt-XuwD487RT~synS5fDmYypjVNODH0jtcg5ysEOmGDSEJb4-k3Mx8S7VEVvAuaNump4dbg6fnhvhf-Dp6eSQLomIk7xKBdiObxB1gcoOQ3ij~cc0FVn9WnSg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/67/beauty-contours.html" class="title">Beauty Contours</a></div>
+                                        <div class="date">8 May 2018</div>
+                                        <div class="description">
+                                            Protocol for jawline correction and removal of excess, saggy skin in the submandibular area by using thread-lift techniques.Preliminary stage The Mezo...
+                                        </div>
+                                        <div><a href="../../post/67/beauty-contours.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/64/performing-thread-lift.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/417/conversions/resized021e.jpg?Expires=1694848422&amp;Signature=Ns4gb5imlXxFz0JG7bFb39Ix3UVanC9t7r1Q4MKw64OedZmZ9O~C8zT-ib8Vwn832ThjhD7xqCmyxGe19MRcyics~T1dq02cx0xrAbgrspOS9z5qOYXi8FqDF3e0I~oG9I25B3fegr7jDmUrRK7EdcGkJVo~-~b1-JQpHFeSmgD2vbHl5u~z14xJ7hQGWigdXkSPjAWoo3xUAq7cnMREHrrAAIwASah9wXAFg55TuhqpY~Bn3a36x1CUsCyQ4O7DVyFAdHANmosUlnIhBuKG5cAm7NhNW-NvzWTs-bgbb77mS6cH~kkS7Eb3NPr6ZJgk4iC87TD0HAs88GvfN7S~1Q__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/64/performing-thread-lift.html" class="title">Performing Thread Lift</a></div>
+                                        <div class="date">8 May 2018</div>
+                                        <div class="description">
+                                            Dr Albina Kajaia shares her personal experience of using polylactic acid threads and advises the best methods for application.After the arrival of sur...
+                                        </div>
+                                        <div><a href="../../post/64/performing-thread-lift.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/66/aptos-talented-beauty-renovator.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/457/conversions/resized73a6.jpg?Expires=1694848422&amp;Signature=gpbymIqRBOxjWi0mNcZw4ozgy1qr3im1Vpdj4g9PhlMsb5cl-OglJ4MJu-FNi9Sye62xN6SxAveSuK-IrcgY6aqWtnj0uih8Vha8PWoL1FE9JKgdyv5-770u3w~uUM6RIJGMcU2sSj28V0q~cjw~2IH3E6z0ZpD0-leuC8gHlcAlOaULxPM3Gm17KzmtOW3Lvl8qtJUaNe2jk7ZxYU8kaarCqewqb100hQfV62~ladLF5jCz0bz-GI3FlFko5g9bajoNMFR5MiVyCjchGR3IRQTzuM6Noeo5e7grlzin0iM5inlSb7JMuE9RoOd5wXrUAXo1ytASDxQekDvurB6gFA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/66/aptos-talented-beauty-renovator.html" class="title">Aptos - Talented Beauty Renovator</a></div>
+                                        <div class="date">5 May 2018</div>
+                                        <div class="description">
+                                            Thread method of rejuvenation has become extremely popular all over the world nowadays. And its popu­larity continues to grow every day. How to attain...
+                                        </div>
+                                        <div><a href="../../post/66/aptos-talented-beauty-renovator.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/65/evaluation-of-the-effectiveness.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/449/conversions/resized41b0.jpg?Expires=1694848422&amp;Signature=irUKD80tC9CRfM0lBhkUs5D1RV~8yFi4-GqclDOqNN2hmZpN5-OBBSDZFWYyUlDNlHvDr3IcKYXALZSLUD4DDIK7-~WhGEu~PwDncKlXXvEdKpc7MrRSSM5YGUG-tn~2aYGj61niD24uOpr5V9Rzxvet96S13pwyg-cDWpMV4VMfm0UfYsQmjNGgvj3vMFey2T8TIsO9woqF5cg0OAMj4Mt-RrsT24kN5ZyhkbR1ov7rhO1fvnmhXX4uvBh~EBFIf~ArL8N4jzJE6jk8ESF9XFV9K0Ro63I5UKIIEuVGXEZ2CsC4FX~TIKBvm0XSeJvpuWMuVHJ2LpcMJ1PcAzFH7Q__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/65/evaluation-of-the-effectiveness.html" class="title">Evaluation of the effectiveness</a></div>
+                                        <div class="date">4 May 2018</div>
+                                        <div class="description">
+                                            SAFETY OF ABSORBABLE THREADS, MADE OF POLYLACTIC ACID IN COMBINATION WITH CAPROLACTONE, IN AGE-RELATED CHANGES OF THE SKINAbstract The goals of this c...
+                                        </div>
+                                        <div><a href="../../post/65/evaluation-of-the-effectiveness.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/63/aptos-excellence-for-facial-rejuvenation.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/428/conversions/resized7b42.jpg?Expires=1694848422&amp;Signature=bAfcdO6y55xuDGkwvFO3OZIcO9VSiGVvqizCJWV9ZEhfxJv2wllCZSKa7cPB8kL3BkO3ifBXadVaKpym-h1xHAqX~IwOCtFzBHRrq9Q77p9Dur-RqwFicOxBdCmpATdyxqUXNARQtzQqbI76gQFQvwOcJGiBv0bELSjpAlAIL6xFpo6e9Qcp92UvlhrUp-aB6e~TeJsOSjh6W0zbuGn-jN1wIHbKmpliSjeYAXHp~9aARXGywqAyX9oU73Rf8AkjxNFed5n2OjdMmZTmSeU2N0Gk88~CtqTuuUCnj8C4YxkZUzXI~4Ded1ZcVqG7HqDnXaaa0QyHqxQUZFHdbSk2AQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/63/aptos-excellence-for-facial-rejuvenation.html" class="title">Aptos Excellence for facial rejuvenation</a></div>
+                                        <div class="date">2 May 2018</div>
+                                        <div class="description">
+                                            Since the early 1990’s, surgeons have been evaluating new surgical tech­niques for lifting the cheeks and jowls. After the arrival of thread-lift tech...
+                                        </div>
+                                        <div><a href="../../post/63/aptos-excellence-for-facial-rejuvenation.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/90/mastoptosis-aesthetic-surgery.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/1932/conversions/resized55c3.jpg?Expires=1694848422&amp;Signature=O1cb6vX87DrgJkZbjgVxgPDdB9bZoNji5txPeg7LATSUoInZKoJtmbfeWM3bfdMqFLvwXl-8ozHU3P3X2HmRBD1PfDe9tDz5ViQMmpxcNl1eNiLqQ4r1osReonGOnOui0kvTQBH114SyzFHgO7MMCPTa5nrnq9IfAGTWxNPZaYWHQEZ4X~FAR49pYFEcYAyLMGJbzl7Hkc7N81n4EMmstQX08GjTPVB6L1DPLlag0-suvmMMi5EKQ3RszWwtt7lPwWSS8uSvg1FUqwVrXdH55kRH3zqrgjOMX8n3K1SvKZQ2KY31XgFkmakmvZLo0ydg0Ky-c5t9YwRa4u-rJBbuOA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/90/mastoptosis-aesthetic-surgery.html" class="title">Mastoptosis Aesthetic Surgery</a></div>
+                                        <div class="date">1 May 2018</div>
+                                        <div class="description">
+                                            
+                                        </div>
+                                        <div><a href="../../post/90/mastoptosis-aesthetic-surgery.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/58/threads-and-aging.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/393/conversions/resizeda817.jpg?Expires=1694848422&amp;Signature=pCbIFd67IehLyOwjtFUnY-YlWAUXztDnMtLzdvMSU12lLCEuoZ-SGaf5tJokow9ohXYojWUjkdaB00PTRYX5glAWYnmGRDuqLMlfSwFaMEyaIJfx8V~-UP3AAbmf9ImGtG1N0eoo3VEo3qG4iBX4SUNf2kWlbY0BQkocKEWuUw9~Ilo0vU0Kri-zYIzyeD~Vl4us0dNarQhOe9sbNJ2FYSnRf1DOeGK7xPBzw1PKp84LbAAJtRrmRr442KOqFJCcwlsblY01gMdP2-ycAcAZyByLA4CQU20gOndpEtiAllKnBy~ti~SiCr80Ldb5bozjuBKD8y9YBg3m4gJoA3LvpQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/58/threads-and-aging.html" class="title">Threads and Aging</a></div>
+                                        <div class="date">29 April 2018</div>
+                                        <div class="description">
+                                            Dr. Albina Kajaia takes us through a combined approach to facial ageing using Aptos threads, platelet rich plasma, dermal fillers and botulinum toxins...
+                                        </div>
+                                        <div><a href="../../post/58/threads-and-aging.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/40/our-experience-of-treatment-of-large-skin-wounds-with-excessively-tense-margins.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/41/conversions/resized62b6.jpg?Expires=1694848422&amp;Signature=TT5ucnX1ZFAgbZyiuJci0sh~w7SI4OmKk-g31HibV9M9vgrJH8aj6RfEHTHJlMyMbkbwnsL5Miveh50aPkbeszC8FReq9CEcQKOiOqAnoqevw-Dmy20gYdfNbTP3HuB4kKxI054gZbLAd1ezZK7yGIhpLhdw6uJVvquqKn8-uPXXBK~~W72itj1wryorBrcWTVZBqOaIv~Or4WVFNx9d71eqtb2xIvfsLMjT4-qyYNopZjqSlrzJqPoJ~KHjSzlusV1jhhYrnzSWT2~rWQPD2E6gcdanVg4yjsyTbkIUNXmVDJo00hj-~QqjKK2E3TTN62dfAErA80dC8HLc7oX3AA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/40/our-experience-of-treatment-of-large-skin-wounds-with-excessively-tense-margins.html" class="title">OUR EXPERIENCE OF TREATMENT OF LARGE SKIN WOUNDS WITH EXCESSIVELY TENSE MARGINS</a></div>
+                                        <div class="date">28 September 2017</div>
+                                        <div class="description">
+                                            M. Sulamanidze*, R. Adamyan, I. Gulyaev, K. Sulamanidze, G. SulamanidzeDepartment of Clinic of plastic and aesthetic surgery TotalCharm, Moscow, Georg...
+                                        </div>
+                                        <div><a href="../../post/40/our-experience-of-treatment-of-large-skin-wounds-with-excessively-tense-margins.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/41/about-articles.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/43/conversions/resized043e.jpg?Expires=1694848422&amp;Signature=j3w24zXydW3~FiLP2~7HYq0dj5xPPHN9BDfATnC9CIGpIs9dYqNCaWs~U9RKwsD4QEu52xoRrx3DlR-zR780HE~sP1O633deuRQhXj3~6~MDkZeKVTUKqemSJ7BIt-3gfmTpDFw25VS2gsyHN-9xD-hwMPm~568-tu7ztJrngpbtUf1X6b-2Mm5K1dii~ihtKVrtakx37KPuXwo02Kv-wdSoQlsr9Er8zy5eDNY1J8FIlhOsFGCltWl97jHfF6~vANp61hmYxx~LA1y6E6jp26iZCVE9ifLAuudPccmxsEnlkCwKpsFt~KPtuQb2v6D8ogQ9HfJhsKY8vR6VgbZErQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/41/about-articles.html" class="title">ABOUT ARTICLES</a></div>
+                                        <div class="date">14 June 2017</div>
+                                        <div class="description">
+                                            Dear colleagues!Aptos Scientific department presents recommendations for the types of articles to be published. We hope, this will help you understand...
+                                        </div>
+                                        <div><a href="../../post/41/about-articles.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/44/threadlift-complications-reporting-form.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/44/conversions/resizeddcbf.jpg?Expires=1694848422&amp;Signature=QASGXHO0ygIetUtaeX~Bwks40SbFy0hJiqTJXqpT6nF-HwZEtK7ikrpjisI1bBX97NOJB99oF~KY9rcFcs1SOf9~MgaYjjxpuSKI1lAcbjx4wKwclExfOmOeIog7KWfbaWLL6X5LzxBsp8fTJr7SYv56aPdskNfHsyzaCqAiC8SX4-oSeukXRrKZ7kPBHC~h6wkMQ1gQHa9MjsD4lvl~0JJlzc7zTALncscNn7GD-gQwCXWnoklZJTZ00hOmbsprxyjwq5rYCnDl7rjhcI5YUnf2cHG~ACR3ZMQB3KQjjXbpg9muFEmswNd27DHGYH3ueq7xHf~wcwvNARXiDT5SKQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/44/threadlift-complications-reporting-form.html" class="title">THREADLIFT COMPLICATIONS REPORTING FORM</a></div>
+                                        <div class="date">6 June 2017</div>
+                                        <div class="description">
+                                            APTOS THREAD LIFTING PROCEDUREComplications Reporting Form&nbsp;InstructionsPlease complete this Thread lift Complications Reporting Form for any medi...
+                                        </div>
+                                        <div><a href="../../post/44/threadlift-complications-reporting-form.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/37/aptos-thread-lifting.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/38/conversions/resized7f1c.jpg?Expires=1694848422&amp;Signature=YmYCiALXLmFYhDcJ6fey4dFtn2c4M3FYh8geCL426SuJMrLmeZTy24ISx7zLMyyrtnvEYQ2HsCr4-d6-Vp8MFymUr4g9NTdWVeDBE1ndFAaNI1pcgjc-XUxMtX3V6yNjsYbPO6RpMxrYSgw8ahQdP7XGr4yAVtcWbV85Dg0L8S0aG0SG8VDf5vtDsl42m6U3fmk1kJtYb~8nZAT1IKTnmVSEKMHjHrZAuUAYRJPul9039WHcmzdfDCdi0XEu1a7AOQD7r18sar5sUUSe1CnUBKYjCkYTxPBvt9s818mpHgi7yQ7g8PHqAAktPKRxcEfdpgW5BiXB4ZiGopRUMk1law__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/37/aptos-thread-lifting.html" class="title">APTOS THREAD LIFTING</a></div>
+                                        <div class="date">25 May 2017</div>
+                                        <div class="description">
+                                            What you need to know about the non-surgical treatmentIf you are looking for a non-surgical way to get younger look again, then fastest-growing anti-a...
+                                        </div>
+                                        <div><a href="../../post/37/aptos-thread-lifting.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                <div class="single-news">
+                                    <div class="image">
+                                        <a href="../../post/38/aptos-threads-visage-excellence.html">
+                                            <div style="background-image: url('../../../media-global.aptos.world/media/39/conversions/resized45df.jpg?Expires=1694848422&amp;Signature=Gs~V~uXrz1AnveZ5K5PEl7tFy~1lWW~EK1gs72Ylmg7I7SHt73YZIFtaue23UqcLBB5GQsGabSC1nKhGbbaShoEBuJClvhpEpXBSBSQvOTb~uNp0SU1qP-vvpgfmapOuS8gPLeQaXEVeGqGZpsEDOgw4t5Hg~mBLR9iX4OrY1lnSDke0g7bppOWmySlovnJRkgdSC6VlIcFAwKZ9mnm6eLJPK67M3GN1nOaHAF0likFgUmBBleZFjOi-mQXtX5zd2tBWZoUUn5JD4IA2jZm9qMZa1hrkxw85Kti4HWXjU8qY1BCDZckakx5ohUUI0TQlaHCVi2HVACebYmZdUznyMQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        </a>
+                                    </div>
+                                    <div class="info">
+                                        <div><a href="../../post/38/aptos-threads-visage-excellence.html" class="title">APTOS THREADS – VISAGE EXCELLENCE</a></div>
+                                        <div class="date">17 May 2017</div>
+                                        <div class="description">
+                                            Excellence Method – absorbable thread with barbs for lifting and armouring.Visage is new dawn for minimally invasive aesthetic medicine. The threads h...
+                                        </div>
+                                        <div><a href="../../post/38/aptos-threads-visage-excellence.html" class="read-more">Read more</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+                    </div>
+    </div>
+
+
+
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+        <p class="accept-cookies-title mr-4">
+            We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+            about how visitors use our site. We collect the information to compile reports and to help us improve the
+            site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+            where visitors have come to the site from and the pages they visited. <a href="../../terms.html">Details.</a>
+        </p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+    </div>
+
+    <div class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="../../Aphoto.html" target="_blank">
+                            <img src="../../img/aphoto_logo.svg" class="aphoto-other-service-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="../../img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../aconnect.html" target="_blank">
+                            <img src="../../img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="../../asupport.html">
+                            <img src="../../img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo" />
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="../../terms.html" target="_blank" >
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../terms.html" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../contact.html" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    <div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+                <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: {
+                    {
+                        env('FB_APP_ID', '1797333467260014')
+                    }
+                },
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+    <script type="text/javascript" src="../../js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+    <script type="text/javascript" src="../../assets/js/sharect.min.js"></script>
+    <script type="text/javascript" src="../../js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </body>
+
+    
+<!-- Mirrored from aptos.global/category/5/articles by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:28:45 GMT -->
+</html>

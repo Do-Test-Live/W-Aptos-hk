@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aptos.global/post/58/threads-and-aging by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:37:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Threads and Aging - Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="../../css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="../../css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="../../favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0" />
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="../../favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Threads and Aging - Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="threads-and-aging.html">
+    <meta property="og:image" content="../../../media-global.aptos.world/media/393/conversions/optimized5584.jpg?Expires=1694848726&amp;Signature=JUajpSD8e1gj0WDKPyleNKOVa5jRybowjFAvNiPFiQRdq02g0IacGgifrLyI~~~swkH3aaD67rd7QOowk2dfJDg92Vy6Pe2HV7Y8KEEQkITBvpSAzLDUgCmchgcdCtiohTBqbolBA1KOZYPJzRkRlXhA6g~S85~zFZEeFj97QzhEyRVdHVVzWYZ1YUN99Pk9ic6Qua3ZkiYay-zMBXaZ9l2yPmWwxqlOswaHQHcEvDD27Odw6YhjyTHOrY~sVBZC1N7XQ-vV5d2E8EQzTifOi8CPBZMbly6-3LJm0Xu~Rf4MOUuXwXtGWDBKVCeXeCKOrq7N95d-bNmxOaOASCfPEw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        '../../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1797333467260014');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading has-navbar ">
+    
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src='../../img/success-circle.png' />
+          <p class='mt-2'>Your Message was sent successfuly</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src="../../img/success-circle.png" />
+          <p class="mt-2">Your Location Updated Successfully</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" >Add Procedure</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form class="modal-body d-flex flex-column align-items-center">
+          <div class='row' id="modal-row">
+              <div class="form-group w-100 col-12">
+                  <label>Procedure Name</label>
+                  <input type="text" id="procedure-name-input" class="ag-form-control form-control" name="en[name]" placeholder="Select Other Option" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (from)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_from" name="price_from" placeholder="From" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (to)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_to" name="price_to" placeholder="To" />
+                  <span class="input-error-text"></span>
+              </div>
+          </div>
+
+          <div id="save-btn-container">
+            <button type='submit' class='submit-btn' id="save-btn">Save</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="loader">
+        <div id="loader-animation"></div>
+    </div>
+    
+    <script type="text/javascript" src="../../js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+    <script type="text/javascript" src="../../js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+            <nav class="navbar navbar-expand-lg fixed-top  for-patients-nav" id="main-navbar-container">
+    <a class="navbar-brand" href="../../index.html">
+        <i class="logo-icon"></i>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">About</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../history.html">History</a>
+                                                                                            <a class="dropdown-item " href="../../about.html">What is Aptos</a>
+                                                                                            <a class="dropdown-item " href="../../faq.html">FAQ</a>
+                                                                                            <a class="dropdown-item " href="../../subscribe.html">Newsletter</a>
+                                                                                </div>
+                                    </li>
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">Activity</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../category/1/news.html">News</a>
+                                                                                            <a class="dropdown-item " href="../../category/3/conferences.html">Conferences</a>
+                                                                                            <a class="dropdown-item " href="../../category/5/articles.html">Articles</a>
+                                                                                            <a class="dropdown-item " href="../../category/6/for-patient.html">For Patient</a>
+                                                                                            <a class="dropdown-item " href="../../category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a>
+                                                                                        <a class="dropdown-item " href="../../intimate.html">Aptos Intimate</a>
+                                                    </div>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../patients.html">Products</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../coaches.html">Trainers</a>
+                                    </li>
+            
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="../../aconnect.html"><i class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../asupport.html"><i class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../Aphoto.html"><i class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                            <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled" href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global/post/58/threads-and-aging">Log in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="../../courses.html">Register for courses</a>
+                </li>
+            
+
+            <li class="nav-item world">
+                <a class="nav-link" href="../../world.html">
+                    <i class="globe-icon"></i>Distribution
+                </a>
+            </li>
+
+                            <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#" class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center " data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="../../img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="../../img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+    
+                <div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <i class="bg-circle-left"></i>
+            <i class="bg-circle-right"></i>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                                                    <div class="row justify-content-center navbar-items-list-container">
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Preparations</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/26/documents-to-be-filled-before-the-aptos-thread-lifting.html">Documents to be filled before the APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/27/what-to-know-for-before-consultation-to-doctor.html">What to know for before consultation to doctor</a></li>
+                                                                                            <li><a href="../../archive/28/cost-of-aptos-thread-procedure.html">Cost of Aptos thread procedure</a></li>
+                                                                                            <li><a href="../../archive/29/how-to-choose-a-doctor-and-a-clinic-for-a-thread-lift.html">How to choose a doctor and a clinic for a thread lift</a></li>
+                                                                                            <li><a href="../../archive/30/the-indications-and-contraindications-for-a-thread-lifting.html">The indications and contraindications for a thread lifting</a></li>
+                                                                                            <li><a href="../../archive/31/myths-and-prejudices-associated-with-aptos-thread-lifting.html">Myths and prejudices associated with APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/37/becoming-aptos-model.html">Becoming Aptos Model</a></li>
+                                                                                            <li><a href="../../archive/39/candidates-suitable-for-procedure.html">Candidates suitable for procedure:</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/10/elimination-of-neck-bands-and-wrinkles.html">Elimination of Neck Bands and Wrinkles</a></li>
+                                                                                            <li><a href="../../archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">Nasolabial Folds: Correction of the folds without fillers and scalpel</a></li>
+                                                                                            <li><a href="../../archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">Sagging mouth corners &quot;wrinkles of sadness&quot;</a></li>
+                                                                                            <li><a href="../../archive/15/eyebrow-correction-with-aptos-threads.html">Eyebrow correction with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/16/tummy-tuck-and-prevention-of-ptosis.html">Tummy tuck and prevention of ptosis</a></li>
+                                                                                            <li><a href="../../archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">Lifting of the forehead with Aptos Threads - Redefined youth and beauty</a></li>
+                                                                                            <li><a href="../../archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">Correction of Lip Contour and Mouth Furrows with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/19/correction-of-the-mental-area-with-aptos-threads.html">Correction of the mental area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/21/double-chin-correction.html">Double Chin Correction</a></li>
+                                                                                            <li><a href="../../archive/22/correction-of-decollete-area-with-aptos-threads.html">Correction of décolleté area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">Lifting of the arms and shoulders with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/24/lifting-of-the-inner-thighs-it-is-easy.html">LIFTING OF THE INNER THIGHS - IT IS EASY!</a></li>
+                                                                                            <li><a href="../../archive/25/special-threads-for-correction-of-the-area-above-knee.html">Special threads for correction of the area above knee</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Post procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/32/how-is-the-procedure-of-thread-lifting-performed-using-aptos.html">How is the procedure of thread lifting performed using APTOS</a></li>
+                                                                                            <li><a href="../../archive/33/does-it-hurt-during-and-after-the-procedure.html">Does it hurt during and after the procedure</a></li>
+                                                                                            <li><a href="../../archive/34/post-procedure-conditions.html">Post Procedure Conditions</a></li>
+                                                                                            <li><a href="../../archive/36/rehabilitation.html">Rehabilitation</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Threads</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/3/the-essence-of-the-method.html">The Essence of the method</a></li>
+                                                                                            <li><a href="../../archive/5/creating-aptos-threads.html">Creating APTOS threads</a></li>
+                                                                                            <li><a href="../../archive/6/advantages-of-thread-rejuvenation.html">Advantages of thread rejuvenation</a></li>
+                                                                                            <li><a href="../../archive/9/aptos-invites.html">APTOS invites</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                                            </div>
+
+                    <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="../../img/icons/close.svg" alt="">Close Window</button>
+                </div>
+            </div>
+        </div>
+    
+
+<div class="news">
+    <div class="container">
+                    <nav class="inside-nav">
+                <ul>
+                                                                <li class=""><a href="../../category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a></li>
+                                            <li class=""><a href="../../category/6/for-patient.html">For Patient</a></li>
+                                            <li class="active"><a href="../../category/5/articles.html">Articles</a></li>
+                                            <li class=""><a href="../../category/3/conferences.html">Conferences</a></li>
+                                            <li class=""><a href="../../category/1/news.html">News</a></li>
+                                    </ul>
+            </nav>
+        
+                    <a href="../../../media-global.aptos.world/media/393/conversions/optimized5584.jpg?Expires=1694848726&amp;Signature=JUajpSD8e1gj0WDKPyleNKOVa5jRybowjFAvNiPFiQRdq02g0IacGgifrLyI~~~swkH3aaD67rd7QOowk2dfJDg92Vy6Pe2HV7Y8KEEQkITBvpSAzLDUgCmchgcdCtiohTBqbolBA1KOZYPJzRkRlXhA6g~S85~zFZEeFj97QzhEyRVdHVVzWYZ1YUN99Pk9ic6Qua3ZkiYay-zMBXaZ9l2yPmWwxqlOswaHQHcEvDD27Odw6YhjyTHOrY~sVBZC1N7XQ-vV5d2E8EQzTifOi8CPBZMbly6-3LJm0Xu~Rf4MOUuXwXtGWDBKVCeXeCKOrq7N95d-bNmxOaOASCfPEw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q" class="d-block" data-fancybox data-caption="Threads and Aging">
+                <div class="img" style="background-image: url('../../../media-global.aptos.world/media/393/conversions/optimized5584.jpg?Expires=1694848726&amp;Signature=JUajpSD8e1gj0WDKPyleNKOVa5jRybowjFAvNiPFiQRdq02g0IacGgifrLyI~~~swkH3aaD67rd7QOowk2dfJDg92Vy6Pe2HV7Y8KEEQkITBvpSAzLDUgCmchgcdCtiohTBqbolBA1KOZYPJzRkRlXhA6g~S85~zFZEeFj97QzhEyRVdHVVzWYZ1YUN99Pk9ic6Qua3ZkiYay-zMBXaZ9l2yPmWwxqlOswaHQHcEvDD27Odw6YhjyTHOrY~sVBZC1N7XQ-vV5d2E8EQzTifOi8CPBZMbly6-3LJm0Xu~Rf4MOUuXwXtGWDBKVCeXeCKOrq7N95d-bNmxOaOASCfPEw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+            </a>
+        
+        <div class="section-title">
+            <h3>Threads and Aging</h3>
+        </div>
+
+        <div class="wrapper ">
+                            <div class="details">
+                    <form method="POST" class="save--post" data-post-id=58 action="https://aptos.global/save-post">
+                        <button class="save not-saved" type="submit" name="button">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            <span class="not-saved">Save for later</span>
+
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            <span class="saved">Saved</span>
+                        </button>
+                    </form>
+
+                    <div class="date">
+                        <img src="../../img/icons/date.png" alt="">
+                        <span class="title">Date</span>
+                        <span>29 April 2018</span>
+                    </div>
+
+                                            <div class="location">
+                            <img src="../../img/icons/location.png" alt="">
+                            <span class="title">Location</span>
+                            <span>Tbilisi</span>
+                        </div>
+                                    </div>
+            
+            <div class="content pb-4">
+                <p><img src="../../../aptos.global_443/media/460/conversions/optimized.html"></p><p><br></p><p><strong>Dr. Albina Kajaia takes us through a combined approach to facial ageing using Aptos threads, platelet rich plasma, dermal fillers and botulinum toxins.</strong></p><p><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">Since ancient times, people always wanted to try and keep their youth and beauty for a long time. For example, the first plastic operations were performed in ancient Egypt and China, where noble persons used skincare tools. Nowadays aesthetic medicine is developing at a quick rate. There are more products, methods and devices to slow down the ageing process than ever before.</span></p><p><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">According to data from the American Society of Aesthetic Plastic Surgery, the number of aesthetic procedures has been exceeding the number of surgical interventions for last several years. Even more of our patients are asking for non-invasive procedures, and accordingly our task is to give good results using injection methods and combination treatments.</span></p><h2><br></h2><h2><strong style="color: rgb(0, 7, 15);">Ageing</strong></h2><p><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">In order to correctly apply different techniques, we must understand how the patient’s face ages. The basic ageing processes are loosing turgor and skin elasticity, atrophy of sub-cutaneous fat, mimical wrinkles and ptosis of soft tissues.</span></p><p><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">There are a lot of ways to fight against each form of ageing. For example, we can use mesotherapy, PRP or biorevitalisation to improve the turgor and skin elasticity. We can also use toxin injections to remove mimical wrinkles, or apply fillers to fill the lipodystrophy. We can also successfully apply chemical peels in our own practice. Unfortunately though, all of these methods are not enough to fight against facial tissue ptosis.</span></p><p><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">There is a need for mechanical transference of face tissues, which is not provided by any other procedures mentioned above. Previously, patients had to undergo a surgical operation for this but today there are methods to fight against ptosis without skin incisions. One of these methods is thread lifting, which has become especially popular among plastic surgeons and dermatologists.</span></p><p><br></p><h2><strong style="color: rgb(0, 7, 15);">Differences between threads</strong></h2><p><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">There are three different thread methods that I have divided into groups. The first group, A, are small, ring sized threads where the thread lift is ten centimetres, USB 4/0, 5/0, 6/0. Group B is biorevitalisation, which is lifting with free fixation, with a thread lift more than ten centimetres, USB 2/0, 3/0. Group L is skin soft tissue lifting, with points of fixation where the thread lift is ten centimetres and more, USB 0, 1/0, 2/0. The last group is F, which is hard fixation of soft tissue with small threads, all with barbs, USB 0, 1/0, 2/0, 3/0 and 4/0.</span></p><p><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">The composition of thread types are either non-absorbable material - mostly polypropylene or silicone, absorbable long material with a long-term duration (one to two years), based on polylactic acid and absorbable short material with a short-term duration (one to three months), which is PGO or polyglycolic acid.</span></p><p><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">As a cosmetologist, I apply the following types of threads in my practice:</span></p><p><br></p><p class="ql-align-justify"><span style="color: rgb(0, 7, 15);">•&nbsp;&nbsp;Absorbable material with a long - term duration - one and a half to two years—based on polylactic acid.</span></p><p><br></p><p><span style="color: rgb(0, 7, 15);">•&nbsp;&nbsp;Small sizes of threads for armoring.</span></p><p><br></p><p><span style="color: rgb(0, 7, 15);">•&nbsp;&nbsp;Lifting with free fixation for biorevitalisation.</span></p><p><br></p><p><span style="color: rgb(0, 7, 15);">•&nbsp;&nbsp;Skin soft tissue lifting with points of fixation.</span></p><p><strong><img src="http://:0/" height="9" width="9"></strong></p><p><br></p><p><img src="data:image/png;base64,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" width="648"></p><p><br></p><p><img src="data:image/png;base64,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" width="651"></p><p><br></p><h2><strong>Product lines</strong></h2><p><br></p><p>At the moment only one brand has all four size ranges - Aptos (antiptosis). According to patients’ age group Aptos offers different lines of absorbable threads. The first product line is intended for skin armoring, suitable for patients aged 25 years and above.</p><p><br></p><p>The Excellence line is intended for soft tissue lifting and armoring. They are suitable to treat patients aged 35 years and above, and a Light Lift line is also available for ‘true lifting’ allowing soft tissue and face skin to be transferred to an aesthetically advantageous position.</p><p><br></p><p>Another product line refers to type A armoring. It consists of polylactic acid which biodegrades after one to one and a half years. There are two basic products in the line - two smooth twisted threads and a spring threads.&nbsp;The application areas are horizontal forehead wrinkles, vertical wrinkles between eyebrows, nose tip lifting, filling the area of lipodystrophy, correction of wrinkles around the eye area, filling of tearthrough, skin turgor improvement, treating small wrinkles of neck and decollete, and removal of fine wrinkles on the face.&nbsp;</p><p><br></p><p>The method is good for correcting nasolabial folds and marionette lines, performing the function of a filler. Even with such heavy tissues, you can see the results in two months. I perform this for patients who also want an injection of botulinum toxin.&nbsp;</p><p><br></p><p>The Excellence product line includes two products, Excellence Visage for treating the face, and Excellence Body.&nbsp;This method offers both lifting and biorevitalization, with biodegradation occuring in one and a half to two years. The products have threads with multidirectional barbs, allowing them to be fixed in the soft tissue.&nbsp;</p><p><br></p><p><br></p><p><img src="../../../aptos.global_443/media/399/conversions/optimized.html" width="635"></p><p><br></p><p><br></p><p><img src="../../../aptos.global_443/media/400/conversions/optimized.html" width="766"></p><p><br></p><p><img src="../../../aptos.global_443/media/401/conversions/optimized.html"></p><p><br></p><p><br></p><p>This method is suitable for lifting of the brows, the middle and lower third of the face, treating ptosis, and neck and decollete area correction. For</p><p>the body it is good for the abdomen, buttocks and inner thighs.</p><p>The Light Lift product line is intended for heavier tissues and adult patients, and the threads are composed of polylactic acid in combination</p><p>with caprolactone. Application areas include the eyebrows, marionette lines, nasolabial folds, the mental area, submental area, correction of the</p><p>nose and ear. In my patients I have applied several products from Light Lift product line.</p><h2><br></h2><h2>PRP</h2><p><br></p><p>Threads offer a very good result, but we often use them in combination with other non-invasive aesthetic procedures.</p><p>Threads only work for the skin structure, but we can use biorevitalisation as well. According my experience I use the procedure of biorevitalisation and PRP in combination with the threads. This decreases period of rehabilitation and provides with better aesthetic effect.</p><p>Plasma lifting is the same PRP method of tis-sue regeneration stimulation by local insertion of injection of thrombocyte auto plasma. We have developed two basic schemes of injection in our clinic.</p><p>The first scheme is “soft therapy”, where we perform three procedures of PRP. The first procedure is performed two weeks before thread lifting, and the second procedure is performed on the thread lifting day. The third and last procedure is performed two weeks after placing the threads.&nbsp;The second scheme is “hard therapy”. The principle is the same and the only difference is that we double the number of PRP procedures.</p><p><br></p><h2>Dermal fillers</h2><p><br></p><p class="ql-align-justify">We always correct platysma three to five days before a thread lifting procedure. After this, we find using threads with polylactic acid in combination with a hyaluronic acid, provide a complex solution for face, and offers good results.</p><p>When patients come to see us and we discuss what treatment they want, we look at what they want the results to be. We do combina­tions with fillers because no one product can change the effect of botulinum toxins. That is why it is necessary to combine all types of procedures - even if only noninvasive options.</p><p>In recent years and even now, the procedure of buccomalar area contouring and volumisation is still actual. Thread lifting does not always provide us with enough volume. In the middle third of the face some additional correction by hyaluronic acid fillers can be required. The correction should be performed three to four weeks before the thread lifting.</p><h2><br></h2><h2>Toxins</h2><p><br></p><p>I find combination of threads and botulinum toxin injections very effective. Blocking muscle movements with the toxins, you make threads to work</p><p>better. This is very important for correcting zones such as platysma, m. frontalis, m. orbicularis oculi and m. corrugator supercilii.</p><p>Botulinum toxin injections should be performed at least 7 days prior to thread lift. This is very important to make sure the muscle does not spoil</p><p>the fixed thread, especially in the eye area.</p><p><br></p><p><img src="../../../aptos.global_443/media/402/conversions/optimized.html" width="786"></p><p><br></p><p><br></p><p><img src="../../../aptos.global_443/media/403/conversions/optimized.html" width="790"></p><h2><br></h2><h2>Conclusion</h2><p><br></p><p>Combination of thread lift with other non-invasive aesthetic procedures results in shorter downtime and better result for the patient.</p><p>The key to cosmetic procedures and cosmetic outcomes is a very thorough assessment of the patient beforehand. Manipulating the face and seeing</p><p>what can be achieved is essential.</p><p>The most important evaluation of the procedure is the satisfied beautiful faces of our patients.</p><p><br></p><p><br></p>
+                
+                
+                
+                            </div>
+
+                            <div class="share ">
+                    <h5>Share on</h5>
+
+                    <ul>
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://aptos.global/post/58/threads-and-aging" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+                        <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://aptos.global/post/58/threads-and-aging" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></li>
+                        <li><a href="https://twitter.com/intent/tweet?text=http://aptos.global/post/58/threads-and-aging" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+                    </ul>
+                </div>
+                    </div>
+    </div>
+</div>
+
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+        <p class="accept-cookies-title mr-4">
+            We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+            about how visitors use our site. We collect the information to compile reports and to help us improve the
+            site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+            where visitors have come to the site from and the pages they visited. <a href="../../terms.html">Details.</a>
+        </p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+    </div>
+
+    <div class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="../../Aphoto.html" target="_blank">
+                            <img src="../../img/aphoto_logo.svg" class="aphoto-other-service-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="../../img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../aconnect.html" target="_blank">
+                            <img src="../../img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="../../asupport.html">
+                            <img src="../../img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo" />
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="../../terms.html" target="_blank" >
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../terms.html" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../contact.html" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    <div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+                <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: {
+                    {
+                        env('FB_APP_ID', '1797333467260014')
+                    }
+                },
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+    <script type="text/javascript" src="../../js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+    <script type="text/javascript" src="../../assets/js/sharect.min.js"></script>
+    <script type="text/javascript" src="../../js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </body>
+
+    
+<!-- Mirrored from aptos.global/post/58/threads-and-aging by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:37:50 GMT -->
+</html>

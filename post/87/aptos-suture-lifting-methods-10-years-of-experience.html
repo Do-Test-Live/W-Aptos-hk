@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aptos.global/post/87/aptos-suture-lifting-methods-10-years-of-experience by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:36:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>APTOS Suture Lifting Methods: 10 Years of Experience - Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="../../css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="../../css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="../../favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0" />
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="../../favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="APTOS Suture Lifting Methods: 10 Years of Experience - Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="aptos-suture-lifting-methods-10-years-of-experience.html">
+    <meta property="og:image" content="../../../media-global.aptos.world/media/1888/conversions/optimized3f99.jpg?Expires=1694848717&amp;Signature=PbBRe5AvBQTd5C1PccBsIruGOsJAv7bh~CIbcQlglEOh1h-5WDgWA7DX4mkl3Qz9CmCuf3ANjy~C6c8wX8X6-D6RtUAeecm8fRg4tytsTRVvtXlh8SdnRsI4HKwF-9AEQOktW4UIpAp~T74eKQLF39ydXcg-FgEVsOUEpSCZGl4qWBHSpORJNNGJl-7FU0iZd3ZP66-wf-ACCqww618f5NrJ5LQHuNSFAreuj7XxXkWg5yAMPtGC2v6pWJID-7Vh2qtlsTEHKnvJPUd7Yeyj9XBLSVLcp0Sn2xfIJ~xnr42mlxQ4SUQigL-DxubrX9fd2FaZ~hc6ZBdW~rvDYBzSRg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        '../../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1797333467260014');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading has-navbar ">
+    
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src='../../img/success-circle.png' />
+          <p class='mt-2'>Your Message was sent successfuly</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src="../../img/success-circle.png" />
+          <p class="mt-2">Your Location Updated Successfully</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" >Add Procedure</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form class="modal-body d-flex flex-column align-items-center">
+          <div class='row' id="modal-row">
+              <div class="form-group w-100 col-12">
+                  <label>Procedure Name</label>
+                  <input type="text" id="procedure-name-input" class="ag-form-control form-control" name="en[name]" placeholder="Select Other Option" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (from)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_from" name="price_from" placeholder="From" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (to)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_to" name="price_to" placeholder="To" />
+                  <span class="input-error-text"></span>
+              </div>
+          </div>
+
+          <div id="save-btn-container">
+            <button type='submit' class='submit-btn' id="save-btn">Save</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="loader">
+        <div id="loader-animation"></div>
+    </div>
+    
+    <script type="text/javascript" src="../../js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+    <script type="text/javascript" src="../../js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+            <nav class="navbar navbar-expand-lg fixed-top  for-patients-nav" id="main-navbar-container">
+    <a class="navbar-brand" href="../../index.html">
+        <i class="logo-icon"></i>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">About</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../history.html">History</a>
+                                                                                            <a class="dropdown-item " href="../../about.html">What is Aptos</a>
+                                                                                            <a class="dropdown-item " href="../../faq.html">FAQ</a>
+                                                                                            <a class="dropdown-item " href="../../subscribe.html">Newsletter</a>
+                                                                                </div>
+                                    </li>
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">Activity</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../category/1/news.html">News</a>
+                                                                                            <a class="dropdown-item " href="../../category/3/conferences.html">Conferences</a>
+                                                                                            <a class="dropdown-item " href="../../category/5/articles.html">Articles</a>
+                                                                                            <a class="dropdown-item " href="../../category/6/for-patient.html">For Patient</a>
+                                                                                            <a class="dropdown-item " href="../../category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a>
+                                                                                        <a class="dropdown-item " href="../../intimate.html">Aptos Intimate</a>
+                                                    </div>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../patients.html">Products</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../coaches.html">Trainers</a>
+                                    </li>
+            
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="../../aconnect.html"><i class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../asupport.html"><i class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../Aphoto.html"><i class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                            <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled" href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global/post/87/aptos-suture-lifting-methods-10-years-of-experience">Log in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="../../courses.html">Register for courses</a>
+                </li>
+            
+
+            <li class="nav-item world">
+                <a class="nav-link" href="../../world.html">
+                    <i class="globe-icon"></i>Distribution
+                </a>
+            </li>
+
+                            <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#" class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center " data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="../../img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="../../img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+    
+                <div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <i class="bg-circle-left"></i>
+            <i class="bg-circle-right"></i>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                                                    <div class="row justify-content-center navbar-items-list-container">
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Preparations</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/26/documents-to-be-filled-before-the-aptos-thread-lifting.html">Documents to be filled before the APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/27/what-to-know-for-before-consultation-to-doctor.html">What to know for before consultation to doctor</a></li>
+                                                                                            <li><a href="../../archive/28/cost-of-aptos-thread-procedure.html">Cost of Aptos thread procedure</a></li>
+                                                                                            <li><a href="../../archive/29/how-to-choose-a-doctor-and-a-clinic-for-a-thread-lift.html">How to choose a doctor and a clinic for a thread lift</a></li>
+                                                                                            <li><a href="../../archive/30/the-indications-and-contraindications-for-a-thread-lifting.html">The indications and contraindications for a thread lifting</a></li>
+                                                                                            <li><a href="../../archive/31/myths-and-prejudices-associated-with-aptos-thread-lifting.html">Myths and prejudices associated with APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/37/becoming-aptos-model.html">Becoming Aptos Model</a></li>
+                                                                                            <li><a href="../../archive/39/candidates-suitable-for-procedure.html">Candidates suitable for procedure:</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/10/elimination-of-neck-bands-and-wrinkles.html">Elimination of Neck Bands and Wrinkles</a></li>
+                                                                                            <li><a href="../../archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">Nasolabial Folds: Correction of the folds without fillers and scalpel</a></li>
+                                                                                            <li><a href="../../archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">Sagging mouth corners &quot;wrinkles of sadness&quot;</a></li>
+                                                                                            <li><a href="../../archive/15/eyebrow-correction-with-aptos-threads.html">Eyebrow correction with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/16/tummy-tuck-and-prevention-of-ptosis.html">Tummy tuck and prevention of ptosis</a></li>
+                                                                                            <li><a href="../../archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">Lifting of the forehead with Aptos Threads - Redefined youth and beauty</a></li>
+                                                                                            <li><a href="../../archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">Correction of Lip Contour and Mouth Furrows with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/19/correction-of-the-mental-area-with-aptos-threads.html">Correction of the mental area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/21/double-chin-correction.html">Double Chin Correction</a></li>
+                                                                                            <li><a href="../../archive/22/correction-of-decollete-area-with-aptos-threads.html">Correction of décolleté area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">Lifting of the arms and shoulders with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/24/lifting-of-the-inner-thighs-it-is-easy.html">LIFTING OF THE INNER THIGHS - IT IS EASY!</a></li>
+                                                                                            <li><a href="../../archive/25/special-threads-for-correction-of-the-area-above-knee.html">Special threads for correction of the area above knee</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Post procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/32/how-is-the-procedure-of-thread-lifting-performed-using-aptos.html">How is the procedure of thread lifting performed using APTOS</a></li>
+                                                                                            <li><a href="../../archive/33/does-it-hurt-during-and-after-the-procedure.html">Does it hurt during and after the procedure</a></li>
+                                                                                            <li><a href="../../archive/34/post-procedure-conditions.html">Post Procedure Conditions</a></li>
+                                                                                            <li><a href="../../archive/36/rehabilitation.html">Rehabilitation</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Threads</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/3/the-essence-of-the-method.html">The Essence of the method</a></li>
+                                                                                            <li><a href="../../archive/5/creating-aptos-threads.html">Creating APTOS threads</a></li>
+                                                                                            <li><a href="../../archive/6/advantages-of-thread-rejuvenation.html">Advantages of thread rejuvenation</a></li>
+                                                                                            <li><a href="../../archive/9/aptos-invites.html">APTOS invites</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                                            </div>
+
+                    <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="../../img/icons/close.svg" alt="">Close Window</button>
+                </div>
+            </div>
+        </div>
+    
+
+<div class="news">
+    <div class="container">
+                    <nav class="inside-nav">
+                <ul>
+                                                                <li class=""><a href="../../category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a></li>
+                                            <li class=""><a href="../../category/6/for-patient.html">For Patient</a></li>
+                                            <li class="active"><a href="../../category/5/articles.html">Articles</a></li>
+                                            <li class=""><a href="../../category/3/conferences.html">Conferences</a></li>
+                                            <li class=""><a href="../../category/1/news.html">News</a></li>
+                                    </ul>
+            </nav>
+        
+                    <a href="../../../media-global.aptos.world/media/1888/conversions/optimized3f99.jpg?Expires=1694848717&amp;Signature=PbBRe5AvBQTd5C1PccBsIruGOsJAv7bh~CIbcQlglEOh1h-5WDgWA7DX4mkl3Qz9CmCuf3ANjy~C6c8wX8X6-D6RtUAeecm8fRg4tytsTRVvtXlh8SdnRsI4HKwF-9AEQOktW4UIpAp~T74eKQLF39ydXcg-FgEVsOUEpSCZGl4qWBHSpORJNNGJl-7FU0iZd3ZP66-wf-ACCqww618f5NrJ5LQHuNSFAreuj7XxXkWg5yAMPtGC2v6pWJID-7Vh2qtlsTEHKnvJPUd7Yeyj9XBLSVLcp0Sn2xfIJ~xnr42mlxQ4SUQigL-DxubrX9fd2FaZ~hc6ZBdW~rvDYBzSRg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q" class="d-block" data-fancybox data-caption="APTOS Suture Lifting Methods: 10 Years of Experience">
+                <div class="img" style="background-image: url('../../../media-global.aptos.world/media/1888/conversions/optimized3f99.jpg?Expires=1694848717&amp;Signature=PbBRe5AvBQTd5C1PccBsIruGOsJAv7bh~CIbcQlglEOh1h-5WDgWA7DX4mkl3Qz9CmCuf3ANjy~C6c8wX8X6-D6RtUAeecm8fRg4tytsTRVvtXlh8SdnRsI4HKwF-9AEQOktW4UIpAp~T74eKQLF39ydXcg-FgEVsOUEpSCZGl4qWBHSpORJNNGJl-7FU0iZd3ZP66-wf-ACCqww618f5NrJ5LQHuNSFAreuj7XxXkWg5yAMPtGC2v6pWJID-7Vh2qtlsTEHKnvJPUd7Yeyj9XBLSVLcp0Sn2xfIJ~xnr42mlxQ4SUQigL-DxubrX9fd2FaZ~hc6ZBdW~rvDYBzSRg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+            </a>
+        
+        <div class="section-title">
+            <h3>APTOS Suture Lifting Methods: 10 Years of Experience</h3>
+        </div>
+
+        <div class="wrapper ">
+                            <div class="details">
+                    <form method="POST" class="save--post" data-post-id=87 action="https://aptos.global/save-post">
+                        <button class="save not-saved" type="submit" name="button">
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                            <span class="not-saved">Save for later</span>
+
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            <span class="saved">Saved</span>
+                        </button>
+                    </form>
+
+                    <div class="date">
+                        <img src="../../img/icons/date.png" alt="">
+                        <span class="title">Date</span>
+                        <span>19 July 2018</span>
+                    </div>
+
+                                    </div>
+            
+            <div class="content pb-4">
+                <p>Marlen Sulamanidze/ MD, Georgi Sulamanidze/MD</p><p><br></p><p class="ql-align-justify">The process of facial aging is manifested as uneven ptosis of the skin and subcutaneous tissues located above and lateral to the nasolabial fold and the superciliary, buccal, mental, and submental areas.</p><p class="ql-align-justify">	For various reasons, gravitational sagging of soft tissue occurs, with the resulting appearance of overhanging eyebrows, lachrymal grooves, deepening nasolabial folds, and the beginning of marionette lines, followed by aggravation and ptosis of the angle of the mouth and mental areas becoming more pronounced (‘‘hanging lips’’).</p><p class="ql-align-justify">	For a long time these deformities were corrected only by radical interventions: cutaneous, superficial musculoaponeurotic system (SMAS), and periosteal and subperiosteal face lift.<a style="color: rgb(87, 29, 31);" href="about:blank" target="_blank"><sup><u>1–4</u></sup></a></p><p class="ql-align-justify">	In any face lift technique, the medial portions of the face uncrumple incompletely. <a style="color: rgb(87, 29, 31);" href="about:blank" target="_blank"><u>Fig. 1</u></a><span style="color: rgb(87, 29, 31);"> </span>shows that to the edge of the mobilized skin cutaneous flap a mechanical force is applied and it is extended to the maximum, with each of the marked, initially 3-cm long portions having elongated to a different degree. The farther the portion is away from the point of force application, the less it extends.</p><p class="ql-align-justify">	Understanding the cause of this factor, we decided to develop a method of tissue extension in which the flap extends evenly along the whole length. Knowledge of the topographic anatomy and clinical experience persuaded us that on separate portions of the face the layers of soft tissues could be easily moved with no mobilization thereof, with the skin capable of shrinking under certain conditions.</p><p class="ql-align-justify">	Barbed threads have long been used in medicine to suture tendons and close wound edges; however, operations on lifting facial tissues by means of such threads to rejuvenate were first proposed by us as long ago as 1998 (<a style="color: rgb(87, 29, 31);" href="about:blank" target="_blank"><u>Fig. 2</u></a>). The name Aptos (anti- ptosis), as we called these threads, was then given to all products and technologies of minimally invasive lifting, which were developed and implemented in practice.<a style="color: rgb(87, 29, 31);" href="about:blank" target="_blank"><sup><u>5,6</u></sup></a></p><p class="ql-align-justify"><br></p><p><br></p><h2>MATERIALS AND METHODS</h2><p><br></p><p class="ql-align-justify">Aptos Thread, Aptos Thread 2G, Aptos Needle, Aptos Needle 2G, Aptos Spring: manufactured by the CHIRAMAX Ltd. (Czech Republic), the product possessing a European Certificate.The needle—a guide of the spinal needle type measuring 1.1&nbsp;&nbsp;100 mm, manufactured&nbsp;by the TSK–Supra SIMS Portex Ltd.</p><p class="ql-align-justify">Patients: a total of 4580 people; of these, 4388 women and 192 men operated on in our clinic by the same surgical team between January 1988 and December 2007. The patients’ ages varied from 31 to 77 years. The age- and sex-related distribution is shown in <a style="color: windowtext;" href="about:blank" target="_blank"><u>Table 1</u></a>.</p><p class="ql-align-justify"><img width="735" src="../../../aptos.global_443/media/1848/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><h2>Aptos Thread Method</h2><p><em>&nbsp;</em></p><p class="ql-align-justify"><img width="268" height="2" src="http://:0/"></p><p class="ql-align-justify">We performed the first experiments using threads that were provided with barbs directed unilaterally and fixed to a long needle. Through a small incision in the temporal area, we pulled several threads subcutaneously. After the lower thread and needle emerged to the surface of the skin, the remainder of each lower thread was cut off, and, after moderate pulling, the upper&nbsp;thread&nbsp;was sutured to the fascia of the temporal muscle. The same technique was used to pull the soft tissues of the submaxillary and cervical regions with fixation of the upper end of the thread to the periosteum of the mastoid process (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 3</u></a>).</p><p class="ql-align-justify">	Later in 1998, we improved this technique slightly by devising a needleless thread with converging barbs, which was introduced under the skin by means of a guiding needle, which made it possible to abandon incisions (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 4</u></a>). Such a thread introduced subcutaneously is fixed in soft tissues because of the barbs converging toward the middle thereof, carrying subcutaneous fat, pulling it together and distributing it evenly along the whole length, thus creating the effect of lifting or obtaining a high contour of soft tissues.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="745" src="../../../aptos.global_443/media/1849/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="724" src="../../../aptos.global_443/media/1850/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify">	Initially, we used this technique on virtually all portions of the face and neck. During long-term practice, however, we concluded that the appropriate use of this method was only for creation of a high contour of the midface soft tissues and lifting of the mental area. Accordingly, we developed an optimal marking of the skin, taking into consideration anatomic and functional peculiarities of the portion concerned and the pathogenesis of the deformity involved (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 5</u></a>).</p><p class="ql-align-justify">	We managed to obtain better outcomes in 35- to 50-year-old patients who had clear, not very thick skin, with no pronounced atrophy of subcutaneous fat and moderate manifestations of soft tissue ptosis (no sharply pronounced nasolabial folds, overhanging of soft tissue bolsters above them, mild distortions of the suborbital contours in the form of lachrymal grooves, and the presence of hanging lips), who for various reasons refused classic face lift operations. Mainly, these were the patients who wished mild lifting barely visible to other people. These were also patients who had previously undergone cutaneous rhytidoplasty and were not satisfied with the outcome obtained because the facial lifting had been poorly pronounced in the midface portions and high volume of the buccozygomatic regions was not attained.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="650" src="../../../aptos.global_443/media/1851/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1852/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><h2 class="ql-align-justify"><br></h2><h2 class="ql-align-justify">Surgical Procedure</h2><p class="ql-align-justify"><br></p><p class="ql-align-justify">To lift the mental regions, the threads were implanted parallel to the mandibular edge with slight archlike sagging within the area of the hanging lip. Doing so, we simultaneously solved the problem of lifting and redistribution of the skin and subcutaneous fat of the hanging lips. The depth of the thread’s implantation varied depending on the thickness of the skin, fat, and the degree of involutional alterations, but obligatorily within fatty tissue, which is thicker closer to the skin.</p><p class="ql-align-justify">	The main task we accomplished while lifting the midface area was to create a new high contour of the buccozygomatic region by elevation of the ptosed soft tissues situated between the nasolabial fold and lachrymal groove. Movement of the cheek&nbsp;upward&nbsp;and&nbsp;&nbsp;slightly&nbsp;&nbsp;laterally&nbsp;&nbsp;obtained a more smoothed-out nasolabial fold and lachrymal groove.</p><p class="ql-align-justify">	This effect was achieved by placing the threads within subcutaneous fat in the form of comparatively steep arches followed by straightening&nbsp;them by pulling the ends and accordingly even closing together of soft tissues along the length&nbsp;of the threads toward the middle thereof. The effect was even more enhanced because within the middle part the threads passed relatively deep, catching SMAS and together with it elevated fatty tissues from the depth toward the surface.</p><p class="ql-align-justify">	While gaining experience, we planned ways of further developing thread-mediated lifting, with the goals of simplifying the operational technique, enhancing the power of lifting, achieving long- standing results that would persist over time, and decreasing the risk for complications and undesirable effects.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="324" src="../../../aptos.global_443/media/1853/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><h2 class="ql-align-justify">Aptos Thread 2G Method</h2><p class="ql-align-justify"><br></p><p class="ql-align-justify">In 2002, we again returned to the idea of using&nbsp;&nbsp;&nbsp;a single product (ie, a needle with a thread); however, the new suture material was distin- guished by the presence of two needles to the ends of which were attached one thread provided with&nbsp;converging&nbsp;barbs—Aptos&nbsp;Thread&nbsp;&nbsp;2G&nbsp;(<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 6</u></a>A). This appliance made it possible to increase the thread’s arm of force twofold, and thus to obtain the power and stability of the lifting. An important novelty herein was that these threads were coupled by temporary soldering so that in this position their pointed tips constituted a single whole (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 6</u></a>B). Implementation of the idea of the coupled needles and a novel technique of the operation made it possible to place the threads with no cutaneous incisions through a puncture, obtaining no skin in-drawings in the place of the thread’s bend: both needles were stuck into the skin with the common tip, to be detached under the skin at the required depth and only thereafter advanced in the opposite directions. (<em>access video&nbsp;on&nbsp;Aptos&nbsp;Thread&nbsp;2G&nbsp;for&nbsp;the&nbsp;eyebrow&nbsp;&nbsp;in the online version of this article at: </em><a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>http://www.</u></a> <a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>plasticsurgery.theclinics.com/</u></a>)</p><p class="ql-align-justify"><br></p><p class="ql-align-justify">	The Aptos Thread 2G method yielded better results during operations of lifting the tail of the eyebrow and mental sagging and more moderate results in the midface area. Optimal marking of the skin is shown in (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 7</u></a>).</p><p class="ql-align-justify">	The indications for the middle and lower facial zone were the same as those for application of the Aptos Thread method, but with more pronounced pathology. In the midface zone, we tended not so much to create a high volume as&nbsp;to distribute soft tissues upward and laterally.&nbsp;The Aptos Thread 2G was also applied when the patient wished a more radical and lasting lifting than the Aptos Thread.</p><p class="ql-align-justify">	In the area of the eyebrow, Aptos Thread 2G was used in cases of moderate ptosis of the lateral portions of the eyebrows, overhanging soft tissues of these portions above the upper eyelids, round shape of the eyebrow, and when it was required to remove signs of ‘‘watering’’ eyes.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="749" src="../../../aptos.global_443/media/1854/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><h2 class="ql-align-justify"><br></h2><h2 class="ql-align-justify">Surgical Procedure</h2><p class="ql-align-justify"><br></p><p class="ql-align-justify">To lift the lateral portion of the eyebrow, the coupled needles were inserted into the skin of&nbsp;the temporal region to the fascia of the temporal muscle, to be detached herein and pulled apart. One of them was advanced to a greater depth to catch the fascia and returned back to the subcutaneous space. Then the threaded needles were alternately advanced along the marked contour&nbsp;to emerge in the marked points, evenly&nbsp;pulling the thread from the both sides, achieving the required shape of the eyebrow, with certain hypercorrection. Doing so, the bend of the thread in the place of entry of the coupled needles was submerged under the skin, tightly holding&nbsp;onto the temporal muscle fascia.</p><p class="ql-align-justify">	The 2G threads were implanted in the midface and mental regions according to the presented marking and the same guidelines that were described in the section concerning the operative procedure according to the Aptos Thread method. The differences concern the moment of insertion of the needles under the skin: it is important to insert the needles into subcutaneous fat in the area of the zygomatic arch, to separate them there and to pull them apart so as to encompass the fascial bands (reference points) with the place of bending of the thread and only thereafter alternately pass the threaded needles according&nbsp;to the marking. The same guidelines are given while lifting the mental area, only the bend of the thread should catch on the fascia of the parotid salivary gland.</p><p class="ql-align-justify">&nbsp;</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="327" src="../../../aptos.global_443/media/1856/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><h2>&nbsp;</h2><h2 class="ql-align-justify">Aptos Needle Method</h2><p class="ql-align-justify"><br></p><p class="ql-align-justify">While gaining experience, we noted that some rejuvenating and lifting operations required suturing through soft tissues in the form of a loop or purse (ie, return of the thread back to the place of entry to apply the fixing knot), with the thread having to be smooth so that tissues could slide along it.<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>6,7</u></sup></a></p><p class="ql-align-justify">	The next stage of our pioneering therefore became the creation of a double-pointed needle with a smooth suturing thread attached to it in the middle, the Aptos Needle. (<em>access video on usual needle versus Aptos Needle in the online version of this article at: </em><a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>http://www.plasticsurgery.</u></a> <a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>theclinics.com/</u></a>) Such a needle is capable of being passed bidirectionally, which allows for it to be passed under the skin along a polygonal or elon- gated contour, also providing subcutaneous suturing through the soft tissues without dimpling of the skin and obtaining an even lifted contour.</p><p class="ql-align-justify">	With the help of different Aptos Needle modifi- cations (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 8</u></a>), we worked out minimally invasive aesthetic operations for sewing through soft tissues of the midface, the submaxillary and cervical zones (2003), the chin, elongated and dis- tended lobes of the ear, and ptosed mammary gland (2004).</p><p class="ql-align-justify"><br></p><h2 class="ql-align-justify">Sewing Through and Lifting of the Midface</h2><p class="ql-align-justify"><br></p><p class="ql-align-justify">This technique may be used independently and in a combination with the classic or transconjunctival blepharoplasty (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 9</u></a>). (<em>access video on APTOS Needle-midface in the online version of this article at: </em><a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>http://www.plasticsurgery.theclinics.com/</u></a>)</p><p class="ql-align-justify">	In the first instance, the operation commenced from making a 2- to 3-mm cutaneous incision along the lower crow’s-foot line, advancing the scalpel’s blade to the osseous edge of the eye socket (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 9</u></a>, point 1). This approach was used to introduce the tip of the Aptos Needle 4/0 (from either side) so that it could entrap the periosteum. Then the needle was advanced to point 2 near the base of the wing of the nostril. Here it was carefully brought from under the skin, but not completely, with the second needle’s tip remaining within fatty tissues at a depth of 0.5 to 1.0 cm, followed by rotating&nbsp;the&nbsp;Aptos&nbsp;Needle&nbsp;by&nbsp;90<sup>○</sup> and&nbsp;then the second needle’s tip being&nbsp;advanced&nbsp;toward point 3. Here the needle was also brought to the surface with incomplete exit. Then the needle&nbsp;was rotated 90<sup>○</sup>, returned to the site of the incision, and brought to the surface through the wound. Here&nbsp;both&nbsp;ends&nbsp;of&nbsp;the&nbsp;thread&nbsp;were&nbsp;pulled and tied by several knots.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1857/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify">	The second and third sutures were applied in the similar manner according to the marking. Taken all together they had various direction vectors and created a new, elevated, aesthetically more favorable contour of soft tissues, with smooth transition to the neighboring regions.</p><p class="ql-align-justify">	For an operation performed through the classic or transconjunctival approach, after isolation and excision of fatty hernias in the amount required, soft tissues of the midface were sutured through so that the knots were distributed along the perimeter of the lower osseous edge of the orbit, arcus marginalis (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 9</u></a>).</p><p class="ql-align-justify">	To sew through and lift the submaxillary and cervical areas, we made incisions up to 1 cm long from both sides and the retroaural regions in the projection of the processus mastoideus to the periosteum onto which we applied holding sutures (Prolene 2/0) (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 10</u></a>). (<em>access video on APTOS Needle-neck in the online version of this article&nbsp;at: </em><a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>http://www.plasticsurgery.theclinics.com/</u></a>)</p><p class="ql-align-justify">	The Aptos Needle 2/0 was inserted through one of the incisions, then advanced subcutaneously along the projection of the lower line of the marking for as long as the length of the thread permitted (usually 15 cm). Here it was brought to surface of the skin and pulled out, but not&nbsp;completely.&nbsp;When the second tip remained under the skin at&nbsp;a depth of approximately 0.5 cm, the needle was turned and the second tip was used to continue passing the thread farther according to the marking. Usually it was necessary to again bring the needle to the surface nearer the angle of the mandible on the opposite side, turn the needle, and continue advancing it again with the first tip until it appeared in the wound contralaterally.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="718" src="../../../aptos.global_443/media/1858/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="717" src="../../../aptos.global_443/media/1859/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify">Here the needle was completely brought to the surface, with the thread pulled out as far as it would go, after having its end preliminarily tied to the holding threads from the first side. At this point the thread was tied to the holding threads on this side.</p><p class="ql-align-justify">	We performed the same passages of the threaded needle first along the upper and then along the middle lines of the marking, each time tying up to the holding threads on both sides.</p><p class="ql-align-justify">	Three threads were thus advanced under the skin of the submaxillary region&nbsp;without dimpling of the skin and with anchoring of the ends of the threads to the periosteum of the mastoid processes, like a hammock lifting and supporting soft tissues in a new position, improving the contour of the entire submaxillary and cervical regions. (<em>access videos on Aptos Needle-chin and Aptos Needle-breast in the online version of this article at: </em><a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>http://www.plasticsurgery.theclinics.</u></a> <a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>com/</u></a>)</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><h2>&nbsp;Aptos Needle 2G Method</h2><p><br></p><p class="ql-align-justify">Our latest development is experimental so far— the suturing material and Aptos Needle 2G method.<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>8 </u></sup></a>(<em>access video on Aptos Needle 2G in the online version of this article at: </em><a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>http://www.plasticsurgery.theclinics.com/</u></a>)</p><p class="ql-align-justify"><br></p><p class="ql-align-justify">	This new product unites the capabilities of Aptos Thread 2G and the Aptos Needle. The Aptos Nee- dle 2G and the Aptos Thread 2G make up one thread with variously directed barbs converging toward the middle and two needles. These needles are double-pointed and the thread is connected to them in the middle portion,&nbsp;as&nbsp;in the Aptos Needle&nbsp;(<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig.&nbsp;11</u></a>).&nbsp;Like&nbsp;the&nbsp;needles&nbsp;of the Aptos Thread 2G, the tips of the needles&nbsp;&nbsp;of the Aptos Needle 2G are fastened together on one side with temporal soldering, constituting in this position a single tip. This design makes it possible to insert both needles under the skin through one puncture and to separate them at&nbsp;the required depth. Owing to the original idea of coupling two needles, the operations can be&nbsp;done without incision or dimpling of the skin.</p><p class="ql-align-justify"><br></p><p>	The operative procedure using the Aptos Needle 2G method is not more difficult than manipulations with the Aptos Thread 2G, but lifting of soft tissues herein is more powerful and stable at the expense of subcutaneous turns of the needle and advancing the barbed thread along the contour&nbsp;&nbsp;of the ‘‘pouch’’ or a hook without disturbing the integrity of bulges and dimpling of the skin. We used the product and technique of the operation Aptos Needle 2G on virtually all portions of the face to move tissues and to create high contours; however, so far we can recommend it for wide application only in lifting of the midface zone (Fig. 12).The operation was performed approximately in the same manner as the Aptos Thread 2G technique:the twin needle was inserted into the area of the zygomatic arch, to be separated in the subcutaneous fat at a depth of approximately 1 cm around the portion of the fascial bands, and the thread was advanced farther on each needle according to the marking. After exiting and incomplete surfacing of the needles from under the skin they were turned&nbsp;within subcutaneous fat (as with the usual Aptos Needle) and along&nbsp;&nbsp;&nbsp;&nbsp;a new contour returned back to the area of the zygomatic arch, where after moderate pulling the threads were cut and the ends submerged under the derma.</p><p><br></p><p><img width="328" src="../../../aptos.global_443/media/1860/conversions/optimized.html"></p><h2><br></h2><h2>Aptos Spring Method    </h2><p><br></p><p class="ql-align-justify"><br></p><p>Involutive alterations in the kinetically active zones (marionette lines, ptosis of the angles of the mouth) were removed by the elastic lifting with special threads<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>9 </u></sup></a>we devised in 2003. This is a heliciform thread made according to a special technology from special shape-memory POLYPROPYLENE (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 13</u></a>). (<em>access video on Aptos Spring in the online version of this article at: </em><a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>http://www.</u></a> <a style="color: windowtext;" href="http://www.plasticsurgery.theclinics.com/" target="_blank"><u>plasticsurgery.theclinics.com/</u></a>)</p><p><br></p><p><img width="454" src="../../../aptos.global_443/media/1862/conversions/optimized.html"></p><p><br></p><h2>Operational Technique</h2><p class="ql-align-justify"><br></p><p class="ql-align-justify">To lift marionette lines, it is necessary to implant two Aptos Spring threads on each side perpendicular to the wrinkle itself (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 14</u></a>). Because the spring needle is coiled onto an aspirating needle and is thus in a compressed state, before being applied it was freed from fixation on the side of the base and spread along the needle’s length.&nbsp;In this working condition of the spring, the needle was inserted in the area of the zygomatic arch, advanced subcutaneously according to the marking, and surfaced approximately 1 cm after passing of the tip of the wrinkle’s&nbsp;projection.&nbsp;Then the thread was released from fixation from the side of the tip, with the surgeon slightly pulling the ends of the spring and cutting off the extra length, submerging the ends under the skin. Other threads were placed in a similar manner.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p><img width="686" src="../../../aptos.global_443/media/1863/conversions/optimized.html"></p><p><br></p><p class="ql-align-justify">	To lift the angles of the mouth, the upper thread was implanted in a somewhat different manner to the angle of the mouth and farther along the projection of the vermilion border of the upper lip by approximately 1 to 1.5 cm. Doing so made it possible to slightly invert the lateral edge of the upper lip to somehow increase its volume and to attain an alteration in the direction of the angle of the mouth upwards.</p><p><br></p><p>&nbsp;</p><h2>RESULTS AND DISCUSSION</h2><p class="ql-align-justify">Of the 4580 patients, 2133 underwent the manipulation as an independent operation. In the rest it was done in combination with other operations and procedures, including undercutting of wrinkles and folds (Aptos Wire method), autolifting, liposuction of mental, submaxillary, and cervical regions, facial skin peeling, blepharoplasty, face lift, platysmaplasty (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 15</u></a>), and others. <a style="color: windowtext;" href="about:blank" target="_blank"><u>Figs.</u></a> <a style="color: windowtext;" href="about:blank" target="_blank"><u>16–20 </u></a>show patients who underwent simultaneous operations.</p><p class="ql-align-justify">	In most cases we used infiltration anesthesia consisting of 1% lidocaine solution with epinephrine; the solution was injected while the threads were placed, with an average of 0.3 to 0.5 mL of the solution used for one thread. Anesthetics were used in greater amounts only during the operation of lifting the submaxillary and cervical areas by the Aptos Needle method. In that procedure the percentage of the anesthetic was decreased to 0.5 or 0.25.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="718" src="../../../aptos.global_443/media/1864/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify">Among our patients, we observed age-related ptosis of the involutional pattern more often and saw acquired ptosis resulting from disease or iatrogenic causes less frequently (a total of 38 patients). We saw congenital ptosis in separate cases (11 patients).</p><p class="ql-align-justify">	Typically, operations using the Aptos methods proceeded easily and quickly, with the injury inflicted to tissues being minimal and the outcome of the intervention seen as early as on the operative table.</p><p class="ql-align-justify">	The Aptos methods are especially effective in the midface zone: the nasolabial fold becomes un- crumpled, the lachrymal fold is smoothed out, and the soft tissues are elevated and moved upward and laterally, thus creating an integral, even round contour of the buccozygomatic area. Based on follow-up of patients over several years, we noted preservation of good outcomes from 1 year and more in most, with the best effect being achieved after implantation of the threads Aptos Needle and Aptos Needle 2G (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Figs. 21–25</u></a>). Complete relapses of the deformity in the region concerned were observed only in sporadic cases.</p><p class="ql-align-justify">	In the area of the tail of the eyebrow (Aptos Thread 2G), we obtained pronounced lifting upward and laterally, and moderate spreading of the upper eyelid skin, especially in the lateral portion. Immediately after surgery, extra lifting of the eyebrow and goffered skin in the area of the temple was considered justified, because within the first 2 to 3 weeks during the period of stabilization of the clinical result, skin adaptation and slight lowering of the brow occurred. We were satisfied if the good outcome obtained persisted for 8 to 12 months (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Figs. 26–29</u></a>).</p><p class="ql-align-justify"><br></p><p class="ql-align-justify">	In the mental area (methods Aptos Thread and Aptos Thread 2G), depending on the degree of ptosis and skin excess after the operation, we observed more or less pronounced lifting of hanging lips and skin redistribution upward and laterally. We noted wrinkled skin in the immediate postoperative period on the background of pronounced improvement of the oval of the face.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="500" src="../../../aptos.global_443/media/1865/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="494" src="../../../aptos.global_443/media/1866/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1867/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1868/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p><br></p><p>In most cases, we noted persistent results up to&nbsp;1 year (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Figs. 30, 31</u></a>).</p><p class="ql-align-justify">	During the last years for minimally invasive correction of deformities of the submaxillary and cervical area, we have been using only the Aptos Needle method. In doing so, we attained moderate redistribution of the ptosed skin from the middle laterally and obtained a sufficiently good profile. We observed no complete relapse of the deformity even after 3 to 4 years. Certain weakening of the threads and sagging of soft tissues (after 1–3 years) were, if necessary, easily corrected by lifting from one of the ends of the knot&nbsp;and anchoring&nbsp;it&nbsp;in&nbsp;a higher position (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Figs. 32–34</u></a>).</p><p class="ql-align-justify">	The success factors for obtaining good outcomes while using the Aptos methods of rigid fixation are as follows: Use only when indicated and correctly select the method.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1869/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify">Determine the purpose of the operation (ie, what effect is expected from the implantation of the threads) lifting of tissues,&nbsp;their redistribution, creation of a&nbsp;new&nbsp;high volume, or a combination of these effects.</p><p class="ql-align-justify">Place the threads in areas where they cannot counteract the kinetics of facial muscles and where you can easily remove layers of soft tissues unimpeded without operative dissection thereof.</p><p class="ql-align-justify">Observe the depth for placing the threads depending on the purposes of the operation, the condition of the skin, and the portion of the face.</p><p class="ql-align-justify">Place the threads such that the barbs from each side of the thread are equal both quantitatively and by strength (this condition concerns only Aptos Thread).</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="563" src="../../../aptos.global_443/media/1870/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify">	All the above-described types of thread-mediated lifting are rigid. On the areas of the face that are especially active (for example, mimic, masticatory, and other muscles in the perioral area), lifting with barbed threads or by the Aptos Needle method is unsuitable because constant tissue movement rapidly destroys the result. For correction of involutive alterations in the perioral area we therefore used the Aptos Spring method.</p><p class="ql-align-justify">	In virtually all cases, this technique allowed removal of labiosubmaxillary wrinkles and provided nonrigid, elastic lifting of the angles of the mouth in the immediate and remote postoperative periods. Polypropylene springs placed in subcutaneous fat in the distended form contract and delicately entail the soft tissues. They contract and extend synchronously with the muscles during the mimic and masticatory movements. Several months after, the threads are covered with fibrous tissue, which later enhances and stabilizes the effect. With the exception of several cases of a rapid relapse of the deformity, when the contracting springs were not fixed in tissues but slipped into the needle-created channel, we observed&nbsp;a&nbsp;stable&nbsp;outcome&nbsp;within 1 to 2 years (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Figs. 35–38</u></a>).</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="570" src="../../../aptos.global_443/media/1871/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="564" src="../../../aptos.global_443/media/1872/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="541" src="../../../aptos.global_443/media/1873/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="543" src="../../../aptos.global_443/media/1874/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="528" src="../../../aptos.global_443/media/1875/conversions/optimized.html"></p><h2 class="ql-align-justify">Complications and Undesirable Events</h2><p class="ql-align-justify"><br></p><p class="ql-align-justify">While performing any aesthetic operation or minimally invasive manipulation on the face one can encounter complications, such as inflammatory processes up to suppuration; disturbed integrity&nbsp;of the parotid salivary gland, little branches of the facial nerve or large vessels; and hematomas. The Aptos methods are not guaranteed against such complications.<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>10–12 </u></sup></a>Such complications are not intrinsic to the nature of the method itself. Prevention of the mentioned complications consists of observing the principles of the regional anatomy of the face and its peculiarities, using asepsis and antiseptics, delicately performing an intervention, and treatment, including antibacterial therapy, general surgical intervention, and special intervention (microsurgical, physiotherapeutic, and others) (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Figs. 39, 40</u></a>).</p><p>	Characteristic of the methods of threadmediated lifting and side effects are as follows: For the Aptos Thread method: disruption of the threads as a consequence of unilateral slackening of the barbs, surfacing of the threads, their migration, a short in&nbsp;time (up to 3 months) and unstable result.</p><p class="ql-align-justify">For all Aptos methods: asymmetry, hypercorrection, visualization of the threads, linear hemorrhages along the length of the thread, hematomas, and dimpling of the skin in the site of needle punctures (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Figs. 41–46</u></a>).</p><p>&nbsp;</p><p>   Prevention of the mentioned complications, side effects, and undesirable events consists of knowing the pathogenesis of ageing and ptosis&nbsp;of the facial soft tissues, correct understanding&nbsp;&nbsp;of the essence of lifting by the Aptos&nbsp;methods and selecting the proper method, faultless handling of the technique, and delicate performance of the intervention. Treatment is associated with removal of the slackened and migrating threads, repeat thread-mediated or classic lifting, physiotherapy, and massage.</p><p class="ql-align-justify">	For thread removal in our clinic we use the methods of noninvasive detection of threads under the skin (ultrasonography, visualization by means of bright directed light) and minimally invasive removal thereof by means of a special needle.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="590" src="../../../aptos.global_443/media/1876/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="571" src="../../../aptos.global_443/media/1877/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p>With experience, this manipulation presents no difficulty for the operator (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 47</u></a>).</p><p class="ql-align-justify">	Complications and unfavorable events are so rare and inconsiderable that specialists in aesthetic surgery and cosmetology should not abandon the methods of thread-mediated lifting for this reason.</p><p class="ql-align-justify">	As we have gained experience in using the Aptos methods, we have been constantly improving them, enhancing the power of lifting, the safety of the operation, and the durability and stability of the results.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="594" src="../../../aptos.global_443/media/1878/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="543" src="../../../aptos.global_443/media/1879/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1880/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1881/conversions/optimized.html">     <img width="302" src="../../../aptos.global_443/media/1882/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify">	We have experienced all things characteristic of implementing any novel technologies: initial admiration and euphoria, disappointments, complications, and cautious attitude. Because of these circumstances and because doctors of our clinic are the designers of the Aptos methods we can express our opinion concerning thread-mediated lifting methods suggested by other authors.</p><p class="ql-align-justify">	Many doctors have still been placing barbed threads using an outdated technique that requires incisions and visualization of solid structures (for example, temporal fascia) to which threads are sewn. With the advent of coupled needles provided with threads and the respective tech- nology (methods using Aptos Thread 2G and Aptos Needle 2G), there is no need for skin incisions, and the operations are thus considerably simplified with no damage for the future result (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 48</u></a>).<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>13</u></sup></a></p><p class="ql-align-justify">	We doubt the efficacy of using long barbed threads for lifting and rigid fixation of the kinetically active zones of the face and neck, and the feasibility of their use without taking into consideration the anatomic peculiarities of various facial regions (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 48</u></a>B). The authors of this methodology do not explain, for instance, what happens to the threads’ barbs directed from the temporal or even bregmatic areas through the entire cheek downward to the submaxillary region, when a person widely opens his or her mouth. Also unclear is what happens to threads that have been advanced from the temporal area downward to&nbsp;the upper&nbsp;lip (the nasolabial triangle), to the labiomental&nbsp;fold (marionette line) when the patient produces mimic movements of the lips and the entire perioral area. Procedures placing threads from the retroaural area to the submental and cervical regions in the form of a fan also usually prove to be ineffective (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 48</u></a>B).<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>14</u></sup></a></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1883/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img width="705" src="../../../aptos.global_443/media/1884/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1885/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><img src="../../../aptos.global_443/media/1886/conversions/optimized.html"></p><p class="ql-align-justify"><br></p><p class="ql-align-justify">We also do not recommend following the advice of those colleagues who lift the whole eyebrow and even the forehead by threadmediated methods.<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>15 </u></sup></a>Doing so, they do not take into consideration the presence of the&nbsp;powerful frontal muscle and its kinetics, which rapidly destroy&nbsp;the&nbsp;barbs&nbsp;of&nbsp;the&nbsp;threads,&nbsp;leading&nbsp;to&nbsp;&nbsp;a relapse of the deformity (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 48</u></a>C). In this situ- ation it seems appropriate to study the possibility of simultaneously using the Aptos Needle 2G method and Botox.</p><p class="ql-align-justify"><br></p><p class="ql-align-justify">	During endoscopic face lift procedures for sewing through the ptosed tissues, many surgeons use suture material that is inconvenient for this purpose and that leaves dimpling on the skin. The Aptos Needle is the best method possible for these purposes.<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>16–20</u></sup></a></p><p class="ql-align-justify">	Sixteen patients who wished a better radical effect and were dissatisfied were subjected to face lift at various times following the first thread lifting (0.5–2 years). Intraoperative findings showed that the implanted threads were in those sites where they had been placed. Neither their color nor their structure was altered, and their removal required considerable effort because of powerful coherence of the barbs with the tissues. Histology revealed that within tissues, the Aptos Threads were covered with a solid fibrous membrane, which was especially pronounced around the barbs, which is yet another explanation of the cause of stability and persistence of good clinical results (<a style="color: windowtext;" href="about:blank" target="_blank"><u>Fig. 49</u></a>).<a style="color: windowtext;" href="about:blank" target="_blank"><sup><u>21,22</u></sup></a></p><p class="ql-align-justify"><br></p><h1>SUMMARY</h1><p class="ql-align-justify">Absolute advantages of using the Aptos technologies while performing lifting are as follows:</p><p class="ql-align-justify"><br></p><ul><li>Simplicity, easiness, economy of use Minimally invasive nature and low trauma of the procedures</li><li>Reliability and sufficient duration of qualitative lifting</li><li>Possible combination with other interventions and a short rehabilitation period</li></ul><p><br></p><p class="ql-align-justify">	The Aptos methods constitute a new, nontraditional trend in aesthetic surgery, requiring further study and development. Despite the apparent simplicity, these operations do have their own nuances, which if taken into consideration and complied with provide a good stable outcome.</p><p class="ql-align-justify">	Unskillful hands and insufficient experience could at best yield undesirable results and rapid relapses and at worst complications. Such practitioners would rapidly be disappointed, ascribing failures to imperfection of the method and speaking against it, which is unfortunate. Doing so, they ignore suggestions to undergo a teaching course. These circumstances thwart progress and hamper improvement not only of the Aptos method but also of minimally invasive aesthetic surgery as a whole. To dismiss suture lifting gives no chance to a large number of patients who have appropriate indications and the desire to rejuvenate their appearance to have an alternative to the classic method of lifting and contour plasty of the face.</p><p class="ql-align-justify"><br></p><p>REFERENCES</p><p>1. Kazinnikova OG, Adamian AA. Age-specific</p><p>changes in facial and cervical tissues, a review.</p><p>Ann Plast Rec Aest Surg (Rus.) 2000;1:52–61.</p><p>2. MendelsonBC,MuzaffarAR,AdamsWP, et al.Surgical</p><p>anatomy of the midcheek and malar mounds, plastic</p><p>and reconstructive surgery 2002;110(N3):885–96.</p><p>3. Sulamanidze MA, Fournier PF, Paikidze TG, et al.</p><p>Removal of facial soft tissue ptosis with special</p><p>threads. Dermatol Surg 2002;28:367–71.</p><p>4. Frischberg IA. Face aesthetic surgery. ICC ‘‘Akademkniga’’,</p><p>2005. p. 271.</p><p>5. Sulamanidze M, Paikidze T, Sulamanidze G, et al.</p><p>Utilisation du fil APTOS[ dans le lifting facial.</p><p>La Revue De Chirurgie Esthetique de Langue Francaise</p><p>2001;25(103):17–22.</p><p>6. Sulamanidze MA, Sulamanidze GM. Flabby, ageing</p><p>face. A new approach. II Congress on aesthetic</p><p>and restorative surgery, Moscow1998. p. 15.</p><p>7. Fournier P. Les variants dans la technique du Curl</p><p>Lift, La revue de chirurgie esthetique de langue</p><p>Francaise. t. XXVIII, n 2004;117:35–8.</p><p>8. Sulamanidze M, Sulamanidze G. Lifting of soft</p><p>tissues: old philosophy, new approach—a method</p><p>of internal stitching (Aptos needle). J Japan Society</p><p>Aesthetic Surg 2005;42(5):182.</p><p>9. Sulamanidze M, Sulamanidze G. Surgical suture</p><p>material and a method to the use thereof, WO</p><p>2007/133103 A1.</p><p>10. Sulamanidze M, Sulamanidze G. APTOS SPRING—</p><p>a new concept of lifting. J Japan Society Aesthetic</p><p>Surg 2005;42(5):183.</p><p>11. Sulamanidze M, Sulamanidze G. Aptos threads,</p><p>side effects, complications APTOS. Congreso International</p><p>de dermatilogia cosmetica. 3 al 5 de Julio</p><p>del Ciudad de Mexico 2003.</p><p>12. Helling ER, Okpaku A, Wang PH, et al. Complications</p><p>of facial suspension sutures. Aesthet Surg J</p><p>2007;27(2):155–61.</p><p>13. Winkler E, Goldan O, Regev E, et al. Stensen duct</p><p>rupture (sialocele) and other complications of the</p><p>Aptos thread technique. Plast Reconstr Surg 2006;</p><p>118:1468–71.</p><p>14. Aesthetic buyers guide.www.miinews.com; 2006.</p><p>15. Guillo D. Fils Aptos implantation en X. Surginevs,</p><p>Automne 2005;8:10.</p><p>16. Woffles Wu. Advances in stitch lift. 2nd regional</p><p>conference in dermatological laser and facial</p><p>cosmetic surgery 2006 20–22 January, Hong</p><p>Kong, Programme Book, p. 30</p><p>17. Isse N. Endiscopic facial rejuvenation: endoforehead,</p><p class="ql-align-justify">the functional lift. Aesthetic Plast Surg 1994;18:21–9.</p><p>18. Ramirez OM. Endoscopic subperiosteal browlift and</p><p>facelift. Clin Plast Surg 1995;22:639–60.</p><p>19. Freeman SM. Transconjunctival sub-orbicularis oculi</p><p>fat (SOOF) Pad lift blepharoplasty. Arch Facial Plast</p><p>Surg 2000;2:16–21.</p><p>20. Little JW. Three dimensional rejuvenation of the</p><p>midface: volumetric resculpture by malar imbrication. Plast Reconstr Surg 2000;105(1):</p><p>267–85.</p><p>21. Fuente del Campo A. Update on minimally invasive</p><p>face lift technique. Aesthet Surg J 2008;28:51–61.</p><p>22. Adamyan A, Skuba N, Sulamanidze M, et al. Morphological</p><p>foundations of facelift using APTOS filaments.</p><p>Ann PlastReconstrAestheticSurg (RU)2002;3:19–27.</p><p class="ql-align-justify">306 Sulamanidze &amp; Sulamanidze</p><p class="ql-align-justify"><br></p><p><br></p><p class="ql-align-justify"> </p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p class="ql-align-justify"><br></p><p><br></p><p><br></p>
+                
+                
+                                    <div class="justify-content-center d-flex flex-wrap">
+                                                    <div class="pdf-prev mx-2">
+                                <a class="red-btn" href="https://media-global.aptos.world/media/1887/sulamanidze2009.pdf?Expires=1694848717&amp;Signature=Y2PoYwyGyHfLarWLQq00ArimMJp1lwkfQGwx7jT2LFd5cgpJizi194qrr35XoHECZGipN8k8vfo8aOQmWhvOQI8gcc7~BW2bIxSvvHg9x7uUnHeVOo0~YsHoVaooc611uEerUf2UdAxImSqJkovyBAZbCQzid11YZjBeT74rI19ZNhFjxGgavSGvra0DBgvETaaFP3t6zE4uH-MMO6XOt-niOkeqTdZiZY8oSdFo9Bd-h1icoG~PBz7sPiRw~i74dbhjk-Egp7ciYffWt3EpPsYAiLkOznOGRzKLQ429InmYOx7y2rLVn-gIjKnmxTPGlo8mYvWy55poTKl2Yr7Ugw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>View PDF</a>
+                            </div>
+                                            </div>
+                
+                            </div>
+
+                            <div class="share ">
+                    <h5>Share on</h5>
+
+                    <ul>
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://aptos.global/post/87/aptos-suture-lifting-methods-10-years-of-experience" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
+                        <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://aptos.global/post/87/aptos-suture-lifting-methods-10-years-of-experience" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i>Linkedin</a></li>
+                        <li><a href="https://twitter.com/intent/tweet?text=http://aptos.global/post/87/aptos-suture-lifting-methods-10-years-of-experience" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+                    </ul>
+                </div>
+                    </div>
+    </div>
+</div>
+
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+        <p class="accept-cookies-title mr-4">
+            We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+            about how visitors use our site. We collect the information to compile reports and to help us improve the
+            site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+            where visitors have come to the site from and the pages they visited. <a href="../../terms.html">Details.</a>
+        </p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+    </div>
+
+    <div class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="../../Aphoto.html" target="_blank">
+                            <img src="../../img/aphoto_logo.svg" class="aphoto-other-service-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="../../img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../aconnect.html" target="_blank">
+                            <img src="../../img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="../../asupport.html">
+                            <img src="../../img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo" />
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="../../terms.html" target="_blank" >
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../terms.html" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../contact.html" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    <div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+                <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: {
+                    {
+                        env('FB_APP_ID', '1797333467260014')
+                    }
+                },
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+    <script type="text/javascript" src="../../js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+    <script type="text/javascript" src="../../assets/js/sharect.min.js"></script>
+    <script type="text/javascript" src="../../js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </body>
+
+    
+<!-- Mirrored from aptos.global/post/87/aptos-suture-lifting-methods-10-years-of-experience by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:36:47 GMT -->
+</html>

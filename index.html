@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap"
+          rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0"/>
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="index.html">
+    <meta property="og:image" content="img/og_image.png">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            '../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1797333467260014');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading  ">
+
+<!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog"
+     aria-labelledby="message-doctorTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src='img/success-circle.png'/>
+                <p class='mt-2'>Your Message was sent successfuly</p>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Modal -->
+<!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog"
+     aria-labelledby="message-doctorTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column align-items-center">
+                <img src="img/success-circle.png"/>
+                <p class="mt-2">Your Location Updated Successfully</p>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Modal -->
+<!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Procedure</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form class="modal-body d-flex flex-column align-items-center">
+                <div class='row' id="modal-row">
+                    <div class="form-group w-100 col-12">
+                        <label>Procedure Name</label>
+                        <input type="text" id="procedure-name-input" class="ag-form-control form-control"
+                               name="en[name]" placeholder="Select Other Option"/>
+                        <span class="input-error-text"></span>
+                    </div>
+                    <div class="form-group w-100 col-6">
+                        <label>Procedure Price (from)</label>
+                        <input type="number" class="ag-form-control form-control" id="price_from" name="price_from"
+                               placeholder="From"/>
+                        <span class="input-error-text"></span>
+                    </div>
+                    <div class="form-group w-100 col-6">
+                        <label>Procedure Price (to)</label>
+                        <input type="number" class="ag-form-control form-control" id="price_to" name="price_to"
+                               placeholder="To"/>
+                        <span class="input-error-text"></span>
+                    </div>
+                </div>
+
+                <div id="save-btn-container">
+                    <button type='submit' class='submit-btn' id="save-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="loader">
+    <div id="loader-animation"></div>
+</div>
+
+<script type="text/javascript" src="js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+<script type="text/javascript" src="js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+
+<div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <i class="bg-circle-left"></i>
+    <i class="bg-circle-right"></i>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="container-fluid">
+                <div class="row justify-content-center navbar-items-list-container">
+                    <div class="col-lg-6">
+                        <b class="bml-image" style="background-image: url()">
+                            <span>Preparations</span>
+                        </b>
+                        <ul class="mb-4">
+                            <li><a href="archive/26/documents-to-be-filled-before-the-aptos-thread-lifting.html">Documents
+                                to be filled before the APTOS thread lifting</a></li>
+                            <li><a href="archive/27/what-to-know-for-before-consultation-to-doctor.html">What to know
+                                for before consultation to doctor</a></li>
+                            <li><a href="archive/28/cost-of-aptos-thread-procedure.html">Cost of Aptos thread
+                                procedure</a></li>
+                            <li><a href="archive/29/how-to-choose-a-doctor-and-a-clinic-for-a-thread-lift.html">How to
+                                choose a doctor and a clinic for a thread lift</a></li>
+                            <li><a href="archive/30/the-indications-and-contraindications-for-a-thread-lifting.html">The
+                                indications and contraindications for a thread lifting</a></li>
+                            <li><a href="archive/31/myths-and-prejudices-associated-with-aptos-thread-lifting.html">Myths
+                                and prejudices associated with APTOS thread lifting</a></li>
+                            <li><a href="archive/37/becoming-aptos-model.html">Becoming Aptos Model</a></li>
+                            <li><a href="archive/39/candidates-suitable-for-procedure.html">Candidates suitable for
+                                procedure:</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <b class="bml-image" style="background-image: url()">
+                            <span>Procedures</span>
+                        </b>
+                        <ul class="mb-4">
+                            <li><a href="archive/10/elimination-of-neck-bands-and-wrinkles.html">Elimination of Neck
+                                Bands and Wrinkles</a></li>
+                            <li>
+                                <a href="archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">Nasolabial
+                                    Folds: Correction of the folds without fillers and scalpel</a></li>
+                            <li><a href="archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">Sagging mouth
+                                corners &quot;wrinkles of sadness&quot;</a></li>
+                            <li><a href="archive/15/eyebrow-correction-with-aptos-threads.html">Eyebrow correction with
+                                Aptos Threads</a></li>
+                            <li><a href="archive/16/tummy-tuck-and-prevention-of-ptosis.html">Tummy tuck and prevention
+                                of ptosis</a></li>
+                            <li>
+                                <a href="archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">Lifting
+                                    of the forehead with Aptos Threads - Redefined youth and beauty</a></li>
+                            <li>
+                                <a href="archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">Correction
+                                    of Lip Contour and Mouth Furrows with Aptos Threads</a></li>
+                            <li><a href="archive/19/correction-of-the-mental-area-with-aptos-threads.html">Correction of
+                                the mental area with Aptos Threads</a></li>
+                            <li><a href="archive/21/double-chin-correction.html">Double Chin Correction</a></li>
+                            <li><a href="archive/22/correction-of-decollete-area-with-aptos-threads.html">Correction of
+                                décolleté area with Aptos Threads</a></li>
+                            <li><a href="archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">Lifting
+                                of the arms and shoulders with Aptos Threads</a></li>
+                            <li><a href="archive/24/lifting-of-the-inner-thighs-it-is-easy.html">LIFTING OF THE INNER
+                                THIGHS - IT IS EASY!</a></li>
+                            <li><a href="archive/25/special-threads-for-correction-of-the-area-above-knee.html">Special
+                                threads for correction of the area above knee</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <b class="bml-image" style="background-image: url()">
+                            <span>Post procedures</span>
+                        </b>
+                        <ul class="mb-4">
+                            <li><a href="archive/32/how-is-the-procedure-of-thread-lifting-performed-using-aptos.html">How
+                                is the procedure of thread lifting performed using APTOS</a></li>
+                            <li><a href="archive/33/does-it-hurt-during-and-after-the-procedure.html">Does it hurt
+                                during and after the procedure</a></li>
+                            <li><a href="archive/34/post-procedure-conditions.html">Post Procedure Conditions</a></li>
+                            <li><a href="archive/36/rehabilitation.html">Rehabilitation</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <b class="bml-image" style="background-image: url()">
+                            <span>Threads</span>
+                        </b>
+                        <ul class="mb-4">
+                            <li><a href="archive/3/the-essence-of-the-method.html">The Essence of the method</a></li>
+                            <li><a href="archive/5/creating-aptos-threads.html">Creating APTOS threads</a></li>
+                            <li><a href="archive/6/advantages-of-thread-rejuvenation.html">Advantages of thread
+                                rejuvenation</a></li>
+                            <li><a href="archive/9/aptos-invites.html">APTOS invites</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="img/icons/close.svg" alt="">Close
+                Window
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<section id="main-page-header">
+    <img src="img/main_page_promo_girl.jpg" id="main-page-promo-girl-overlay"/>
+    <span id="main-page-gradient-overlay"></span>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light " id="main-navbar-container">
+        <a class="navbar-brand" href="index.html">
+            <i class="logo-icon"></i>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar"
+                aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">About</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item " href="history.html">History</a>
+                        <a class="dropdown-item " href="about.html">What is Aptos</a>
+                        <a class="dropdown-item " href="faq.html">FAQ</a>
+                        <a class="dropdown-item " href="subscribe.html">Newsletter</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">Activity</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item " href="category/1/news.html">News</a>
+                        <a class="dropdown-item " href="category/3/conferences.html">Conferences</a>
+                        <a class="dropdown-item " href="category/5/articles.html">Articles</a>
+                        <a class="dropdown-item " href="category/6/for-patient.html">For Patient</a>
+                        <a class="dropdown-item " href="category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a>
+                        <a class="dropdown-item " href="intimate.html">Aptos Intimate</a>
+                    </div>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link" href="patients.html">Products</a>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link" href="coaches.html">Trainers</a>
+                </li>
+
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="aconnect.html"><i
+                                class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="asupport.html"><i
+                                class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="Aphoto.html"><i
+                                class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i
+                                class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i
+                                class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled"
+                       href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global">Log
+                        in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="courses.html">Register for courses</a>
+                </li>
+
+
+                <li class="nav-item world">
+                    <a class="nav-link" href="world.html">
+                        <i class="globe-icon"></i>Distribution
+                    </a>
+                </li>
+
+                <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#"
+                       class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center border-white"
+                       data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="intro-container container-fluid for-doctors-active">
+        <div class="row h-100 justify-content-end align-items-center position-relative">
+            <div class="intro-button-container">
+                <a href="index.html" class="active">For Doctors</a>
+                <a href="patients.html">For Patients</a>
+            </div>
+
+            <div class="col-xs-12 col-md-6 px-0" id="for-doctors-container">
+                <div class="col-xs-12 col-lg-8 for-doctors-description-wrapper">
+                    <h3>Aptos thread lifting methods</h3>
+                    <p>Minimally invasive threads and methods for face and body lifting, contouring and armoring.</p>
+                    <a class="play-video mt-1 mb-4" data-fancybox data-type="iframe"
+                       data-src="https://www.youtube.com/embed/i5OBSnh-qkU/?autoplay=1" href="javascript:;">
+                    <span>
+                        <i class="fa fa-play"></i>
+                    </span>
+                        Play Video
+                    </a>
+                </div>
+
+                <div class="large-dev-slider">
+                    <div class="coaches-slider">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#authors">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/5036/conversions/resizede0dc.jpg?Expires=1694848400&amp;Signature=bFPKOfGfGCTN7ShG8Bc1W5qFBnVsW4MC9Qs9JWp5Z6ntcZQP30D0IVtAH1CfFRcCRmXy716YBfmfBs8IYnQ7JANU73SbR~ZexCIvjoUGVoe7yuVeouRpFWU470-GmW8CT5XOi36vF0pSJ5ksaCnZkchKix6jLH2gJC6VT4DczAN4tOgOqpHVdkwPUhJ3DIBgevIOw0cU1nyOHswSO8y8CcGpQzhLILrDS-nVGhBo-w7yANlucKZXL7Xg2lI~G-5QecjRk4tohJNJ7F9~k6dwEjQ~eM28-BZpCJB1ja3zg5ErVyYfd6YLPgDa2fT7fTcfiM2y0CvgoIR2R8n7OBNG5w__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Marlen Sulamanidze, PH.D.</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#authors">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/3601/conversions/resizedaac5.jpg?Expires=1694848400&amp;Signature=Pzm4pAi2N0yIh80N3dcIY9UwBp3NdGdy10LJSMRU3uW~lx5BvUuw0tQzZkIhp7hHkqBibtdKNEDOTRNTslIEXNI5HYLloE97HdZ4z1j04B8VeiiYaHkYssae8WJHSyKFh6lLCzNAWsELIJ29OeORms~TbMIOsUPhAf7~J1nfJgSR7EzfvmhpOdRx7LFwKuGcRU-DvV6sr-312u4AUspEBxY2DfEz4tf0ojUcNq0ydcbxdRpXBgIspDcL7xAr9i~cGB-3DT8idPnb8pI4yGevJcytZwhECn2lrYzBaZ9m9EIxQwpqV50FV0Dml-7tkyn0YhYCxs5TME-StY6he2cGGA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">George Sulamanidze</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#authors">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/3600/conversions/resized363a.jpg?Expires=1694848400&amp;Signature=TPnim~f5wKJV2giPBHKKsBC7hFD~MQntIO1PnyhANKqEEKeqxYOx-CusydPxtXXEtfRsilJgWqU1KNtFPSTMwiAk2d7xAw3QvW2te70Yo6cYSIPCUDPnXYAa4m5D7HUo-eTpjJrb~Z7sxUpEaautiS86cCQ2NSivBz4Ca~Ydv7OaRHPmLuOJEXhpE4Eoc0h0w1OqP3YemZIT5erYJ1VNGRhNS2NsAHSiI7FHeJowM0G2FSmBSzHTU6WvQ7YUX0tBssGRqCDY2aSDnN~yK1dFP7ws3UyRwXt-B6XGGcUIKHZfXMQBwIzHUErnuZWH6ljODn7N5YNpmJDbRa7FW6oigg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Konstantin Sulamanidze</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#experts">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/5693/conversions/resized62d7.jpg?Expires=1694848400&amp;Signature=DcZ-tcpVELjY6wNd~kGRe1lI7k9ab49ECqVui0O9wsAwAW6W3bFMS25mLkH1FYNHAecigt1tl7JpGO5VRo~if-CL~6ryFKm9LAw5lN1dlsZfP5dNyhkXzRykB6MTvx6uiWJVAv1uYZeD8AHT~JcJgmXndcfDO-JgwKNv4bSg9ngfjeMRWZV0~mU41ad27IaZ9UfwwC7rTpgWUnidLJkoCT30ZBR-FLgkqZkjJ83a1r2m2yiya4FvmeDqKkTcSJZYPFLW3A7GaeR4vCC6N6F1UPmT1KvEYCcTi-xsZmduOodA0izl1L410uc68H5k07CYKFqZtY8c7Th5uGFVzq~MdQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Albina Kajaia</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#experts">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/3763/conversions/resized8f1c.jpg?Expires=1694848400&amp;Signature=arPlSpp~WDsTyywnijkYvFLAQczCFmkPP9NEQneeZ8AxHWfifVzeJZmznAToCoZGGi3pyWdUuNKVtnWR-P9sURSJ2Mg24gK~Jfsjp0Yc1FcgwfhA0t3ivQ71hi2BNhb7CZdJ3iCxxwZexY2zjlh8R~qaBAR23Jlf1mYVsA0vtilkENthEfY0yfp486mxWpBZBt3mPieHTLHbNGwDWnwgTeSfAva7fND02QI6NOYBVKVv8Sptrt~i0BczCYPKubqcZyIIgHci7mgFVAjGkKyFLj1iZwWhPk-rhxMdDI2KivlVb2Zhf3FfmFMdmZktweT1f1sZIXf5hNbNxgB8F3Qu1Q__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Amr Abdelmoniem Elnaggary</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#experts">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/3797/conversions/resizede60b.jpg?Expires=1694848400&amp;Signature=ijHc86jUPKa1gOhLPr6inUeAR71alTjpnDXNcQqHYz7zmC4jPafX0S~qmTf34zSD9JNP7QEeOU5tF1v4NN4jDOjUCLXZaO8X2AIsI5evkOw2pD5qEWAPP9dVWncfNHzojfjVvORvYZiGCqnzQgaGDVlJVlM0keHsFtuyv3wp91mIFytPPtM9f2ecs034jSinMCr~lMF5nRPLxehmlghor1cP90B-ZY9ajp-o-R6NHcpeqr3fMVOLgtkeazHqAvAseKVZ8tfqKUf5tDEPwbekdihpQBOqbMqdpRwd5pmjqQtCW52Uh5w880Nj9uy2DNyGMbj-EMCN~WcS5GQoQPwRnw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Murat Tsintsadze</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#trainers">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/3222/conversions/resized69c7.jpg?Expires=1694848400&amp;Signature=oTl8NwClVBKRwRgk4aX6NcCbtBN7FtVg3dQHdfR1g2FXP2GzbGPZs1OtVpQmK3zP~00ZYE8-wQlNxBiIpeGGdEr2Yb3o2DdxkmkUzR-avZF9-FE-JC0CSTpWJ6~XwjaRrpYQQJKnSEyItWz~cd3MnGF5uZBTuV1sDdjVtiAQ4m4uFv-trDza0Yii9iwmdlYnHcOCrrfHRFewNZjGUQlOaTaCDDVzM~6I7wt0JcKoAYL3DNnO3wY91UQxT8SnbjMMB~hrgv1c6JLx8TpyeFPSIoNfxhuUFy6JIxxlOUuTjBXlRtMCYfwFgw6pB1RvqD9REdeZmI5FNENC57qJZtIxcA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Frank R. Graewe</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#trainers">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/368/conversions/resizede7e5.jpg?Expires=1694848400&amp;Signature=fi0q-ptySM4CZX3NIHKrYSBViiOZE8wpAZfnb7PgSEOC1f8KU52DWYvhG7O-y2rag9JR4WKxVFllIjozwjc7ODYm9jiE-EVvdNRRug1fyiacVWweR9IX-4FQLS4wPn9WtRl0IEHtRjGDMFj-lCpg3CC~jRsFwz12pHdkDo8x-~EUsXWn0u9uTdoXglrSdhpVbTv41l5fJu2a3G3YYoRKzeHe~TqUngFTYOdJxQ79iRYUh64p10NPu-BuBVfG-GJyYtW1LV2y0ITARLF2Gm~1VFQ409KKix83B6VnX0fMa5U24PJBlTHvLJAd6hwgSGDUc5YWYXCabzZWBkjearm20g__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Anna Maria Malgioglio</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#trainers">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/3636/conversions/resizeda139.jpg?Expires=1694848400&amp;Signature=GEILsOboydtAgLD9XMNbKYOBXy6x3U66fHQ2jUDOZnNElTv0khGubwCrUC5Cxxj8KE-JSPEUQeX3to8V4NKxbfPMLLrn2E43a5YzoanNUVjB-Z3aOCpM9ThjHFcnDCJ94gCQyvA8RaYe3U~YR2Rn3pbuoRQWYS4dcArMpvfc~0IVWGQLy7lwrXqw5wRwniqb6aHZPeiSKOEXDA8AqxMeIBzNcLU~YvWUucnLpAUDdLCUonYAAZue3W37tLo6n6c0jhWT2XIOM7Vb295u8CEHKTGpewYwYNb0m9bJbWu70fc~ezwB-SHMHaO79dnOQkFwpHSVn9JU-rfDKgO6mg5x9Q__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Christeen Youssef</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="coaches.html#trainers">
+                                        <div class="img"
+                                             style="background-image: url('../media-global.aptos.world/media/142/conversions/resized315e.jpg?Expires=1694848400&amp;Signature=K-eGo4sgVb6dToiyahiIxPcCIxHTbiEdYgiltvhRDX9-wnmcv7ESAsYW7GVrXnHEjGmwL1KSefF6XwXv6otpdYPbuICRnvoyuYPKILbcvSDq-eAKxyQX92EeYzWu3wBVuAFi7wp3txg0CyINL7OJkh7P21duS6AcULQ210TzDyxjJ2s~qxYmFdhftLW5DJQBF1~88m9AKswFkAKQcge5k4ewoKcJvKS9DuQlfsDVQBRbMgwyg~a0-D5pAgKGeJUV1pwJT8m4HKkodpozd7EusCWZpILBgRipKbOL20lfrdC1fA9LDfb9k9QgT~U58uzaQoTwyiXMsxVwypmgNiwtew__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                                        <div class="info">
+                                            <div class="name">Tatyana Paikidze</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-buttons">
+                            <div class="button-prev"><i class="fa fa-chevron-left"></i></div>
+                            <div class="button-next"><i class="fa fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-down">
+                <a href=".html" class="scroll">
+                    <i class="fa fa-chevron-down"></i> Scroll Down
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="small-dev-slider">
+    <div class="coaches-slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="coaches.html#authors">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/5036/conversions/resizede0dc.jpg?Expires=1694848400&amp;Signature=bFPKOfGfGCTN7ShG8Bc1W5qFBnVsW4MC9Qs9JWp5Z6ntcZQP30D0IVtAH1CfFRcCRmXy716YBfmfBs8IYnQ7JANU73SbR~ZexCIvjoUGVoe7yuVeouRpFWU470-GmW8CT5XOi36vF0pSJ5ksaCnZkchKix6jLH2gJC6VT4DczAN4tOgOqpHVdkwPUhJ3DIBgevIOw0cU1nyOHswSO8y8CcGpQzhLILrDS-nVGhBo-w7yANlucKZXL7Xg2lI~G-5QecjRk4tohJNJ7F9~k6dwEjQ~eM28-BZpCJB1ja3zg5ErVyYfd6YLPgDa2fT7fTcfiM2y0CvgoIR2R8n7OBNG5w__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Marlen Sulamanidze, PH.D.</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#authors">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/3601/conversions/resizedaac5.jpg?Expires=1694848400&amp;Signature=Pzm4pAi2N0yIh80N3dcIY9UwBp3NdGdy10LJSMRU3uW~lx5BvUuw0tQzZkIhp7hHkqBibtdKNEDOTRNTslIEXNI5HYLloE97HdZ4z1j04B8VeiiYaHkYssae8WJHSyKFh6lLCzNAWsELIJ29OeORms~TbMIOsUPhAf7~J1nfJgSR7EzfvmhpOdRx7LFwKuGcRU-DvV6sr-312u4AUspEBxY2DfEz4tf0ojUcNq0ydcbxdRpXBgIspDcL7xAr9i~cGB-3DT8idPnb8pI4yGevJcytZwhECn2lrYzBaZ9m9EIxQwpqV50FV0Dml-7tkyn0YhYCxs5TME-StY6he2cGGA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">George Sulamanidze</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#authors">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/3600/conversions/resized363a.jpg?Expires=1694848400&amp;Signature=TPnim~f5wKJV2giPBHKKsBC7hFD~MQntIO1PnyhANKqEEKeqxYOx-CusydPxtXXEtfRsilJgWqU1KNtFPSTMwiAk2d7xAw3QvW2te70Yo6cYSIPCUDPnXYAa4m5D7HUo-eTpjJrb~Z7sxUpEaautiS86cCQ2NSivBz4Ca~Ydv7OaRHPmLuOJEXhpE4Eoc0h0w1OqP3YemZIT5erYJ1VNGRhNS2NsAHSiI7FHeJowM0G2FSmBSzHTU6WvQ7YUX0tBssGRqCDY2aSDnN~yK1dFP7ws3UyRwXt-B6XGGcUIKHZfXMQBwIzHUErnuZWH6ljODn7N5YNpmJDbRa7FW6oigg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Konstantin Sulamanidze</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#experts">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/5693/conversions/resized62d7.jpg?Expires=1694848400&amp;Signature=DcZ-tcpVELjY6wNd~kGRe1lI7k9ab49ECqVui0O9wsAwAW6W3bFMS25mLkH1FYNHAecigt1tl7JpGO5VRo~if-CL~6ryFKm9LAw5lN1dlsZfP5dNyhkXzRykB6MTvx6uiWJVAv1uYZeD8AHT~JcJgmXndcfDO-JgwKNv4bSg9ngfjeMRWZV0~mU41ad27IaZ9UfwwC7rTpgWUnidLJkoCT30ZBR-FLgkqZkjJ83a1r2m2yiya4FvmeDqKkTcSJZYPFLW3A7GaeR4vCC6N6F1UPmT1KvEYCcTi-xsZmduOodA0izl1L410uc68H5k07CYKFqZtY8c7Th5uGFVzq~MdQ__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Albina Kajaia</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#experts">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/3763/conversions/resized8f1c.jpg?Expires=1694848400&amp;Signature=arPlSpp~WDsTyywnijkYvFLAQczCFmkPP9NEQneeZ8AxHWfifVzeJZmznAToCoZGGi3pyWdUuNKVtnWR-P9sURSJ2Mg24gK~Jfsjp0Yc1FcgwfhA0t3ivQ71hi2BNhb7CZdJ3iCxxwZexY2zjlh8R~qaBAR23Jlf1mYVsA0vtilkENthEfY0yfp486mxWpBZBt3mPieHTLHbNGwDWnwgTeSfAva7fND02QI6NOYBVKVv8Sptrt~i0BczCYPKubqcZyIIgHci7mgFVAjGkKyFLj1iZwWhPk-rhxMdDI2KivlVb2Zhf3FfmFMdmZktweT1f1sZIXf5hNbNxgB8F3Qu1Q__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Amr Abdelmoniem Elnaggary</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#experts">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/3797/conversions/resizede60b.jpg?Expires=1694848400&amp;Signature=ijHc86jUPKa1gOhLPr6inUeAR71alTjpnDXNcQqHYz7zmC4jPafX0S~qmTf34zSD9JNP7QEeOU5tF1v4NN4jDOjUCLXZaO8X2AIsI5evkOw2pD5qEWAPP9dVWncfNHzojfjVvORvYZiGCqnzQgaGDVlJVlM0keHsFtuyv3wp91mIFytPPtM9f2ecs034jSinMCr~lMF5nRPLxehmlghor1cP90B-ZY9ajp-o-R6NHcpeqr3fMVOLgtkeazHqAvAseKVZ8tfqKUf5tDEPwbekdihpQBOqbMqdpRwd5pmjqQtCW52Uh5w880Nj9uy2DNyGMbj-EMCN~WcS5GQoQPwRnw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Murat Tsintsadze</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#trainers">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/3222/conversions/resized69c7.jpg?Expires=1694848400&amp;Signature=oTl8NwClVBKRwRgk4aX6NcCbtBN7FtVg3dQHdfR1g2FXP2GzbGPZs1OtVpQmK3zP~00ZYE8-wQlNxBiIpeGGdEr2Yb3o2DdxkmkUzR-avZF9-FE-JC0CSTpWJ6~XwjaRrpYQQJKnSEyItWz~cd3MnGF5uZBTuV1sDdjVtiAQ4m4uFv-trDza0Yii9iwmdlYnHcOCrrfHRFewNZjGUQlOaTaCDDVzM~6I7wt0JcKoAYL3DNnO3wY91UQxT8SnbjMMB~hrgv1c6JLx8TpyeFPSIoNfxhuUFy6JIxxlOUuTjBXlRtMCYfwFgw6pB1RvqD9REdeZmI5FNENC57qJZtIxcA__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Frank R. Graewe</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#trainers">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/368/conversions/resizede7e5.jpg?Expires=1694848400&amp;Signature=fi0q-ptySM4CZX3NIHKrYSBViiOZE8wpAZfnb7PgSEOC1f8KU52DWYvhG7O-y2rag9JR4WKxVFllIjozwjc7ODYm9jiE-EVvdNRRug1fyiacVWweR9IX-4FQLS4wPn9WtRl0IEHtRjGDMFj-lCpg3CC~jRsFwz12pHdkDo8x-~EUsXWn0u9uTdoXglrSdhpVbTv41l5fJu2a3G3YYoRKzeHe~TqUngFTYOdJxQ79iRYUh64p10NPu-BuBVfG-GJyYtW1LV2y0ITARLF2Gm~1VFQ409KKix83B6VnX0fMa5U24PJBlTHvLJAd6hwgSGDUc5YWYXCabzZWBkjearm20g__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Anna Maria Malgioglio</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#trainers">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/3636/conversions/resizeda139.jpg?Expires=1694848400&amp;Signature=GEILsOboydtAgLD9XMNbKYOBXy6x3U66fHQ2jUDOZnNElTv0khGubwCrUC5Cxxj8KE-JSPEUQeX3to8V4NKxbfPMLLrn2E43a5YzoanNUVjB-Z3aOCpM9ThjHFcnDCJ94gCQyvA8RaYe3U~YR2Rn3pbuoRQWYS4dcArMpvfc~0IVWGQLy7lwrXqw5wRwniqb6aHZPeiSKOEXDA8AqxMeIBzNcLU~YvWUucnLpAUDdLCUonYAAZue3W37tLo6n6c0jhWT2XIOM7Vb295u8CEHKTGpewYwYNb0m9bJbWu70fc~ezwB-SHMHaO79dnOQkFwpHSVn9JU-rfDKgO6mg5x9Q__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Christeen Youssef</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="coaches.html#trainers">
+                        <div class="img"
+                             style="background-image: url('../media-global.aptos.world/media/142/conversions/resized315e.jpg?Expires=1694848400&amp;Signature=K-eGo4sgVb6dToiyahiIxPcCIxHTbiEdYgiltvhRDX9-wnmcv7ESAsYW7GVrXnHEjGmwL1KSefF6XwXv6otpdYPbuICRnvoyuYPKILbcvSDq-eAKxyQX92EeYzWu3wBVuAFi7wp3txg0CyINL7OJkh7P21duS6AcULQ210TzDyxjJ2s~qxYmFdhftLW5DJQBF1~88m9AKswFkAKQcge5k4ewoKcJvKS9DuQlfsDVQBRbMgwyg~a0-D5pAgKGeJUV1pwJT8m4HKkodpozd7EusCWZpILBgRipKbOL20lfrdC1fA9LDfb9k9QgT~U58uzaQoTwyiXMsxVwypmgNiwtew__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                        <div class="info">
+                            <div class="name">Tatyana Paikidze</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="control-buttons">
+            <div class="button-prev"><i class="fa fa-chevron-left"></i></div>
+            <div class="button-next"><i class="fa fa-chevron-right"></i></div>
+        </div>
+    </div>
+</div>
+
+<div class="intro">
+    <div class="container" style="padding-top: 120px">
+        <!-- <div class="stats row justify-content-center">
+                <div class="title col-xs-12 col-md-10 col-lg-8 text-center">
+                    <h3>The inventor and pioneer of thread lifting with more than 24 years of experience.</h3>
+                    <p>The history of Aptos and thread lifting field starts simultaneously and develops in a parallel way.</p>
+                </div>
+                <div class="w-100"></div>
+                <div class="items col-12 col-lg-11 row">
+                    <div class="item col-xs-12 col-sm-12 col-md-4">
+                        <div class="icon"><img src="https://aptos.global/img/icons/user.svg" alt=""></div>
+                        <div>
+                            <div class="count">200</div>
+                            <div class="name">Aptos trainers worldwide</div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-12 col-md-4">
+                        <div class="icon"><img src="https://aptos.global/img/icons/diploma.svg" alt=""></div>
+                        <div>
+                            <div class="count">20000+</div>
+                            <div class="name">Aptos certified doctors</div>
+                        </div>
+                    </div>
+                    <div class="item col-xs-12 col-sm-12 col-md-4">
+                        <div class="icon"><img src="https://aptos.global/img/icons/earth.svg" alt="" width="60"></div>
+                        <div>
+                            <div class="count">70</div>
+                            <div class="name">Countries</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        <div class="new-calendar-container">
+            <div class="row">
+                <div class="col text-center">
+                    <h3 class="mb-4 calendar-info-heading">
+                        Join the training
+                    </h3>
+                </div>
+            </div>
+            <div class="row justify-content-lg-center mb-4">
+                <div class="col-lg-9 text-center">
+                    <p class="calendar-info-paragraph">
+                        Book yourself for convenient time and place of training and learn the modern approaches of
+                        minimally invasive thread lifting techniques.
+                    </p>
+                </div>
+            </div>
+            <div id="react-root"></div>
+        </div>
+    </div>
+
+    <div class="app-cont mobile-app" style="background-image: url(img/mobileback.png)">
+        <div class="container">
+            <div class="links row justify-content-center">
+                <a href="https://aptosvideo.com/" target="_blank" class="img d-flex justify-content-center m-auto">
+                    <img src="img/icons/aptos-video.png" alt="Aptos Video Mobile App"/>
+                </a>
+
+                <div class="desc text-center">
+                    <h4>Video portal for cosmetologists and plastic surgeons</h4>
+                    <p>Aptos Photo is a brand new software for doctors, where one can create patients history,
+                        upload before/after photos and manage all useful information. The software is free. Feel
+                        free to download and register. Actually, it's free</p>
+                </div>
+
+                <div class="icons d-flex">
+                    <a href="https://play.google.com/store/apps/details?id=com.orbitsoft.Aptos" target="_blank">
+                        <img src="img/icons/google-play.png" alt="Google Play"/>
+                    </a>
+                    <a href="https://itunes.apple.com/ru/app/aptosvideo/id1136179495?mt=8" target="_blank">
+                        <img src="img/icons/app-store.png" alt="App Store"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="news-list row justify-content-center">
+            <div class="section-title col-xs-12 col-md-8 col-lg-6 text-center">
+                <h3>News</h3>
+                <p>The up to date news and events from Aptos around the world</p>
+            </div>
+
+            <div class="row col-12">
+                <div class="col-sm-12 col-md-4">
+                    <div class="single-news">
+                        <div class="image">
+                            <a href="post/212/multicentric-observational-study-of-the-possible-side-effects-of-the-covid-19-vaccine-in-relation-to-absorbable-thread-insertion.html">
+                                <div style="background-image: url('../media-global.aptos.world/media/71131/conversions/cropped6978.jpg?Expires=1694848400&amp;Signature=O75g1AmTbStR0KDV~q1vSIZt6OxoCQJO-sbSrHb0v0ZYIFX18ar-ZvprcMHDxXm2FdYqb2ucryHUQz5FU1sj3os1JiuZ9Aadn0Ny~AAZdDu1HBcZWTE1CXOayO9wd4X0B5iClAefa5grlRxboZsVjYw4TR7oFc3Ga3lhAhN6iG7w0ip3EbvttLFjZ~4Z4lqq4k21X65q3UhBeE7Zl6zBmMdrR2Kpz02xrRc51p02PnymV8cFFVQZMuOwOlWe2d4dflrD7EoMYZkHJeA~dZZ0gPPbni4jCHJPijKnHVu5Gtuo03b179h8rOFV77nBx0toYCxMYdgN7jLN0CwAaqmYRg__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div>
+                                <a href="post/212/multicentric-observational-study-of-the-possible-side-effects-of-the-covid-19-vaccine-in-relation-to-absorbable-thread-insertion.html"
+                                   class="title">Multicentric Observational Study of the Possible Side Effects of the
+                                    COVID-19 Vaccine in Relation to Absorbable Thread Insertion</a></div>
+                            <div class="date">11 August 2023</div>
+                            <div class="description">
+                                Background: Coronavirus disease 2019 (COVID-19) vaccination programs in Europe began in
+                                December 2020, and as the number of vaccinated people increase...
+                            </div>
+                            <div>
+                                <a href="post/212/multicentric-observational-study-of-the-possible-side-effects-of-the-covid-19-vaccine-in-relation-to-absorbable-thread-insertion.html"
+                                   class="read-more">Read more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="single-news">
+                        <div class="image">
+                            <a href="post/210/httpsonlinelibrarywileycomdoi101111jocd15885.html">
+                                <div style="background-image: url('../media-global.aptos.world/media/70091/conversions/cropped351a.jpg?Expires=1694848400&amp;Signature=aB7PdJBhnRey~rC9D9cTCLltwdwB~333FkhplBGpnG-~~9mEnm0Vew1M2TQEtVQ7nvI7UvNgeRrnkY4o8LNsL7XfQLgm5cfyEVb6pF50ZUkrMq315uEZT9uh~~rhon3uugcYIFvvqiv0vnVPYbc7rZ4jbgsBhAJprfpm6A3ZkKSGHAvB1ZXpk~ohEskrlCz1zlEP~JemtGLOPmMI8gCK2iDFDtmKiw~drOcM5HOdeknTwytUTB6WrkFZi6qgNmnxLDBJuxHpV-HUsLkTALPBeE-RYI~GoE2im7OFHQq1CtwL5IdQL85A-~17fhCHtwAk8q9hvOVjOa2qQnMBXjWBSw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div><a href="post/210/httpsonlinelibrarywileycomdoi101111jocd15885.html" class="title">The
+                                Third Generation Barbed Lifting Threads: Added Value of Hyaluronic Acid</a></div>
+                            <div class="date">19 July 2023</div>
+                            <div class="description">
+                                Facial thread lifting is a highly demanded procedure in esthetic clinics worldwide. The
+                                aim of this retrospective study is to evaluate the clinical ef...
+                            </div>
+                            <div><a href="post/210/httpsonlinelibrarywileycomdoi101111jocd15885.html" class="read-more">Read
+                                more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="single-news">
+                        <div class="image">
+                            <a href="post/209/httpsjournalslwwcomprsgofulltext202304000thread-lifting-of-the-nose-fully-comprehensive8aspxej-article-sam-container.html">
+                                <div style="background-image: url('../media-global.aptos.world/media/63623/conversions/croppeddd7a.jpg?Expires=1694848400&amp;Signature=VXFL~x4wjsQrCXWsT9dtGrDd6vV1Qa188-nbnUYh8f9WzJubwvSiyiYQeUx6ltR9l4BQA9Y4qV17u~5-iUkNBa0y199XPkVwWrceG7AW3Wim12Z9r-yv2stx-9c3T6-HaKdDMl0f-u2TcOWCH-GH8Kdof9TXuD8dLumMemeBKnIGVgaDvQ24LybmHeXmLfyi52drolcGYaxip9x9xid~3cNwgSCem-vwEcb~BvSD7DmlXhD8Qwu5FF-2lFiUd2FBnZI0SNs~MI9A5~FUJqr2md6zVehf~-1X~JVL4vhd1A0sW6zLdrlU1CiuAqYKy7lzmWo7iNRLVfZ~k74~COo18Q__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q')"></div>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div>
+                                <a href="post/209/httpsjournalslwwcomprsgofulltext202304000thread-lifting-of-the-nose-fully-comprehensive8aspxej-article-sam-container.html"
+                                   class="title">Thread Lifting of the Nose: Fully Comprehensive Approach to the
+                                    Technique</a></div>
+                            <div class="date">11 April 2023</div>
+                            <div class="description">
+                                Background: Nose thread lifting is a relatively recent technique. It offers a chance to
+                                approach nose morphology defects without turning to surgery to...
+                            </div>
+                            <div>
+                                <a href="post/209/httpsjournalslwwcomprsgofulltext202304000thread-lifting-of-the-nose-fully-comprehensive8aspxej-article-sam-container.html"
+                                   class="read-more">Read more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column">
+        <a href="https://www.aptos.global/en/category/8/hyaluronic-acid" class="d-inline-block w-100 position-relative">
+            <img alt="" src="img/ha.jpg" class="position-absolute d-none d-md-block w-100 h-100"
+                 style="object-fit: cover; object-position: bottom center;"/>
+            <div class="container">
+                <img src="img/aptos_threads_banner.png" alt="" class="w-100 d-none d-md-block"/>
+                <img src="img/aptos_threads_banner_mobile.png" alt="" class="w-100 d-md-none"/>
+            </div>
+        </a>
+
+        <div class="d-inline-block w-100 position-relative">
+            <img alt="" src="img/aptos_photo_banner_bg.jpg" class="position-absolute w-100 h-100"
+                 style="object-fit: cover; object-position: top center; z-index: -1"/>
+            <div class="container position-relative">
+                <div class="aphoto-banner-links position-absolute d-flex flex-column flex-sm-row">
+                    <a href="#" class="download-appstore mr-sm-2 mb-2 mr-lg-3 mb-lg-3" data-toggle="modal"
+                       data-target=".appStorePhotoTermsModal">
+                        <img src="img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" height="40"/>
+                    </a>
+                    <a href="#" class="download-playstore mr-sm-2 mb-2 mr-lg-3 mb-lg-3" data-toggle="modal"
+                       data-target=".playGooglePhotoTermsModal">
+                        <img src="img/google-play-badge.png" height="40"/>
+                    </a>
+                    <a href="#" class="download mr-sm-2 mb-2 mr-lg-3 mb-lg-3 d-none" data-toggle="modal"
+                       data-target=".photoTermsModal">
+                        Download for Windows
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=0NV8qfRCuG4"
+                       class="download youtube-btn fancybox-media mr-sm-2 mb-2 mr-lg-3 mb-lg-3">
+                        <i class="fa fa-youtube-play mr-2" aria-hidden="true"></i>
+                        Play Tutorial
+                    </a>
+                </div>
+                <img src="img/aptos_photo_banner_mobile.png" alt="" class="w-100 d-md-none"/>
+                <img src="img/aptos_photo_banner.png" alt="" class="w-100 d-none d-md-block"/>
+            </div>
+        </div>
+    </div>
+    <a href="aconnect.html" class="d-inline-block w-100 position-relative mb-4 mb-md-0">
+        <img alt="" src="img/aconnect_banner_bg.jpg" class="position-absolute w-100 h-100"
+             style="object-fit: cover; object-position: bottom center; z-index: -1"/>
+        <div class="container">
+            <img src="img/aconnect_banner_overlay.png" alt="" class="w-100 d-none d-md-block"/>
+            <img src="img/aconnect_banner_overlay1.png" alt="" class="w-100 d-md-none"/>
+        </div>
+    </a>
+
+
+    <!-- <div class="container">
+        <div class="contact-section row justify-content-center">
+    <div class="w-100"></div>
+    <div class="social-links col-sm-12 col-lg-8">
+        <div class="col pl-0">
+            <div class="title my-3">Certification</div>
+        </div>
+        <div class="w-100"></div>
+        <div class="links row">
+            <div class="col-sm-6 col-md-3 cert">
+                <div class="cert-container">
+                    <img class="cert-image fda-cert" src="https://aptos.global/img/icons/certs/FDA-cert.png" alt="FDA">
+                    <p class="cert-description fda-description">Food and Drug Administration</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 cert">
+                <div class="cert-container">
+                    <img class="cert-image ce-cert " src="https://aptos.global/img/icons/certs/CE-cert.png" alt="CE">
+                    <p class="cert-description ce-description">CE marking</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 cert">
+                <div class="cert-container">
+                    <img class="cert-image " src="https://aptos.global/img/icons/certs/ISO-cert.png" alt="ISO">
+                    <p class="cert-description iso-description">ISO 13485:2016</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3 cert">
+                <div class="cert-container">
+                    <img class="cert-image" src="https://aptos.global/img/icons/certs/TGA-cert.png" alt="TGA">
+                    <p class="cert-description tga-description">Health Safety Regulation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div> -->
+</div>
+
+<div class="modal fade photoTermsModal ">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <h5 class="modal-title">Terms And Conditions</h5>
+
+            <div class="cont">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <div class="text">
+                    <p>By processing and continuing using Aphoto desktop and/or Aptos mobile apps (hereinafter “digital
+                        products”), you are accepting and agreeing to comply with and be bound by the following terms
+                        that govern Aptos’s relationship with you in relation to this desktop and mobile apps and its
+                        digital products. If you disagree with any part of these terms and conditions, please,
+                        reconsider downloading Aphoto mobile and/or desktop apps.</p>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Introduction
+                    </b></h5>
+                    <ul>
+                        <li>These terms will be applied fully and affect your use of the mobile and desktop apps. By
+                            processing and using Aphoto desktop and mobile apps, you agree to accept and perform all
+                            terms, rules and conditions written in here. You must not use these desktop and mobile apps
+                            if you disagree with any Terms and Conditions that apply to these apps. When you visit the
+                            Aphoto desktop and mobile apps or send e-mails to us, you are communicating with us
+                            electronically. You are consenting to receiving communication from us electronically, in
+                            writing. We will communicate with you by e-mail or by posting notices on these desktop and
+                            mobile apps. You agree that all agreements, notices, disclosures, and other communications
+                            provided to you electronically and in written form satisfy any and all the legal
+                            requirements of existing legislation and have the legal force of written consent/agreement.
+                        </li>
+                        <li>In order to proceed with using desktop and mobile apps, you will be required to have/create
+                            a personal account through www.aptospass.com and be asked to provide personal information
+                            including your name/surname, professional address, postal code, country, Aptos Certificate,
+                            Number of the Aptos Certificate and Diploma of Independent Medical Practice, specialties.
+                            The processing of your personal information during the creation of your account is governed
+                            by the present terms, in compliance with Georgian legislative framework.
+                        </li>
+                        <li>You agree to provide accurate and complete information. If we have reasonable grounds to
+                            believe that the information provided is inaccurate or incomplete, we may have the right to
+                            refuse the creation of your account or to suspend or cancel/invalidate it, when already
+                            created. We also reserve the right to verify the accuracy of any information given,
+                            especially the information relating to the professional category.
+                        </li>
+                        <li>Membership is strictly individual and limited to 1 (one) per person. Members are not
+                            permitted to share their credentials with third parties. Members are responsible for
+                            maintaining the confidentiality of their credentials. You agree to notify us immediately of
+                            any unauthorized use of your password or account or any other breach of security, and
+                            equally, agree to securely log out of your account at the end of each session. We will not
+                            be liable for any loss or damage arising out of your failure to protect your password or
+                            account/personal information.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Copyright
+                    </b></h5>
+                    <ul>
+                        <li>All content included on this site, such as text, graphics, logos, button icons, images,
+                            design, interface, audio clips, digital downloads, data compilations, and software, is the
+                            property of Aptos LLC or its content suppliers and protected by respective copyright laws.
+                            The compilation of all content on this site is the exclusive property of Aptos and protected
+                            by respective copyright laws.
+                        </li>
+                        <li>Copying, reproduction, republication or redistribution of any part of the services
+                            whatsoever, including by caching, framing or similar means, is prohibited without the
+                            express written permission of an authorized person (Aptos LLC). This restriction applies to
+                            the processing of information for both commercial and non-commercial purposes.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Confidentiality
+                    </b></h5>
+                    <ul>
+                        <li>The visitor agrees and takes the obligation to observe confidentiality of the terms and
+                            conditions envisaged in these Terms, as well as treat as confidential any information which
+                            became/will become available to the Parties as a result of the present Terms and Conditions;
+                        </li>
+                        <li>Aptos undertakes the obligation not to disclose confidential information received from the
+                            Visitor, which is related to the Product, the Visitor's activities and its clients, during
+                            the validity period of these Terms and conditions.
+                        </li>
+                        <li>Aptos, under its own responsibility, provides the confidential information, received from
+                            the visitor, to its employees and other authorized official representatives, if necessary,
+                            for fulfilling the obligations of Aptos under these Terms. In addition, Aptos takes all
+                            necessary measures for the protection of confidentiality of the information by its employees
+                            and other authorized official representatives towards any third party, including the
+                            conclusion of an agreement with them about protection and the prohibition of the disclosure
+                            of the confidential information.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Personal Data Processing
+                    </b></h5>
+                    <ul>
+                        <li>This policy sets out how Aptos uses and protects any information that you give Aptos when
+                            you use Aphoto desktop and/or mobile app.
+                        </li>
+                        <li>Aptos is committed to ensuring that your privacy is protected. Should we ask you to provide
+                            certain information by which you can be identified when using this digital product, you can
+                            be assured that it will only be used in accordance with these terms and conditions and such
+                            usage will comply with all the relevant legal requirements in the direction of personal data
+                            protection field.
+                        </li>
+                        <li>Aptos may change this policy from time to time by updating this page. You should check this
+                            page from time to time to ensure that you agree with any changes.
+                        </li>
+                        <li>We are committed to ensuring that your personal information is secure. In order to prevent
+                            unauthorized access or disclosure, we have put in place suitable physical, electronic and
+                            managerial procedures to safeguard and secure the information we collect online from any of
+                            our visitors.
+                        </li>
+                        <li>Our digital products may contain link to other website/desktop and mobile apps/source of
+                            interest. However, once you have used the link to leave our digital products, you should
+                            note that we do not have any control over those other resources. Therefore, we cannot be
+                            responsible for the protection and privacy of any information which you provide whilst
+                            visiting such websites/desktop and mobile apps and such websites/desktop and mobile apps are
+                            not governed by this privacy statement. You should exercise caution and look at the privacy
+                            statement application to the desktop and mobile apps in question.
+                        </li>
+                        <li>Aptos shall have the right to use the personal information for the commercial and
+                            non-commercial activities. Precisely, Aptos shall have the right to provide such information
+                            to its Distributors. Accepting to these Terms and Conditions shall be deemed as the consent
+                            of the Visitor. We may use your personal information to send you promotional information
+                            about third parties which we think you may find interesting if you tell us that you wish
+                            this to happen.
+                        </li>
+                        <li>Aptos shall acquire the consent of the Visitor prior to obtaining any identification data.
+                            The consent shall include the name and the address of the Visitor on collecting the
+                            identification data, the purpose for collection of the referred data, the scope of the
+                            information that is collected, the right of the Visitor to receive the information on the
+                            collected data, voluntary characteristic of provision of the consent as well as the right to
+                            request its correction, update, addition, blocking, deletion or destruction of the collected
+                            data. Additionally, the said consent shall include the information regarding the sharing of
+                            acquired data with Aptos;
+                        </li>
+                        <li>If Aptos receives the request from the Visitor to provide the information on the collected
+                            data about him/her, Aptos is obliged to provide the Visitor with the requested information
+                            immediately. The information provided to the Visitor shall include the following: the
+                            specifications of the data being collected, the purpose of the collection of the data, the
+                            ground for the collection of such data, the scope of the information that is collected, the
+                            manner of collection of the data; These terms and conditions do not apply to the cases where
+                            the visitor themselves made their personal identification data publicly available.
+                        </li>
+                        <li>Aptos, within 5 (five) calendar days is obliged to inform the Visitor of any request on
+                            correction, renewal, addition, deletion and/or destruction of the data regarding the
+                            collection of their identification data. Aptos, within 10 (ten) calendar days, is obliged to
+                            take necessary steps from receiving the notification of the request for correction, renewal,
+                            addition, deletion and/or destruction of the identification data, when the collected data is
+                            incomplete, inaccurate, not updated or collected and proceeded illegally.
+                        </li>
+                        <li>In case the Visitor additionally requests to block the collected data, Aptos shall block the
+                            data within 5 (five) calendar days from receiving the said request, when the collected data
+                            is incomplete, inaccurate, not updated or collected and proceeded illegally. The decision on
+                            blocking the data is in force until Aptos makes decision on the correction, renewal,
+                            addition, and/or destruction of the data. The said decision shall be attached to the data,
+                            requested to be blocked, throughout the existence of the ground for blocking the collected
+                            data.
+                        </li>
+                        <li>In case the Visitor requests to withdraw their consent, Aptos shall cease the collection
+                            and/or delete the data within 5 (five) calendar days from receiving the said request.
+                        </li>
+                        <li>Aptos is obliged to inform the Visitor with regards to the correction, renewal, addition,
+                            blocking, deletion and/or destruction of the collected data.
+                        </li>
+                        <li>If you believe that any information we are holding on you is incorrect or incomplete, please
+                            write to or email us as soon as possible. We will promptly correct any information found to
+                            be incorrect.
+                        </li>
+                        <li>By using Aphoto desktop and mobile apps, you agree to submitting patient images and
+                            understand their storage will be governed and regulated by these Terms and Conditions. You
+                            hereby confirm that any and all patient images will be obtained based on their consent and
+                            in full compliance with personal data protection rules.
+                        </li>
+                        <li>Any correspondence regarding the above rights shall be addressed on the following email: <a
+                                href="mailto:hello@aptos.ge">hello@aptos.ge</a></li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Intellectual Property/Neighboring Rights
+                    </b></h5>
+                    <ul>
+                        <li>The Visitor is obliged to ensure the protection of the intellectual property rights,
+                            including any/all trademark of Aptos at the Visitor’s cost, in its territory;
+                        </li>
+                        <li>The Visitor undertakes the obligation not to submit an application for the intellectual
+                            property of Aptos: any patents, designs, trademarks, trade names, symbols, not to register
+                            in its or other name (except approved by Aptos) any trademark on the Product or packaging of
+                            the Product, by which Aptos supplies the Product to the Visitor in the Territory or
+                            elsewhere. Additionally, the Visitor confirms that the intellectual property stated in the
+                            present section has not been requested to be registered in the Territory or elsewhere;
+                        </li>
+                        <li>The Visitor does not dispute with Aptos for its property rights and any other intellectual
+                            property including patents, trademarks and designs, databases, scientific programs,
+                            applications and other intangible property of Aptos;
+                        </li>
+                        <li>The Visitor shall notify Aptos of any actual or potential infringement or violation of
+                            Aptos’s patents, designs, trademarks, trade names, symbols or other industrial property
+                            rights, that comes to the Visitor’s attention in the Territory;
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Settlement of Disputes, Arbitration Clause/Agreement
+                    </b></h5>
+                    <ul>
+                        <li>Relationship of the Parties is based on collegiality, partnership and interest of long-term
+                            cooperation; to resolve the disputable issues, arisen during their relations, the Parties
+                            use the negotiations. If the dispute settlement is not reached within 30 (thirty) days from
+                            its occurrence, a Party may appeal to the arbitration tribunal;
+                        </li>
+                        <li>All disputes arising out of or in connection with the present Terms and Conditions or
+                            related to its violation, termination, execution or nullity shall be submitted to Georgian
+                            International Arbitration Centre for final settlement by arbitration under the Arbitration
+                            Rules of Georgian International Arbitration Centre (GIAC Rules) by one arbitrator appointed
+                            in accordance with these Rules. The place of arbitration shall be in Tbilisi, Georgia. The
+                            language to be used in the arbitral proceedings shall be English language;
+                        </li>
+                        <li>The validity of this Arbitration Clause/Agreement shall be governed and construed in
+                            accordance with the laws of Georgia.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Applicable Law
+                    </b></h5>
+                    <ul class="mb-5">
+                        <li>Any questions and disputes relating to this Terms which are not expressly or implicitly
+                            settled by the provisions contained in these Terms itself shall be governed by the Civil
+                            Code of Georgia (applicable in the Country of Georgia).
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="modal-footer px-md-0">
+                <div class="d-flex flex-row align-items-center w-100">
+                    <label class="modal-checkbox">
+                        <input type="checkbox"/>
+                        <small></small>
+                        <span>I read and agree with the terms and conditions.</span>
+                    </label>
+                    <a href="softwares/Windows.zip" target="_blank" class="btn ml-auto" disabled>Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade photoTermsModal appStorePhotoTermsModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <h5 class="modal-title">Terms And Conditions</h5>
+
+            <div class="cont">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <div class="text">
+                    <p>By processing and continuing using Aphoto desktop and/or Aptos mobile apps (hereinafter “digital
+                        products”), you are accepting and agreeing to comply with and be bound by the following terms
+                        that govern Aptos’s relationship with you in relation to this desktop and mobile apps and its
+                        digital products. If you disagree with any part of these terms and conditions, please,
+                        reconsider downloading Aphoto mobile and/or desktop apps.</p>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Introduction
+                    </b></h5>
+                    <ul>
+                        <li>These terms will be applied fully and affect your use of the mobile and desktop apps. By
+                            processing and using Aphoto desktop and mobile apps, you agree to accept and perform all
+                            terms, rules and conditions written in here. You must not use these desktop and mobile apps
+                            if you disagree with any Terms and Conditions that apply to these apps. When you visit the
+                            Aphoto desktop and mobile apps or send e-mails to us, you are communicating with us
+                            electronically. You are consenting to receiving communication from us electronically, in
+                            writing. We will communicate with you by e-mail or by posting notices on these desktop and
+                            mobile apps. You agree that all agreements, notices, disclosures, and other communications
+                            provided to you electronically and in written form satisfy any and all the legal
+                            requirements of existing legislation and have the legal force of written consent/agreement.
+                        </li>
+                        <li>In order to proceed with using desktop and mobile apps, you will be required to have/create
+                            a personal account through www.aptospass.com and be asked to provide personal information
+                            including your name/surname, professional address, postal code, country, Aptos Certificate,
+                            Number of the Aptos Certificate and Diploma of Independent Medical Practice, specialties.
+                            The processing of your personal information during the creation of your account is governed
+                            by the present terms, in compliance with Georgian legislative framework.
+                        </li>
+                        <li>You agree to provide accurate and complete information. If we have reasonable grounds to
+                            believe that the information provided is inaccurate or incomplete, we may have the right to
+                            refuse the creation of your account or to suspend or cancel/invalidate it, when already
+                            created. We also reserve the right to verify the accuracy of any information given,
+                            especially the information relating to the professional category.
+                        </li>
+                        <li>Membership is strictly individual and limited to 1 (one) per person. Members are not
+                            permitted to share their credentials with third parties. Members are responsible for
+                            maintaining the confidentiality of their credentials. You agree to notify us immediately of
+                            any unauthorized use of your password or account or any other breach of security, and
+                            equally, agree to securely log out of your account at the end of each session. We will not
+                            be liable for any loss or damage arising out of your failure to protect your password or
+                            account/personal information.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Copyright
+                    </b></h5>
+                    <ul>
+                        <li>All content included on this site, such as text, graphics, logos, button icons, images,
+                            design, interface, audio clips, digital downloads, data compilations, and software, is the
+                            property of Aptos LLC or its content suppliers and protected by respective copyright laws.
+                            The compilation of all content on this site is the exclusive property of Aptos and protected
+                            by respective copyright laws.
+                        </li>
+                        <li>Copying, reproduction, republication or redistribution of any part of the services
+                            whatsoever, including by caching, framing or similar means, is prohibited without the
+                            express written permission of an authorized person (Aptos LLC). This restriction applies to
+                            the processing of information for both commercial and non-commercial purposes.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Confidentiality
+                    </b></h5>
+                    <ul>
+                        <li>The visitor agrees and takes the obligation to observe confidentiality of the terms and
+                            conditions envisaged in these Terms, as well as treat as confidential any information which
+                            became/will become available to the Parties as a result of the present Terms and Conditions;
+                        </li>
+                        <li>Aptos undertakes the obligation not to disclose confidential information received from the
+                            Visitor, which is related to the Product, the Visitor's activities and its clients, during
+                            the validity period of these Terms and conditions.
+                        </li>
+                        <li>Aptos, under its own responsibility, provides the confidential information, received from
+                            the visitor, to its employees and other authorized official representatives, if necessary,
+                            for fulfilling the obligations of Aptos under these Terms. In addition, Aptos takes all
+                            necessary measures for the protection of confidentiality of the information by its employees
+                            and other authorized official representatives towards any third party, including the
+                            conclusion of an agreement with them about protection and the prohibition of the disclosure
+                            of the confidential information.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Personal Data Processing
+                    </b></h5>
+                    <ul>
+                        <li>This policy sets out how Aptos uses and protects any information that you give Aptos when
+                            you use Aphoto desktop and/or mobile app.
+                        </li>
+                        <li>Aptos is committed to ensuring that your privacy is protected. Should we ask you to provide
+                            certain information by which you can be identified when using this digital product, you can
+                            be assured that it will only be used in accordance with these terms and conditions and such
+                            usage will comply with all the relevant legal requirements in the direction of personal data
+                            protection field.
+                        </li>
+                        <li>Aptos may change this policy from time to time by updating this page. You should check this
+                            page from time to time to ensure that you agree with any changes.
+                        </li>
+                        <li>We are committed to ensuring that your personal information is secure. In order to prevent
+                            unauthorized access or disclosure, we have put in place suitable physical, electronic and
+                            managerial procedures to safeguard and secure the information we collect online from any of
+                            our visitors.
+                        </li>
+                        <li>Our digital products may contain link to other website/desktop and mobile apps/source of
+                            interest. However, once you have used the link to leave our digital products, you should
+                            note that we do not have any control over those other resources. Therefore, we cannot be
+                            responsible for the protection and privacy of any information which you provide whilst
+                            visiting such websites/desktop and mobile apps and such websites/desktop and mobile apps are
+                            not governed by this privacy statement. You should exercise caution and look at the privacy
+                            statement application to the desktop and mobile apps in question.
+                        </li>
+                        <li>Aptos shall have the right to use the personal information for the commercial and
+                            non-commercial activities. Precisely, Aptos shall have the right to provide such information
+                            to its Distributors. Accepting to these Terms and Conditions shall be deemed as the consent
+                            of the Visitor. We may use your personal information to send you promotional information
+                            about third parties which we think you may find interesting if you tell us that you wish
+                            this to happen.
+                        </li>
+                        <li>Aptos shall acquire the consent of the Visitor prior to obtaining any identification data.
+                            The consent shall include the name and the address of the Visitor on collecting the
+                            identification data, the purpose for collection of the referred data, the scope of the
+                            information that is collected, the right of the Visitor to receive the information on the
+                            collected data, voluntary characteristic of provision of the consent as well as the right to
+                            request its correction, update, addition, blocking, deletion or destruction of the collected
+                            data. Additionally, the said consent shall include the information regarding the sharing of
+                            acquired data with Aptos;
+                        </li>
+                        <li>If Aptos receives the request from the Visitor to provide the information on the collected
+                            data about him/her, Aptos is obliged to provide the Visitor with the requested information
+                            immediately. The information provided to the Visitor shall include the following: the
+                            specifications of the data being collected, the purpose of the collection of the data, the
+                            ground for the collection of such data, the scope of the information that is collected, the
+                            manner of collection of the data; These terms and conditions do not apply to the cases where
+                            the visitor themselves made their personal identification data publicly available.
+                        </li>
+                        <li>Aptos, within 5 (five) calendar days is obliged to inform the Visitor of any request on
+                            correction, renewal, addition, deletion and/or destruction of the data regarding the
+                            collection of their identification data. Aptos, within 10 (ten) calendar days, is obliged to
+                            take necessary steps from receiving the notification of the request for correction, renewal,
+                            addition, deletion and/or destruction of the identification data, when the collected data is
+                            incomplete, inaccurate, not updated or collected and proceeded illegally.
+                        </li>
+                        <li>In case the Visitor additionally requests to block the collected data, Aptos shall block the
+                            data within 5 (five) calendar days from receiving the said request, when the collected data
+                            is incomplete, inaccurate, not updated or collected and proceeded illegally. The decision on
+                            blocking the data is in force until Aptos makes decision on the correction, renewal,
+                            addition, and/or destruction of the data. The said decision shall be attached to the data,
+                            requested to be blocked, throughout the existence of the ground for blocking the collected
+                            data.
+                        </li>
+                        <li>In case the Visitor requests to withdraw their consent, Aptos shall cease the collection
+                            and/or delete the data within 5 (five) calendar days from receiving the said request.
+                        </li>
+                        <li>Aptos is obliged to inform the Visitor with regards to the correction, renewal, addition,
+                            blocking, deletion and/or destruction of the collected data.
+                        </li>
+                        <li>If you believe that any information we are holding on you is incorrect or incomplete, please
+                            write to or email us as soon as possible. We will promptly correct any information found to
+                            be incorrect.
+                        </li>
+                        <li>By using Aphoto desktop and mobile apps, you agree to submitting patient images and
+                            understand their storage will be governed and regulated by these Terms and Conditions. You
+                            hereby confirm that any and all patient images will be obtained based on their consent and
+                            in full compliance with personal data protection rules.
+                        </li>
+                        <li>Any correspondence regarding the above rights shall be addressed on the following email: <a
+                                href="mailto:hello@aptos.ge">hello@aptos.ge</a></li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Intellectual Property/Neighboring Rights
+                    </b></h5>
+                    <ul>
+                        <li>The Visitor is obliged to ensure the protection of the intellectual property rights,
+                            including any/all trademark of Aptos at the Visitor’s cost, in its territory;
+                        </li>
+                        <li>The Visitor undertakes the obligation not to submit an application for the intellectual
+                            property of Aptos: any patents, designs, trademarks, trade names, symbols, not to register
+                            in its or other name (except approved by Aptos) any trademark on the Product or packaging of
+                            the Product, by which Aptos supplies the Product to the Visitor in the Territory or
+                            elsewhere. Additionally, the Visitor confirms that the intellectual property stated in the
+                            present section has not been requested to be registered in the Territory or elsewhere;
+                        </li>
+                        <li>The Visitor does not dispute with Aptos for its property rights and any other intellectual
+                            property including patents, trademarks and designs, databases, scientific programs,
+                            applications and other intangible property of Aptos;
+                        </li>
+                        <li>The Visitor shall notify Aptos of any actual or potential infringement or violation of
+                            Aptos’s patents, designs, trademarks, trade names, symbols or other industrial property
+                            rights, that comes to the Visitor’s attention in the Territory;
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Settlement of Disputes, Arbitration Clause/Agreement
+                    </b></h5>
+                    <ul>
+                        <li>Relationship of the Parties is based on collegiality, partnership and interest of long-term
+                            cooperation; to resolve the disputable issues, arisen during their relations, the Parties
+                            use the negotiations. If the dispute settlement is not reached within 30 (thirty) days from
+                            its occurrence, a Party may appeal to the arbitration tribunal;
+                        </li>
+                        <li>All disputes arising out of or in connection with the present Terms and Conditions or
+                            related to its violation, termination, execution or nullity shall be submitted to Georgian
+                            International Arbitration Centre for final settlement by arbitration under the Arbitration
+                            Rules of Georgian International Arbitration Centre (GIAC Rules) by one arbitrator appointed
+                            in accordance with these Rules. The place of arbitration shall be in Tbilisi, Georgia. The
+                            language to be used in the arbitral proceedings shall be English language;
+                        </li>
+                        <li>The validity of this Arbitration Clause/Agreement shall be governed and construed in
+                            accordance with the laws of Georgia.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Applicable Law
+                    </b></h5>
+                    <ul class="mb-5">
+                        <li>Any questions and disputes relating to this Terms which are not expressly or implicitly
+                            settled by the provisions contained in these Terms itself shall be governed by the Civil
+                            Code of Georgia (applicable in the Country of Georgia).
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="modal-footer px-md-0">
+                <div class="d-flex flex-row align-items-center w-100">
+                    <label class="modal-checkbox">
+                        <input type="checkbox"/>
+                        <small></small>
+                        <span>I read and agree with the terms and conditions.</span>
+                    </label>
+                    <a href="https://apps.apple.com/us/app/id1503326914" target="_blank" class="btn ml-auto" disabled>Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade photoTermsModal playGooglePhotoTermsModal">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <h5 class="modal-title">Terms And Conditions</h5>
+
+            <div class="cont">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
+                <div class="text">
+                    <p>By processing and continuing using Aphoto desktop and/or Aptos mobile apps (hereinafter “digital
+                        products”), you are accepting and agreeing to comply with and be bound by the following terms
+                        that govern Aptos’s relationship with you in relation to this desktop and mobile apps and its
+                        digital products. If you disagree with any part of these terms and conditions, please,
+                        reconsider downloading Aphoto mobile and/or desktop apps.</p>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Introduction
+                    </b></h5>
+                    <ul>
+                        <li>These terms will be applied fully and affect your use of the mobile and desktop apps. By
+                            processing and using Aphoto desktop and mobile apps, you agree to accept and perform all
+                            terms, rules and conditions written in here. You must not use these desktop and mobile apps
+                            if you disagree with any Terms and Conditions that apply to these apps. When you visit the
+                            Aphoto desktop and mobile apps or send e-mails to us, you are communicating with us
+                            electronically. You are consenting to receiving communication from us electronically, in
+                            writing. We will communicate with you by e-mail or by posting notices on these desktop and
+                            mobile apps. You agree that all agreements, notices, disclosures, and other communications
+                            provided to you electronically and in written form satisfy any and all the legal
+                            requirements of existing legislation and have the legal force of written consent/agreement.
+                        </li>
+                        <li>In order to proceed with using desktop and mobile apps, you will be required to have/create
+                            a personal account through www.aptospass.com and be asked to provide personal information
+                            including your name/surname, professional address, postal code, country, Aptos Certificate,
+                            Number of the Aptos Certificate and Diploma of Independent Medical Practice, specialties.
+                            The processing of your personal information during the creation of your account is governed
+                            by the present terms, in compliance with Georgian legislative framework.
+                        </li>
+                        <li>You agree to provide accurate and complete information. If we have reasonable grounds to
+                            believe that the information provided is inaccurate or incomplete, we may have the right to
+                            refuse the creation of your account or to suspend or cancel/invalidate it, when already
+                            created. We also reserve the right to verify the accuracy of any information given,
+                            especially the information relating to the professional category.
+                        </li>
+                        <li>Membership is strictly individual and limited to 1 (one) per person. Members are not
+                            permitted to share their credentials with third parties. Members are responsible for
+                            maintaining the confidentiality of their credentials. You agree to notify us immediately of
+                            any unauthorized use of your password or account or any other breach of security, and
+                            equally, agree to securely log out of your account at the end of each session. We will not
+                            be liable for any loss or damage arising out of your failure to protect your password or
+                            account/personal information.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Copyright
+                    </b></h5>
+                    <ul>
+                        <li>All content included on this site, such as text, graphics, logos, button icons, images,
+                            design, interface, audio clips, digital downloads, data compilations, and software, is the
+                            property of Aptos LLC or its content suppliers and protected by respective copyright laws.
+                            The compilation of all content on this site is the exclusive property of Aptos and protected
+                            by respective copyright laws.
+                        </li>
+                        <li>Copying, reproduction, republication or redistribution of any part of the services
+                            whatsoever, including by caching, framing or similar means, is prohibited without the
+                            express written permission of an authorized person (Aptos LLC). This restriction applies to
+                            the processing of information for both commercial and non-commercial purposes.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Confidentiality
+                    </b></h5>
+                    <ul>
+                        <li>The visitor agrees and takes the obligation to observe confidentiality of the terms and
+                            conditions envisaged in these Terms, as well as treat as confidential any information which
+                            became/will become available to the Parties as a result of the present Terms and Conditions;
+                        </li>
+                        <li>Aptos undertakes the obligation not to disclose confidential information received from the
+                            Visitor, which is related to the Product, the Visitor's activities and its clients, during
+                            the validity period of these Terms and conditions.
+                        </li>
+                        <li>Aptos, under its own responsibility, provides the confidential information, received from
+                            the visitor, to its employees and other authorized official representatives, if necessary,
+                            for fulfilling the obligations of Aptos under these Terms. In addition, Aptos takes all
+                            necessary measures for the protection of confidentiality of the information by its employees
+                            and other authorized official representatives towards any third party, including the
+                            conclusion of an agreement with them about protection and the prohibition of the disclosure
+                            of the confidential information.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Personal Data Processing
+                    </b></h5>
+                    <ul>
+                        <li>This policy sets out how Aptos uses and protects any information that you give Aptos when
+                            you use Aphoto desktop and/or mobile app.
+                        </li>
+                        <li>Aptos is committed to ensuring that your privacy is protected. Should we ask you to provide
+                            certain information by which you can be identified when using this digital product, you can
+                            be assured that it will only be used in accordance with these terms and conditions and such
+                            usage will comply with all the relevant legal requirements in the direction of personal data
+                            protection field.
+                        </li>
+                        <li>Aptos may change this policy from time to time by updating this page. You should check this
+                            page from time to time to ensure that you agree with any changes.
+                        </li>
+                        <li>We are committed to ensuring that your personal information is secure. In order to prevent
+                            unauthorized access or disclosure, we have put in place suitable physical, electronic and
+                            managerial procedures to safeguard and secure the information we collect online from any of
+                            our visitors.
+                        </li>
+                        <li>Our digital products may contain link to other website/desktop and mobile apps/source of
+                            interest. However, once you have used the link to leave our digital products, you should
+                            note that we do not have any control over those other resources. Therefore, we cannot be
+                            responsible for the protection and privacy of any information which you provide whilst
+                            visiting such websites/desktop and mobile apps and such websites/desktop and mobile apps are
+                            not governed by this privacy statement. You should exercise caution and look at the privacy
+                            statement application to the desktop and mobile apps in question.
+                        </li>
+                        <li>Aptos shall have the right to use the personal information for the commercial and
+                            non-commercial activities. Precisely, Aptos shall have the right to provide such information
+                            to its Distributors. Accepting to these Terms and Conditions shall be deemed as the consent
+                            of the Visitor. We may use your personal information to send you promotional information
+                            about third parties which we think you may find interesting if you tell us that you wish
+                            this to happen.
+                        </li>
+                        <li>Aptos shall acquire the consent of the Visitor prior to obtaining any identification data.
+                            The consent shall include the name and the address of the Visitor on collecting the
+                            identification data, the purpose for collection of the referred data, the scope of the
+                            information that is collected, the right of the Visitor to receive the information on the
+                            collected data, voluntary characteristic of provision of the consent as well as the right to
+                            request its correction, update, addition, blocking, deletion or destruction of the collected
+                            data. Additionally, the said consent shall include the information regarding the sharing of
+                            acquired data with Aptos;
+                        </li>
+                        <li>If Aptos receives the request from the Visitor to provide the information on the collected
+                            data about him/her, Aptos is obliged to provide the Visitor with the requested information
+                            immediately. The information provided to the Visitor shall include the following: the
+                            specifications of the data being collected, the purpose of the collection of the data, the
+                            ground for the collection of such data, the scope of the information that is collected, the
+                            manner of collection of the data; These terms and conditions do not apply to the cases where
+                            the visitor themselves made their personal identification data publicly available.
+                        </li>
+                        <li>Aptos, within 5 (five) calendar days is obliged to inform the Visitor of any request on
+                            correction, renewal, addition, deletion and/or destruction of the data regarding the
+                            collection of their identification data. Aptos, within 10 (ten) calendar days, is obliged to
+                            take necessary steps from receiving the notification of the request for correction, renewal,
+                            addition, deletion and/or destruction of the identification data, when the collected data is
+                            incomplete, inaccurate, not updated or collected and proceeded illegally.
+                        </li>
+                        <li>In case the Visitor additionally requests to block the collected data, Aptos shall block the
+                            data within 5 (five) calendar days from receiving the said request, when the collected data
+                            is incomplete, inaccurate, not updated or collected and proceeded illegally. The decision on
+                            blocking the data is in force until Aptos makes decision on the correction, renewal,
+                            addition, and/or destruction of the data. The said decision shall be attached to the data,
+                            requested to be blocked, throughout the existence of the ground for blocking the collected
+                            data.
+                        </li>
+                        <li>In case the Visitor requests to withdraw their consent, Aptos shall cease the collection
+                            and/or delete the data within 5 (five) calendar days from receiving the said request.
+                        </li>
+                        <li>Aptos is obliged to inform the Visitor with regards to the correction, renewal, addition,
+                            blocking, deletion and/or destruction of the collected data.
+                        </li>
+                        <li>If you believe that any information we are holding on you is incorrect or incomplete, please
+                            write to or email us as soon as possible. We will promptly correct any information found to
+                            be incorrect.
+                        </li>
+                        <li>By using Aphoto desktop and mobile apps, you agree to submitting patient images and
+                            understand their storage will be governed and regulated by these Terms and Conditions. You
+                            hereby confirm that any and all patient images will be obtained based on their consent and
+                            in full compliance with personal data protection rules.
+                        </li>
+                        <li>Any correspondence regarding the above rights shall be addressed on the following email: <a
+                                href="mailto:hello@aptos.ge">hello@aptos.ge</a></li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Intellectual Property/Neighboring Rights
+                    </b></h5>
+                    <ul>
+                        <li>The Visitor is obliged to ensure the protection of the intellectual property rights,
+                            including any/all trademark of Aptos at the Visitor’s cost, in its territory;
+                        </li>
+                        <li>The Visitor undertakes the obligation not to submit an application for the intellectual
+                            property of Aptos: any patents, designs, trademarks, trade names, symbols, not to register
+                            in its or other name (except approved by Aptos) any trademark on the Product or packaging of
+                            the Product, by which Aptos supplies the Product to the Visitor in the Territory or
+                            elsewhere. Additionally, the Visitor confirms that the intellectual property stated in the
+                            present section has not been requested to be registered in the Territory or elsewhere;
+                        </li>
+                        <li>The Visitor does not dispute with Aptos for its property rights and any other intellectual
+                            property including patents, trademarks and designs, databases, scientific programs,
+                            applications and other intangible property of Aptos;
+                        </li>
+                        <li>The Visitor shall notify Aptos of any actual or potential infringement or violation of
+                            Aptos’s patents, designs, trademarks, trade names, symbols or other industrial property
+                            rights, that comes to the Visitor’s attention in the Territory;
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Settlement of Disputes, Arbitration Clause/Agreement
+                    </b></h5>
+                    <ul>
+                        <li>Relationship of the Parties is based on collegiality, partnership and interest of long-term
+                            cooperation; to resolve the disputable issues, arisen during their relations, the Parties
+                            use the negotiations. If the dispute settlement is not reached within 30 (thirty) days from
+                            its occurrence, a Party may appeal to the arbitration tribunal;
+                        </li>
+                        <li>All disputes arising out of or in connection with the present Terms and Conditions or
+                            related to its violation, termination, execution or nullity shall be submitted to Georgian
+                            International Arbitration Centre for final settlement by arbitration under the Arbitration
+                            Rules of Georgian International Arbitration Centre (GIAC Rules) by one arbitrator appointed
+                            in accordance with these Rules. The place of arbitration shall be in Tbilisi, Georgia. The
+                            language to be used in the arbitral proceedings shall be English language;
+                        </li>
+                        <li>The validity of this Arbitration Clause/Agreement shall be governed and construed in
+                            accordance with the laws of Georgia.
+                        </li>
+                    </ul>
+
+                    <h5 class="text-center mt-5 mb-3"><b>
+                        Applicable Law
+                    </b></h5>
+                    <ul class="mb-5">
+                        <li>Any questions and disputes relating to this Terms which are not expressly or implicitly
+                            settled by the provisions contained in these Terms itself shall be governed by the Civil
+                            Code of Georgia (applicable in the Country of Georgia).
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="modal-footer px-md-0">
+                <div class="d-flex flex-row align-items-center w-100">
+                    <label class="modal-checkbox">
+                        <input type="checkbox"/>
+                        <small></small>
+                        <span>I read and agree with the terms and conditions.</span>
+                    </label>
+                    <a href="https://play.google.com/store/apps/details?id=com.aptos.aphoto" target="_blank"
+                       class="btn ml-auto" disabled>Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+    <p class="accept-cookies-title mr-4">
+        We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+        about how visitors use our site. We collect the information to compile reports and to help us improve the
+        site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+        where visitors have come to the site from and the pages they visited. <a href="terms.html">Details.</a>
+    </p>
+    <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+</div>
+
+<div class="footer no-border">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="Aphoto.html" target="_blank">
+                            <img src="img/aphoto_logo.svg" class="aphoto-other-service-logo"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="aconnect.html" target="_blank">
+                            <img src="img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo"/>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="asupport.html">
+                            <img src="img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo"/>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="terms.html" target="_blank">
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms.html" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+
+
+<script>
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5f193d837258dc118beec633/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: {
+        {
+            env('FB_APP_ID', '1797333467260014')
+        }
+    },
+        xfbml: true,
+            version
+    :
+        'v2.8'
+    })
+        ;
+        FB.AppEvents.logPageView();
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "../connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+<script type="text/javascript" src="js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+<script type="text/javascript" src="assets/js/sharect.min.js"></script>
+<script type="text/javascript" src="js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+
+
+</body>
+
+</html>

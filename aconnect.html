@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aptos.global/aconnect by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:31:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Aconnect - Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0" />
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aconnect - Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="aconnect.html">
+    <meta property="og:image" content="img/og_image.png">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        '../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1797333467260014');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading has-navbar ">
+    
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src='img/success-circle.png' />
+          <p class='mt-2'>Your Message was sent successfuly</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src="img/success-circle.png" />
+          <p class="mt-2">Your Location Updated Successfully</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" >Add Procedure</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form class="modal-body d-flex flex-column align-items-center">
+          <div class='row' id="modal-row">
+              <div class="form-group w-100 col-12">
+                  <label>Procedure Name</label>
+                  <input type="text" id="procedure-name-input" class="ag-form-control form-control" name="en[name]" placeholder="Select Other Option" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (from)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_from" name="price_from" placeholder="From" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (to)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_to" name="price_to" placeholder="To" />
+                  <span class="input-error-text"></span>
+              </div>
+          </div>
+
+          <div id="save-btn-container">
+            <button type='submit' class='submit-btn' id="save-btn">Save</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="loader">
+        <div id="loader-animation"></div>
+    </div>
+    
+    <script type="text/javascript" src="js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+    <script type="text/javascript" src="js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+            <nav class="navbar navbar-expand-lg fixed-top  for-patients-nav" id="main-navbar-container">
+    <a class="navbar-brand" href="index.html">
+        <i class="logo-icon"></i>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">About</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="history.html">History</a>
+                                                                                            <a class="dropdown-item " href="about.html">What is Aptos</a>
+                                                                                            <a class="dropdown-item " href="faq.html">FAQ</a>
+                                                                                            <a class="dropdown-item " href="subscribe.html">Newsletter</a>
+                                                                                </div>
+                                    </li>
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">Activity</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="category/1/news.html">News</a>
+                                                                                            <a class="dropdown-item " href="category/3/conferences.html">Conferences</a>
+                                                                                            <a class="dropdown-item " href="category/5/articles.html">Articles</a>
+                                                                                            <a class="dropdown-item " href="category/6/for-patient.html">For Patient</a>
+                                                                                            <a class="dropdown-item " href="category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a>
+                                                                                        <a class="dropdown-item " href="intimate.html">Aptos Intimate</a>
+                                                    </div>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="patients.html">Products</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="coaches.html">Trainers</a>
+                                    </li>
+            
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="aconnect.html"><i class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="asupport.html"><i class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="Aphoto.html"><i class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                            <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled" href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global/aconnect">Log in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="courses.html">Register for courses</a>
+                </li>
+            
+
+            <li class="nav-item world">
+                <a class="nav-link" href="world.html">
+                    <i class="globe-icon"></i>Distribution
+                </a>
+            </li>
+
+                            <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#" class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center " data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+    
+                <div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <i class="bg-circle-left"></i>
+            <i class="bg-circle-right"></i>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                                                    <div class="row justify-content-center navbar-items-list-container">
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Preparations</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="archive/26/documents-to-be-filled-before-the-aptos-thread-lifting.html">Documents to be filled before the APTOS thread lifting</a></li>
+                                                                                            <li><a href="archive/27/what-to-know-for-before-consultation-to-doctor.html">What to know for before consultation to doctor</a></li>
+                                                                                            <li><a href="archive/28/cost-of-aptos-thread-procedure.html">Cost of Aptos thread procedure</a></li>
+                                                                                            <li><a href="archive/29/how-to-choose-a-doctor-and-a-clinic-for-a-thread-lift.html">How to choose a doctor and a clinic for a thread lift</a></li>
+                                                                                            <li><a href="archive/30/the-indications-and-contraindications-for-a-thread-lifting.html">The indications and contraindications for a thread lifting</a></li>
+                                                                                            <li><a href="archive/31/myths-and-prejudices-associated-with-aptos-thread-lifting.html">Myths and prejudices associated with APTOS thread lifting</a></li>
+                                                                                            <li><a href="archive/37/becoming-aptos-model.html">Becoming Aptos Model</a></li>
+                                                                                            <li><a href="archive/39/candidates-suitable-for-procedure.html">Candidates suitable for procedure:</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="archive/10/elimination-of-neck-bands-and-wrinkles.html">Elimination of Neck Bands and Wrinkles</a></li>
+                                                                                            <li><a href="archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">Nasolabial Folds: Correction of the folds without fillers and scalpel</a></li>
+                                                                                            <li><a href="archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">Sagging mouth corners &quot;wrinkles of sadness&quot;</a></li>
+                                                                                            <li><a href="archive/15/eyebrow-correction-with-aptos-threads.html">Eyebrow correction with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/16/tummy-tuck-and-prevention-of-ptosis.html">Tummy tuck and prevention of ptosis</a></li>
+                                                                                            <li><a href="archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">Lifting of the forehead with Aptos Threads - Redefined youth and beauty</a></li>
+                                                                                            <li><a href="archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">Correction of Lip Contour and Mouth Furrows with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/19/correction-of-the-mental-area-with-aptos-threads.html">Correction of the mental area with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/21/double-chin-correction.html">Double Chin Correction</a></li>
+                                                                                            <li><a href="archive/22/correction-of-decollete-area-with-aptos-threads.html">Correction of décolleté area with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">Lifting of the arms and shoulders with Aptos Threads</a></li>
+                                                                                            <li><a href="archive/24/lifting-of-the-inner-thighs-it-is-easy.html">LIFTING OF THE INNER THIGHS - IT IS EASY!</a></li>
+                                                                                            <li><a href="archive/25/special-threads-for-correction-of-the-area-above-knee.html">Special threads for correction of the area above knee</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Post procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="archive/32/how-is-the-procedure-of-thread-lifting-performed-using-aptos.html">How is the procedure of thread lifting performed using APTOS</a></li>
+                                                                                            <li><a href="archive/33/does-it-hurt-during-and-after-the-procedure.html">Does it hurt during and after the procedure</a></li>
+                                                                                            <li><a href="archive/34/post-procedure-conditions.html">Post Procedure Conditions</a></li>
+                                                                                            <li><a href="archive/36/rehabilitation.html">Rehabilitation</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Threads</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="archive/3/the-essence-of-the-method.html">The Essence of the method</a></li>
+                                                                                            <li><a href="archive/5/creating-aptos-threads.html">Creating APTOS threads</a></li>
+                                                                                            <li><a href="archive/6/advantages-of-thread-rejuvenation.html">Advantages of thread rejuvenation</a></li>
+                                                                                            <li><a href="archive/9/aptos-invites.html">APTOS invites</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                                            </div>
+
+                    <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="img/icons/close.svg" alt="">Close Window</button>
+                </div>
+            </div>
+        </div>
+    
+
+<div
+    class="find-doctor container"
+    data-fad-path="aconnect.html"
+    data-fad-params-country=""
+>
+    <div class="col-md-10 offset-md-1">
+        <form action="https://aptos.global/aconnect" id='find-doctor-search'>
+            <div class="form-group">
+                <input type="text" id="find-doctor-search-input" class="ag-form-control form-control" spellcheck="false"placeholder="Input Doctor's Name" value="" name="name" onkeydown="return (event.keyCode!=13)"/>
+                <span class="input-error-text"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <select name="country" class="ag-form-control form-control find-doctor-country-select" placeholder="Select Country...">
+                                <option></option>
+                                                                    <option flag="flag-icon flag-icon-al"  value="2">Albania</option>
+                                                                    <option flag="flag-icon flag-icon-au"  value="222">Australia</option>
+                                                                    <option flag="flag-icon flag-icon-br"  value="207">Brazil</option>
+                                                                    <option flag="flag-icon flag-icon-bg"  value="8">Bulgaria</option>
+                                                                    <option flag="flag-icon flag-icon-cl"  value="208">Chile</option>
+                                                                    <option flag="flag-icon flag-icon-cz"  value="11">Czech Republic</option>
+                                                                    <option flag="flag-icon flag-icon-eg"  value="120">Egypt</option>
+                                                                    <option flag="flag-icon flag-icon-fr"  value="17">France</option>
+                                                                    <option flag="flag-icon flag-icon-ge"  value="65">Georgia</option>
+                                                                    <option flag="flag-icon flag-icon-de"  value="18">Germany</option>
+                                                                    <option flag="flag-icon flag-icon-gr"  value="20">Greece</option>
+                                                                    <option flag="flag-icon flag-icon-in"  value="67">India</option>
+                                                                    <option flag="flag-icon flag-icon-id"  value="68">Indonesia</option>
+                                                                    <option flag="flag-icon flag-icon-ir"  value="69">Iran (Islamic Republic of)</option>
+                                                                    <option flag="flag-icon flag-icon-il"  value="71">Israel</option>
+                                                                    <option flag="flag-icon flag-icon-it"  value="27">Italy</option>
+                                                                    <option flag="flag-icon flag-icon-jo"  value="73">Jordan</option>
+                                                                    <option flag="flag-icon flag-icon-kw"  value="75">Kuwait</option>
+                                                                    <option flag="flag-icon flag-icon-lb"  value="78">Lebanon</option>
+                                                                    <option flag="flag-icon flag-icon-my"  value="80">Malaysia</option>
+                                                                    <option flag="flag-icon flag-icon-mc"  value="35">Monaco</option>
+                                                                    <option flag="flag-icon flag-icon-no"  value="38">Norway</option>
+                                                                    <option flag="flag-icon flag-icon-pl"  value="39">Poland</option>
+                                                                    <option flag="flag-icon flag-icon-pt"  value="40">Portugal</option>
+                                                                    <option flag="flag-icon flag-icon-qa"  value="89">Qatar</option>
+                                                                    <option flag="flag-icon flag-icon-ro"  value="41">Romania</option>
+                                                                    <option flag="flag-icon flag-icon-ru"  value="42">Russia</option>
+                                                                    <option flag="flag-icon flag-icon-sa"  value="90">Saudi Arabia</option>
+                                                                    <option flag="flag-icon flag-icon-rs"  value="44">Serbia</option>
+                                                                    <option flag="flag-icon flag-icon-sg"  value="91">Singapore</option>
+                                                                    <option flag="flag-icon flag-icon-za"  value="154">South Africa</option>
+                                                                    <option flag="flag-icon flag-icon-es"  value="47">Spain</option>
+                                                                    <option flag="flag-icon flag-icon-se"  value="49">Sweden</option>
+                                                                    <option flag="flag-icon flag-icon-ch"  value="50">Switzerland</option>
+                                                                    <option flag="flag-icon flag-icon-tr"  value="100">Turkey</option>
+                                                                    <option flag="flag-icon flag-icon-ua"  value="51">Ukraine</option>
+                                                                    <option flag="flag-icon flag-icon-ae"  value="102">United Arab Emirates</option>
+                                                                    <option flag="flag-icon flag-icon-gb"  value="52">United Kingdom</option>
+                                                            </select>
+                            <span class="input-error-text"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <select name="procedure_type" class="ag-form-control form-control find-doctor-select" placeholder="Select Procedure Type...">
+                                <option></option>
+                                                                                                            <option value="220">A.i.l.a technique</option>
+                                                                            <option value="219">All procedures</option>
+                                                                            <option value="218">Scars Correction with Aptos Threads</option>
+                                                                            <option value="217">Correction of Urinary Incontinence with Aptos Threads</option>
+                                                                            <option value="216">Lower Face Correction with Aptos Threads</option>
+                                                                            <option value="215">Neck Lifting with Aptos Threads</option>
+                                                                            <option value="214">Smoker Wrinkle Correction with Aptos Threads</option>
+                                                                            <option value="213">Wrinkle Correction with Aptos Threads</option>
+                                                                            <option value="212">Lower Eyelid Correction with Aptos Threads</option>
+                                                                            <option value="211">Abdomen Correction with Aptos Threads</option>
+                                                                            <option value="210">Knee Correction with Aptos Threads</option>
+                                                                            <option value="209">Sole Otoplasty with Aptos Threads</option>
+                                                                            <option value="208">Mental Area Correction with Aptos Threads</option>
+                                                                            <option value="207">Mid-face Lift with Aptos Threads</option>
+                                                                            <option value="206">Submental Area Correction with Aptos Threads</option>
+                                                                            <option value="205">Sole Rhinoplasty with Aptos Threads</option>
+                                                                            <option value="204">Body Lifting with Aptos Threads</option>
+                                                                            <option value="203">Marionette Lines Correction with Aptos Threads</option>
+                                                                            <option value="202">Nasolabial Folds Correction with Aptos Threads</option>
+                                                                            <option value="201">Chin Correction with Aptos Threads</option>
+                                                                            <option value="200">Forehead Correction with Aptos Threads</option>
+                                                                            <option value="199">Pubis Lifting with Aptos Threads</option>
+                                                                            <option value="198">Labia Plasty with Aptos Threads</option>
+                                                                            <option value="197">Perineoplasty with Aptos Threads</option>
+                                                                            <option value="196">Vaginoplasty with Aptos Threads</option>
+                                                                            <option value="195">Face Lift with Aptos Threads</option>
+                                                                            <option value="194">Eyebrow Lifting with Aptos Threads</option>
+                                                                            <option value="193">Jawline Lifting with Aptos Threads</option>
+                                                                            <option value="192">Body Contouring with Aptos Threads</option>
+                                                                            <option value="191">Lip Augmentation with Aptos Threads</option>
+                                                                            <option value="190">Chin Augmentation with Aptos Threads</option>
+                                                                            <option value="189">Cheeks Augmentation with Aptos Threads</option>
+                                                                            <option value="188">Non-surgical Rhinoplasty with Aptos Threads</option>
+                                                                            <option value="187">Arms Lift with Aptos Threads</option>
+                                                                            <option value="186">Thighs Lift with Aptos Threads</option>
+                                                                            <option value="185">Belt Lift with Aptos Threads</option>
+                                                                            <option value="184">Breast Correction with Aptos Threads</option>
+                                                                            <option value="183">Otoplasty (Prominent Ears) with Aptos Threads</option>
+                                                                                                </select>
+                            <span class="input-error-text"></span>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <button type='submit' class="submit-btn">Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class='w-100 justify-content-center align-items-center spinner-wrapper d-none'>
+        <div id='spinner'></div>
+        <span class='ml-2'>Loading ...</span>
+    </div>
+
+    <div class="d-flex flex-column align-items-center doctors d-none position-relative">
+        <div class="doctor-are-available">We could not locate a doctor near you</div>
+        <div id='render' class='row pb-3 w-100'>
+        </div>
+        <div class="animation-cont d-none">
+            <svg class="line" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.11 70.33">
+              <defs>
+                <style>
+                  .cls-1 {
+                    fill: none;
+                    stroke: #78c8f0;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    stroke-width: 26px;
+                  }
+                </style>
+              </defs>
+              <title>aptos_line_path</title>
+              <path class="cls-1" d="M18.14,33.67s108.44,22.33,196.21,0"/>
+            </svg>
+        </div>
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" >Contact the doctor</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form class="modal-body">
+         <div class='row'>
+             <input type='hidden' value='' name='model_id' />
+             <input type='hidden' value='' name='model_type' />
+             <div class="col-12">
+                 <div class="form-group">
+                     <div class='doctor-modal-input'>
+                         <input type="text" class="ag-form-control form-control" value="" name="full_name" />
+                         <label>Full Name</label>
+                     </div>
+                     <i class="error-message"></i>
+                 </div>
+             </div>
+             <div class="col-12">
+                 <div class="form-group">
+                     <div class='doctor-modal-input'>
+                         <input type="text" class="ag-form-control form-control" value="" name="phone" />
+                         <label>Mobile Phone</label>
+                     </div>
+                     <i class="error-message"></i>
+                 </div>
+             </div>
+
+             <div class="col-12">
+                 <div class="form-group">
+                     <div class='doctor-modal-input'>
+                         <input type="text" class="ag-form-control form-control" value="" name="email" />
+                         <label>Mail</label>
+                     </div>
+                     <i class="error-message"></i>
+                 </div>
+             </div>
+             <div class="col-12">
+                 <div class="form-group doctor-modal-textarea">
+                     <div class='doctor-modal-textarea'>
+                         <textarea class="ag-form-control form-control" name='message'></textarea>
+                         <label>Your Message</label>
+                     </div>
+                     <i class="error-message"></i>
+                 </div>
+             </div>
+         </div>
+    </form>
+      <div class="modal-footer">
+        <button type="button" class="btn text-center active send w-100">
+          <span id='default'>Send Message</span>
+          <span class='d-none' id='spinner'></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="location-modal-blade" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center modal-move">
+          <img src="img/location-2.png" class="modal-image"/>
+          <p class="mt-2 allow-location-text">Allow location <br>to find a doctor nearby</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center button-flex">
+          <button class="btn active" id="allow-location-modal" aria-label="Close">Go to Settings</button>
+          <button class="button-not" id="allow-location-close" type="button" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="cluster-modal-blade" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center modal-move">
+          <img src='img/location-2.png' class="modal-image"/>
+          <p class='mt-2 allow-location-text find-doctor-modal'>Find a Doctor</p>
+          <p class='mt-2 allow-location-text'>On this location available </br><span id='doctorsLength'></span>Doctors</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center button-flex">
+          <button class="btn btn-black" id="allow-location-modal-directions" data-dismiss="modal">Show All</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+
+    </div>
+
+    <div class="doctors-map-container d-flex flex-column align-items-center w-100">
+        <div class="row doctors-map-buttons">
+            <div class="ml-3 map-button">
+                <a class="btn active" id='all' href="javascript:void(0);">All Doctors</a>
+            </div>
+            <div class="ml-3 map-button">
+                <a class="btn" id='nearby' href="javascript:void(0);">Nearby Doctors</a>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+</div>
+<script src="../developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+        <p class="accept-cookies-title mr-4">
+            We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+            about how visitors use our site. We collect the information to compile reports and to help us improve the
+            site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+            where visitors have come to the site from and the pages they visited. <a href="terms.html">Details.</a>
+        </p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+    </div>
+
+    <div class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="https://aptos.global/Aphoto" target="_blank">
+                            <img src="https://aptos.global/img/aphoto_logo.svg" class="aphoto-other-service-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="https://aptos.global/img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptos.global/aconnect" target="_blank">
+                            <img src="https://aptos.global/img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="asupport.html">
+                            <img src="https://aptos.global/img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo" />
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="https://aptos.global/terms" target="_blank" >
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://aptos.global/terms" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://aptos.global/contact" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    <div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+                <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: {
+                    {
+                        env('FB_APP_ID', '1797333467260014')
+                    }
+                },
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+    <script type="text/javascript" src="js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+    <script type="text/javascript" src="assets/js/sharect.min.js"></script>
+    <script type="text/javascript" src="js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </body>
+
+    
+<!-- Mirrored from aptos.global/aconnect by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:31:16 GMT -->
+</html>

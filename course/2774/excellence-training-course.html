@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from aptos.global/course/2774/excellence-training-course by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:44:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Excellence Training Course - Aptos</title>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="2Umec2DhyhcERCOkyMcS2hycSI8WtO7SnXLaAAmm">
+    <link rel="stylesheet" type="text/css" href="../../css/vendor67d3.css?id=c431a4f8c8a0b7359930">
+    <link rel="stylesheet" type="text/css" href="../../css/appa534.css?id=eb01f228d77b26d87d41">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700;800;900&amp;family=Tinos:wght@400;700&amp;display=swap" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../../favicon/safari-pinned-tab.svg" color="#2190cf">
+    <link rel="shortcut icon" href="../../favicon/favicon.ico">
+    <meta name="facebook-domain-verification" content="86l4a2tp4khxrnfs4ncu91kpgwxfy0" />
+    <meta name="msapplication-TileColor" content="#2190cf">
+    <meta name="msapplication-config" content="../../favicon/browserconfig.xml">
+    <meta name="theme-color" content="#2190cf">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Excellence Training Course - Aptos">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="excellence-training-course.html">
+    <meta property="og:image" content="../../img/og_image.png">
+    <meta property="article:author" content="Circle">
+    <meta name="keywords" content="">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-117857588-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117857588-1');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        '../../../connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1797333467260014');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=1797333467260014&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+</head>
+<body class="loading has-navbar ">
+    
+        <!-- Modal -->
+<div class="modal fade doctors-message-modal" id="message-doctor-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src='../../img/success-circle.png' />
+          <p class='mt-2'>Your Message was sent successfuly</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class='btn' data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade doctors-message-modal location-modal" id="location-success" tabindex="-1" role="dialog" aria-labelledby="message-doctorTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body d-flex flex-column align-items-center">
+          <img src="../../img/success-circle.png" />
+          <p class="mt-2">Your Location Updated Successfully</p>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+          <button class="btn" data-dismiss="modal" aria-label="Close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Modal -->
+    <!-- Modal -->
+<div class="modal fade other-modal" id="other-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" >Add Procedure</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+      <form class="modal-body d-flex flex-column align-items-center">
+          <div class='row' id="modal-row">
+              <div class="form-group w-100 col-12">
+                  <label>Procedure Name</label>
+                  <input type="text" id="procedure-name-input" class="ag-form-control form-control" name="en[name]" placeholder="Select Other Option" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (from)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_from" name="price_from" placeholder="From" />
+                  <span class="input-error-text"></span>
+              </div>
+              <div class="form-group w-100 col-6">
+                  <label>Procedure Price (to)</label>
+                  <input type="number" class="ag-form-control form-control" id="price_to" name="price_to" placeholder="To" />
+                  <span class="input-error-text"></span>
+              </div>
+          </div>
+
+          <div id="save-btn-container">
+            <button type='submit' class='submit-btn' id="save-btn">Save</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+    <div class="loader">
+        <div id="loader-animation"></div>
+    </div>
+    
+    <script type="text/javascript" src="../../js/manifest116c.js?id=3856261ebef1de6b975c"></script>
+    <script type="text/javascript" src="../../js/aptos_loadera3e9.js?id=5d63e7a684da86fdd1a5"></script>
+
+            <nav class="navbar navbar-expand-lg fixed-top  for-patients-nav" id="main-navbar-container">
+    <a class="navbar-brand" href="../../index.html">
+        <i class="logo-icon"></i>
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">About</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../history.html">History</a>
+                                                                                            <a class="dropdown-item " href="../../about.html">What is Aptos</a>
+                                                                                            <a class="dropdown-item " href="../../faq.html">FAQ</a>
+                                                                                            <a class="dropdown-item " href="../../subscribe.html">Newsletter</a>
+                                                                                </div>
+                                    </li>
+                                                            <li class="nav-item dropdown small_drop ">
+                    <a class="nav-link" href="#">Activity</a>
+                                            <div class="dropdown-menu">
+                                                                                                                        <a class="dropdown-item " href="../../category/1/news.html">News</a>
+                                                                                            <a class="dropdown-item " href="../../category/3/conferences.html">Conferences</a>
+                                                                                            <a class="dropdown-item " href="../../category/5/articles.html">Articles</a>
+                                                                                            <a class="dropdown-item " href="../../category/6/for-patient.html">For Patient</a>
+                                                                                            <a class="dropdown-item " href="../../category/8/hyaluronic-acid.html">Aptos with Hyaluronic Acid</a>
+                                                                                        <a class="dropdown-item " href="../../intimate.html">Aptos Intimate</a>
+                                                    </div>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../patients.html">Products</a>
+                                    </li>
+                                                            <li class="nav-item  ">
+                    <a class="nav-link" href="../../coaches.html">Trainers</a>
+                                    </li>
+            
+                <li class="nav-item dropdown digital-products small_drop">
+                    <a class="nav-link" href="#">
+                        <i class="digital-products-icon"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" target="_blank" href="../../aconnect.html"><i class="nav-item-icon-aconnect"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../asupport.html"><i class="nav-item-icon-asupport"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="../../Aphoto.html"><i class="nav-item-icon-aphoto"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://www.aptosvideo.com/"><i class="nav-item-icon-avideo"></i></a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://new.aptospass.com/"><i class="nav-item-icon-apass"></i></a></li>
+                    </ul>
+                </li>
+
+                            <li class="nav-item sign-in d-flex align-items-center pl-lg-2">
+                    <a class="nav-link filled" href="https://new.aptospass.com?redirect_url=https://aptos.global/callback?from=https://aptos.global/course/2774/excellence-training-course">Log in</a>
+                </li>
+                <li class="nav-item pr-lg-2 nav-item-register-link">
+                    <a class="d-flex align-self-center nav-link filled" href="../../courses.html">Register for courses</a>
+                </li>
+            
+
+            <li class="nav-item world">
+                <a class="nav-link" href="../../world.html">
+                    <i class="globe-icon"></i>Distribution
+                </a>
+            </li>
+
+                            <li class="nav-item d-flex align-items-center drop_menu">
+                    <a href="#" class="nav-link sec-menu-toggler d-flex align-items-center justify-content-center " data-toggle="modal" data-target="#secondary-menu">
+                        <img class="open-btn open-btn-light" src="../../img/icons/secmenuW.svg" alt="">
+                        <img class="open-btn open-btn-dark" src="../../img/icons/secmenu.svg" alt="">
+                    </a>
+                </li>
+                    </ul>
+    </div>
+</nav>
+    
+                <div class="modal fade solid-modal lg" id="secondary-menu" tabindex="-1" role="dialog">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <i class="bg-circle-left"></i>
+            <i class="bg-circle-right"></i>
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="container-fluid">
+                                                    <div class="row justify-content-center navbar-items-list-container">
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Preparations</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/26/documents-to-be-filled-before-the-aptos-thread-lifting.html">Documents to be filled before the APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/27/what-to-know-for-before-consultation-to-doctor.html">What to know for before consultation to doctor</a></li>
+                                                                                            <li><a href="../../archive/28/cost-of-aptos-thread-procedure.html">Cost of Aptos thread procedure</a></li>
+                                                                                            <li><a href="../../archive/29/how-to-choose-a-doctor-and-a-clinic-for-a-thread-lift.html">How to choose a doctor and a clinic for a thread lift</a></li>
+                                                                                            <li><a href="../../archive/30/the-indications-and-contraindications-for-a-thread-lifting.html">The indications and contraindications for a thread lifting</a></li>
+                                                                                            <li><a href="../../archive/31/myths-and-prejudices-associated-with-aptos-thread-lifting.html">Myths and prejudices associated with APTOS thread lifting</a></li>
+                                                                                            <li><a href="../../archive/37/becoming-aptos-model.html">Becoming Aptos Model</a></li>
+                                                                                            <li><a href="../../archive/39/candidates-suitable-for-procedure.html">Candidates suitable for procedure:</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/10/elimination-of-neck-bands-and-wrinkles.html">Elimination of Neck Bands and Wrinkles</a></li>
+                                                                                            <li><a href="../../archive/12/nasolabial-folds-correction-of-the-folds-without-fillers-and-scalpel.html">Nasolabial Folds: Correction of the folds without fillers and scalpel</a></li>
+                                                                                            <li><a href="../../archive/14/sagging-mouth-corners-wrinkles-of-sadness.html">Sagging mouth corners &quot;wrinkles of sadness&quot;</a></li>
+                                                                                            <li><a href="../../archive/15/eyebrow-correction-with-aptos-threads.html">Eyebrow correction with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/16/tummy-tuck-and-prevention-of-ptosis.html">Tummy tuck and prevention of ptosis</a></li>
+                                                                                            <li><a href="../../archive/17/lifting-of-the-forehead-with-aptos-threads-redefined-youth-and-beauty.html">Lifting of the forehead with Aptos Threads - Redefined youth and beauty</a></li>
+                                                                                            <li><a href="../../archive/18/correction-of-lip-contour-and-mouth-furrows-with-aptos-threads.html">Correction of Lip Contour and Mouth Furrows with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/19/correction-of-the-mental-area-with-aptos-threads.html">Correction of the mental area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/21/double-chin-correction.html">Double Chin Correction</a></li>
+                                                                                            <li><a href="../../archive/22/correction-of-decollete-area-with-aptos-threads.html">Correction of décolleté area with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/23/lifting-of-the-arms-and-shoulders-with-aptos-threads.html">Lifting of the arms and shoulders with Aptos Threads</a></li>
+                                                                                            <li><a href="../../archive/24/lifting-of-the-inner-thighs-it-is-easy.html">LIFTING OF THE INNER THIGHS - IT IS EASY!</a></li>
+                                                                                            <li><a href="../../archive/25/special-threads-for-correction-of-the-area-above-knee.html">Special threads for correction of the area above knee</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Post procedures</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/32/how-is-the-procedure-of-thread-lifting-performed-using-aptos.html">How is the procedure of thread lifting performed using APTOS</a></li>
+                                                                                            <li><a href="../../archive/33/does-it-hurt-during-and-after-the-procedure.html">Does it hurt during and after the procedure</a></li>
+                                                                                            <li><a href="../../archive/34/post-procedure-conditions.html">Post Procedure Conditions</a></li>
+                                                                                            <li><a href="../../archive/36/rehabilitation.html">Rehabilitation</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                                    <div class="col-lg-6">
+                                        <b class="bml-image" style="background-image: url()">
+                                            <span>Threads</span>
+                                        </b>
+                                        <ul class="mb-4">
+                                                                                            <li><a href="../../archive/3/the-essence-of-the-method.html">The Essence of the method</a></li>
+                                                                                            <li><a href="../../archive/5/creating-aptos-threads.html">Creating APTOS threads</a></li>
+                                                                                            <li><a href="../../archive/6/advantages-of-thread-rejuvenation.html">Advantages of thread rejuvenation</a></li>
+                                                                                            <li><a href="../../archive/9/aptos-invites.html">APTOS invites</a></li>
+                                                                                    </ul>
+                                    </div>
+                                                            </div>
+                                            </div>
+
+                    <button class="sec-menu-toggler" type="button" data-dismiss="modal"><img src="../../img/icons/close.svg" alt="">Close Window</button>
+                </div>
+            </div>
+        </div>
+    
+    <div class="modal fade solid-modal lg" id="course-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseModalLabel">Description of course</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text">
+                        <p>Excellence Training is a type of the entry training dedicated to the Aptos Excellence methods: Excellence Visage/HA, Excellence Visage Soft/HA and Nano Excellence/HA.</p><p><br></p><p>AGENDA:</p><p><br></p><p>DAY 1</p><p><br></p><p>09:30 – 10:40 Theoretical Part:</p><p><br></p><p>10:50 – 11:30 Live Demonstration by Hussein Abou Khalil</p><p><br></p><p>11:40 – 12:20 Live Demonstration by Hussein Abou Khalil</p><p><br></p><p>12:30 – 13:30 Lunch Break</p><p><br></p><p>13:30 – 16:40 Hands-on procedures by Hussein Abou Khalil and Mariam Tsivtsivadze</p><p><br></p><p>DAY 2</p><p><br></p><p>10:00 – 11:30 Theoretical Part by George Sulamanidze</p><p><br></p><p>11:30 – 12:30 Hands-on Procedure by Hussein Abou Khalil and Mariam Tsivtsivadze 2x</p><p><br></p><p>12:30 – 13:30 Lunch Break</p><p><br></p><p>13:30 –16:50 Hands-on procedures by Hussein Abou Khalil and Mariam Tsivtsivadze</p><p><br></p><p>16:50 – 17:00 Certification Ceremony</p><p><br></p><p>17:00 Transfer to The Gala Dinner</p><p><br></p><p><br></p><p>Cost of attendance: EUR400</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn ag-btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="training container mb-5">
+                                <div class="col-12">
+	<div class="row mb-5 courses-swiper on-site">
+		<div class="col-lg-3 course-doctor-image-container" style="background-color: #cbbd7b">
+							<div class="swiper-container">
+					<div class="swiper-wrapper">
+													<div class="swiper-slide" style="background:
+								linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)),
+								url('../../../media-global.aptos.world/media/3797/conversions/resizedcf92.jpg?Expires=1694849333&amp;Signature=mq8ySNYMCFGTphiGUdUV1qUrIyhsHpnKfQWyvN-lfuopvVFabbg5oz05TUaVDszkY5n7dIh7BMu99xeuzghCCETyrDMDdcO9bDqMK28mBOI8-Han5vRgIb5plVmlUAW~pZxAU5~4KNJMtRt9hM1cOoGsTQAzV64tfcA9I-biJmr~tEcGyw4IAXXOqMhrsZDlEBS6o8wmzY7jOj~oaz3-QGNKgxTnFXvqfIROaZhJ6CsHRTzcqoxMATQav-ZdI6ZcSYLMyLNeoqZCEFQC1CQ6gjfTGJmfud7KvMVsLH-14YlxU2DUu4aWEZMb6472a9sNjEWlyOHD3y~CqdpPu1d4Nw__&amp;Key-Pair-Id=APKAJSJOJEK5F7WQF37Q') top center; background-size: cover">
+							</div>
+											</div>
+				</div>
+									<div class="coach-info-container">
+														<div class="d-block">
+						<h5 class="coach-name">Murat Tsintsadze</h5>
+					</div>
+							</div>
+                            <div class="location-container">
+                    <div class="location-icon-container d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19.026" height="24.132" viewBox="0 0 19.026 24.132">
+	<g id="Group_8" data-name="Group 8" transform="translate(-410.406 -752.072)">
+		<path id="Path_15" data-name="Path 15" d="M429.432,761.585c0,7-9.513,14.619-9.513,14.619s-9.513-7.529-9.513-14.619a9.513,9.513,0,1,1,19.026,0Z" fill="#fff"/>
+		<circle id="Ellipse_1" data-name="Ellipse 1" cx="6.381" cy="6.381" r="6.381" transform="translate(413.537 755.203)" fill="#cbbd7b"/>
+	</g>
+</svg>
+                        <h4>Location</h4>
+                    </div>
+                    <p class="location">Tbilisi, Georgia</p>
+                </div>
+            		</div>
+		<div class="col-lg-9 training-container">
+			<div class="training-info-footer-buttons mt-1 mb-5">
+				<div class="back-to-calendar-container">
+					<a href="../../courses.html" class="courses-back-link">
+						<img src="../../img/course-back-to-calendar.svg" alt="go back" />
+						back to the calendar
+					</a>
+				</div>
+				<div class="buttons-container">
+											<button class="btn" id="join-the-training">Join the training</button>
+									</div>
+			</div>
+			<h3 class="training-heading">Excellence Training Course</h3>
+			<div class="training-info">
+				<div class="date">
+					<svg xmlns="http://www.w3.org/2000/svg" width="18.022" height="19.495" viewBox="0 0 18.022 19.495">
+	<g id="Group_3" data-name="Group 3" transform="translate(-766.118 -480.23)">
+		<g id="Group_2" data-name="Group 2">
+			<path id="Path_3" data-name="Path 3" d="M781.612,498.975a1.781,1.781,0,0,0,1.778-1.778V484.312a1.781,1.781,0,0,0-1.778-1.779H768.646a1.78,1.78,0,0,0-1.778,1.779V497.2a1.78,1.78,0,0,0,1.778,1.778Z" fill="none" stroke="#cbbd7b" stroke-miterlimit="10" stroke-width="1.5"/>
+		</g>
+		<path id="Path_4" data-name="Path 4" d="M777.841,490.754l-3.1,3.748a.114.114,0,0,1-.168.009l-1.744-1.689" fill="none" stroke="#cbbd7b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+		<line id="Line_4" data-name="Line 4" x2="16.181" transform="translate(767.033 486.839)" fill="none" stroke="#cbbd7b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+		<line id="Line_5" data-name="Line 5" y2="3.106" transform="translate(771.666 480.98)" fill="none" stroke="#cbbd7b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+		<line id="Line_6" data-name="Line 6" y2="3.106" transform="translate(778.672 480.98)" fill="none" stroke="#cbbd7b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+	</g>
+</svg>
+ <span class="start-date">Start date</span>
+                    <p class="my-2"> 5 October 2023 10:00 <span id="timezone"></span></p>
+				</div>
+				<div class="description">
+					<svg xmlns="http://www.w3.org/2000/svg" width="19.071" height="22" viewBox="0 0 19.071 22">
+	<g id="Group_1" data-name="Group 1" transform="translate(-766.118 -580.49)">
+		<path id="Path_2" data-name="Path 2" d="M771.749,596.859h-1.465a3.415,3.415,0,0,1-3.416-3.416v-8.786a3.416,3.416,0,0,1,3.416-3.417h5.857a3.417,3.417,0,0,1,3.417,3.417v1.464" fill="none" stroke="#cbbd7b" stroke-miterlimit="10" stroke-width="1.5"/>
+		<rect id="Rectangle_6" data-name="Rectangle 6" width="12.69" height="15.619" rx="3.5" transform="translate(771.749 586.121)" fill="none" stroke="#cbbd7b" stroke-miterlimit="10" stroke-width="1.5"/>
+		<line id="Line_1" data-name="Line 1" x2="3.905" transform="translate(776.141 591.978)" fill="none" stroke="#cbbd7b" stroke-miterlimit="10" stroke-width="1.5"/>
+		<line id="Line_2" data-name="Line 2" x2="3.905" transform="translate(776.141 595.883)" fill="none" stroke="#cbbd7b" stroke-miterlimit="10" stroke-width="1.5"/>
+	</g>
+</svg>
+<span>Description</span>
+				</div>
+				<div  id="description-content" aria-expanded="false">
+					<p>Excellence Training is a type of the entry training dedicated to the Aptos Excellence methods: Excellence Visage/HA, Excellence Visage Soft/HA and Nano Excellence/HA.</p><p><br></p><p>AGENDA:</p><p><br></p><p>DAY 1</p><p><br></p><p>09:30 – 10:40 Theoretical Part:</p><p><br></p><p>10:50 – 11:30 Live Demonstration by Hussein Abou Khalil</p><p><br></p><p>11:40 – 12:20 Live Demonstration by Hussein Abou Khalil</p><p><br></p><p>12:30 – 13:30 Lunch Break</p><p><br></p><p>13:30 – 16:40 Hands-on procedures by Hussein Abou Khalil and Mariam Tsivtsivadze</p><p><br></p><p>DAY 2</p><p><br></p><p>10:00 – 11:30 Theoretical Part by George Sulamanidze</p><p><br></p><p>11:30 – 12:30 Hands-on Procedure by Hussein Abou Khalil and Mariam Tsivtsivadze 2x</p><p><br></p><p>12:30 – 13:30 Lunch Break</p><p><br></p><p>13:30 –16:50 Hands-on procedures by Hussein Abou Khalil and Mariam Tsivtsivadze</p><p><br></p><p>16:50 – 17:00 Certification Ceremony</p><p><br></p><p>17:00 Transfer to The Gala Dinner</p><p><br></p><p><br></p><p>Cost of attendance: EUR400</p>
+				</div>
+			</div>
+			<hr style="border-color: #cbbd7b">
+			<div class="event-purpose-container">
+									<div class="event-purpose-item purpose">
+						<div class="text ml-4 mt-3">
+							<div class="purpose-heading">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21.611" height="21.611" viewBox="0 0 21.611 21.611">
+	<g id="Group_5" data-name="Group 5" transform="translate(-766.043 -753.984)">
+		<path id="Path_8" data-name="Path 8" d="M787.654,764.789a10.805,10.805,0,1,0-10.806,10.806,10.806,10.806,0,0,0,10.806-10.806" fill="#cbbd7b"/>
+		<path id="Path_9" data-name="Path 9" d="M784.061,764.789A7.212,7.212,0,1,0,776.849,772,7.212,7.212,0,0,0,784.061,764.789Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+		<path id="Path_10" data-name="Path 10" d="M779.482,764.789a2.634,2.634,0,1,0-2.634,2.634A2.633,2.633,0,0,0,779.482,764.789Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+	</g>
+</svg>
+								<h4>Purpose</h4>
+							</div>
+							<p>Present the advantages and beneﬁts of Aptos threads</p>
+						</div>
+					</div>
+													<div class="event-purpose-item">
+						<div class="text ml-4">
+							<div class="purpose-heading">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21.611" height="21.611" viewBox="0 0 21.611 21.611">
+	<g id="Group_4" data-name="Group 4" transform="translate(-1121.183 -753.984)">
+		<path id="Path_5" data-name="Path 5" d="M1142.794,764.789a10.805,10.805,0,1,0-10.806,10.806,10.806,10.806,0,0,0,10.806-10.806" fill="#cbbd7b"/>
+		<path id="Path_6" data-name="Path 6" d="M1131.989,758.207v7.271l4.48,2.23" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+		<path id="Path_7" data-name="Path 7" d="M1133.529,765.3a1.485,1.485,0,1,1-1.485-1.485,1.485,1.485,0,0,1,1.485,1.485" fill="#fff"/>
+	</g>
+</svg>
+								<h4>Events</h4>
+							</div>
+							<p>A learning opportunity for Doctors</p>
+						</div>
+					</div>
+							</div>
+		</div>
+	</div>
+	<div class="row training-info-footer justify-content-between mt-3 mb-4">
+	</div>
+	</div>
+
+<input type="hidden" id="startAt" value="1696485606">
+<input type="hidden" id="location" value="Tbilisi, Georgia">
+
+            </div>
+    <div id="course-preview-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="confirm-attendance-heading">Please confirm your
+                        attendance
+                    </h2>
+                    <p class="confirm-attendance-para">Are you sure you want to register
+                        for this course?
+                    </p>
+                    <a href="../../courses/sign-up/2774.html" class="confirm-attendance-link">Yes</a>
+                    <button class="dismiss-modal-btn confirm-attendance-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script>
+        let mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            speed: 900,
+            fadeEffect: {
+                crossFade: true
+            },
+            effect: "fade",
+            spaceBetween: 0,
+            slidesPerView: 1,
+                        navigation: {
+                nextEl: '.swiper-control-next',
+                prevEl: '.swiper-control-prev',
+            }
+
+
+        })
+
+        mySwiper.on('slideChange', function() {
+            $('.courses-swiper  .coach-info-container div').addClass('d-none').removeClass('d-block')
+            let activeElement = $(`.coach-info-container div:nth-child(${mySwiper.realIndex+1})`)
+            if (activeElement.hasClass('d-none')) {
+                activeElement.addClass('d-block')
+            }
+        });
+    </script>
+
+<div id="accept-cookies-popup" class="accept-cookies-popup d-none opacity-0">
+        <p class="accept-cookies-title mr-4">
+            We use cookies to ensure you get the best experience on our site. Cookies are used to collect information
+            about how visitors use our site. We collect the information to compile reports and to help us improve the
+            site. The cookies collect information in an anonymous form, including the number of visitors to the site,
+            where visitors have come to the site from and the pages they visited. <a href="../../terms.html">Details.</a>
+        </p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Got it</button>
+    </div>
+
+    <div class="footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col d-flex justify-content-center large-dev">
+                <ul class="list-unstyled footer-logo-panel">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2022 APTOS LLC</li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled soc-media-list">
+                    <li class="list-heading">Social media hub</li>
+                    <li>
+                        <a href="https://www.facebook.com/aptosglobal" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> Facebook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/aptos/" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCCLtDF8ev0DiVxdPuuM0ung/" target="_blank">
+                            <i class="fa fa-youtube" aria-hidden="true"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/17977999" target="_blank">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                    <li class="list-heading">Digital Products</li>
+                    <li>
+                        <a href="../../Aphoto.html" target="_blank">
+                            <img src="../../img/aphoto_logo.svg" class="aphoto-other-service-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aptosvideo.com/" target="_blank">
+                            <img src="../../img/avideo_logo.svg" class="aphoto-other-service-logo avideo-logo" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../aconnect.html" target="_blank">
+                            <img src="../../img/aconnect_logo.svg" class="aphoto-other-service-logo aconnect-logo" />
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="../../asupport.html">
+                            <img src="../../img/asupport_logo.svg" class="aphoto-other-service-logo asupport-logo" />
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled w-100 w-md-auto">
+                    <li class="list-heading text-center text-md-left">Other information</li>
+                    <div class="d-flex flex-wrap justify-content-between d-md-block">
+                        <li>
+                            <a href="../../terms.html" target="_blank" >
+                                Terms and Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../terms.html" target="_blank">
+                                Privacy policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../contact.html" target="_blank">
+                                Contact
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-sm-12 d-flex justify-content-center small-dev">
+                <ul class="list-unstyled footer-logo-panel text-center">
+                    <li class="list-heading"><i class="logo-icon"></i></li>
+                    <li>Copyright © 2020 APTOS LTD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>    <div aria-live="polite" aria-atomic="true">
+    <div class="toast aptos-toast" style="position: fixed; bottom: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header bg-danger text-white">
+            <strong class="mr-auto aptos-toast-title"></strong>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body aptos-toast-text"></div>
+    </div>
+</div>
+                <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: {
+                    {
+                        env('FB_APP_ID', '1797333467260014')
+                    }
+                },
+                xfbml: true,
+                version: 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "../../../connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqenmo-yzE5Joz8Iwhe4hgWPPqQ8bMuoU&amp;libraries=places"></script>
+    <script type="text/javascript" src="../../js/vendorc272.js?id=a48f908e0a58b09acf0c"></script>
+    <script type="text/javascript" src="../../assets/js/sharect.min.js"></script>
+    <script type="text/javascript" src="../../js/app7cb5.js?id=20c62ec66be52c5c27fc"></script>
+        <script type="text/javascript" src="../../js/timezoned453.js?id=8b7b9538d962841e4593"></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    </body>
+
+    
+<!-- Mirrored from aptos.global/course/2774/excellence-training-course by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 16 Sep 2023 06:44:30 GMT -->
+</html>
